@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JHM">
+<meta name="dcterms.date" content="2022-03-08">
+
+<title>jhmartel.github.io - Fundamentos de Relatividad Especial y Propagacion de la Luz en el Vacío. Una revisión crítica (3/4).</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">jhmartel.github.io</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jhmartel"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/_jhmlabs"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Fundamentos de Relatividad Especial y Propagacion de la Luz en el Vacío. Una revisión crítica (3/4).</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">SR</div>
+    <div class="quarto-category">es</div>
+    <div class="quarto-category">light</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JHM </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 8, 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>En la Parte 3/4 de nuestra revisión crítica de SR, examinamos la ecuación de onda homogénea y sus propiedades bajo las transformaciones de Lorentz.</p>
+<section id="ecuación-de-onda-homogénea-transformaciones-de-lorentz-y-sr" class="level1">
+<h1><em>Ecuación de Onda Homogénea, Transformaciones de Lorentz y SR</em></h1>
+<p>En las Partes 1 y 2 de esta serie nos enfocamos en el espacio de Minkowski, el álgebra lineal de las transformaciones de Lorentz y el cono nulo. Estas discusiones se basaron principalmente en el modelo fotónico de la luz.</p>
+<p>En la Parte 3 consideramos el modelo ondulatorio de la luz, y específicamente las propiedades de las transformaciones de Lorentz y la ecuación de onda homogénea (EOH).</p>
+<p>Brevemente, el intento de prueba de Einstein de las afirmaciones (i) y (ii) de que las fórmulas de Lorentz resuelven todas las aparentes contradicciones de (A12) se basa en la idea de que la luz se propaga a una velocidad constante <span class="math inline">\(c\)</span> que es idéntica para todos los observadores. Del argumento del frente de onda esférico de Einstein, vemos que Einstein entendió que (A12) implica que los pulsos de luz se propagan en frentes de onda geométricamente esféricos en <em>todos</em> marcos de referencia inerciales <span class="math inline">\(K\)</span>. En términos de EOH, esto implica que existe una clase invariante de Lorentz de soluciones radiales para EOH. Como discutimos a continuación, las soluciones radiales existen canónicamente para cualquier marco de referencia único <span class="math inline">\(K\)</span>. Sin embargo, los argumentos de las Partes 1 y 2 demuestran que ningún conjunto invariante de soluciones radiales de Lorentz puede existir simultáneamente para todos los marcos de referencia <span class="math inline">\(K'\)</span>.</p>
+</section>
+<section id="dalembert-cuadrado-square-es-un-único-operador-diferencial-lineal-de-segundo-orden-invariante-de-lorentz" class="level1">
+<h1><em>d’Alembert cuadrado</em> <span class="math inline">\(\square\)</span> <em>es un único operador diferencial lineal de segundo orden invariante de Lorentz</em></h1>
+<p>En la Parte 1 mencionamos brevemente un resultado interesante de Elton-Arminjon sobre la métrica de Minkowski <span class="math display">\[h=d\xi^2 + d\eta^2 + d \zeta^2 - c^2 \tau^2\]</span> siendo el única forma cuadrática simétrica invariante de Lorentz en <span class="math inline">\({\bf{R}}^4\)</span> (módulo de homotecia). Su prueba tiene un corolario útil en términos de EOH.</p>
+<p>Sea <span class="math inline">\(\square\)</span> el operador de onda de d’Alembert. Entonces <span class="math inline">\(\square\)</span> es un operador diferencial lineal homogéneo de segundo orden, en coordenadas que tienen la forma <span class="math display">\[\square = \frac{\partial^2}{\partial \xi^2} +\frac{\partial^2}{ \partial \eta^2}+\frac{\partial^2}{\partial \zeta^2}-\frac{1}{c^2}\frac{\partial^2 }{\partial \tau^2 }.\]</span></p>
+<p>Informalmente vemos <span class="math inline">\(\square\)</span> como esencialmente dual a la forma <span class="math inline">\(h\)</span> de Minkowski. Algo más riguroso, encontramos que el argumento de Elton-Arminjon prueba lo siguiente:</p>
+<ul>
+<li>Lema: Sea <span class="math inline">\(C\)</span> el álgebra de funciones polinomiales en <span class="math inline">\({\bf{R}}^4\)</span>, y sea <span class="math inline">\(\rho^*\)</span> la representación contragrediente del grupo de Lorentz en <span class="math inline">\(C\)</span>. Entonces, el operador de onda de d’Alembert <span class="math inline">\(\square\)</span> es el único operador diferencial lineal de segundo orden invariante de Lorentz en <span class="math inline">\(C\)</span> módulo de homotecia.</li>
+</ul>
+<p>De ello se deduce que la afirmación de Einstein (i) de que diferentes marcos inerciales <span class="math inline">\(K, K'\)</span> están relacionados mediante transformaciones de Lorentz también implica que el operador de d’Alembert <span class="math inline">\(\square\)</span> es esencialmente el único operador de segundo orden definido simultáneamente para todos los observadores inerciales. Esto significa que EOH es la única ecuación de segundo orden invariante de Lorentz en <span class="math inline">\({\bf{R}}^4\)</span>.</p>
+<p>La invariancia de Lorentz del EOH implica que las soluciones del EOH son <em>covariantes</em> de Lorentz. Para ser precisos, si <span class="math inline">\(\phi=\phi(x,y,z,t)\)</span> es una función regular que satisface el HWE, a saber <span class="math display">\[ \phi_{xx}+\phi_{yy}+\phi_{zz}-\frac{1}{c^2}\phi_{tt}=0, \]</span> y si <span class="math inline">\(\lambda\)</span> es una transformada de Lorentz con <span class="math display">\[(\xi, \eta, \zeta, \tau)=\lambda.(x,y,z,t),\]</span> entonces <span class="math display">\[\phi':=\lambda^*(\phi)=\phi\circ\lambda^{-1}\]</span> es nuevamente una solución del EOH: <span class="math display">\[\phi_{\xi \xi}+\phi_{\eta \eta}+\phi_{\zeta \zeta}-\frac{1}{c^2}\phi_{\tau \tau}=0.\]</span> Esto se verifica mediante cálculo elemental.</p>
+<p>La discusión anterior es completamente elemental. Más significativa es la interpretación de (A12) en términos de EOH.</p>
+</section>
+<section id="el-radio-no-es-una-variable-invariante-de-lorentz" class="level1">
+<h1><em>El radio no es una variable invariante de Lorentz</em></h1>
+<p>Entendemos que (A12) declara que existe una clase invariante distinguida de Lorentz de soluciones para EOH que corresponden a ondas de luz esféricas. Sin embargo, argumentamos que esto contradice las propiedades de EOH. Específicamente <em>no existe un conjunto invariante de Lorentz de soluciones radiales para el EOH.</em></p>
+<p>De hecho, la variable de radio espacial <span class="math inline">\(r^2=x^2+y^2+z^2\)</span> no es una variable invariante de Lorentz. Esto se discutió en la Parte 2, pero podemos dar otra explicación en términos de grupos de Lie.</p>
+<p>En términos de teoría de grupos, un observador dice que una solución <span class="math inline">\(\phi=\phi(x,t)\)</span> de EOH es <em>radial <span class="math inline">\(K\)</span></em> iff $(Ax,t)=(x,t) $ por cada movimiento rígido <span class="math inline">\(A\in SO(3)\)</span> en las variables espaciales <span class="math inline">\(x,y,z\)</span> de <span class="math inline">\(K\)</span>. Implícitamente esto requiere una representación de grupo de Lie <span class="math inline">\(\rho\)</span> de <span class="math inline">\(SO(3)\)</span> en el grupo de Lorentz <span class="math inline">\(G\simeq O(3,1)\)</span>. Pero esta elección de subgrupo compacto máximo no es canónica. Diferentes observadores inerciales <span class="math inline">\(K, K'\)</span> generalmente eligen diferentes grupos de simetría ortogonal, p.&nbsp;según su propia fórmula física de suma de cuadrados <span class="math inline">\(\xi^2+\eta^2+\zeta^2\)</span>.</p>
+<p>Por supuesto, la forma de Minkowski <span class="math inline">\(h\)</span> es invariante y canónica, pero cualquier descomposición en componentes “espaciales” y “temporales” requiere <em>elecciones arbitrarias dependientes del observador</em>, y estas elecciones no pueden ser invariantes de Lorentz.</p>
+<p>Por ejemplo, mientras que el conjunto abierto de vectores temporales <span class="math inline">\(\{h(v) &lt; 0\}\)</span> se define invariablemente, no hay una elección invariante de Lorentz de vector temporal. Del mismo modo, entre el conjunto espacial <span class="math inline">\(\{h(v)&gt;0\}\)</span> no hay una elección invariante de Lorentz de un marco tridimensional ortogonal.</p>
+<p>Además, para el movimiento de los pulsos de luz según (A12), el elemento de Minkowski se anula de forma idéntica y el único elemento tensor canónico se convierte en el elemento cero constante. Después de un cambio de variables de Lorentz, encontramos una nueva solución <span class="math inline">\(\phi'\)</span> como la anterior, pero esta solución no necesita ser radial en el marco inercial <span class="math inline">\(K'\)</span>. De hecho, el movimiento espacial <span class="math inline">\(K\)</span> rígido <span class="math inline">\(A\)</span> generalmente no preservará las coordenadas espaciales <span class="math inline">\(\xi, \eta, \zeta\)</span> de <span class="math inline">\(K'\)</span>. Por lo tanto, encontramos que los movimientos de <span class="math inline">\(A\)</span> dependen de manera no trivial de la variable de tiempo <span class="math inline">\(K'\)</span> <span class="math inline">\(\tau\)</span>. Esto nuevamente refleja la inexistencia de un radio invariante de Lorentz.</p>
+</section>
+<section id="conclusión" class="level1">
+<h1><em>Conclusión</em></h1>
+<p>Esto concluye nuestro análisis matemático de los fundamentos de la RS, especialmente los Supuestos de Einstein (A12) y su intento de resolución a través de las fórmulas de Lorentz y las afirmaciones (i) y (ii).</p>
+<p>En última instancia, las transformaciones de Lorentz no tienen las propiedades necesarias para mantener (A12). La llamada Ley de Propagación de la Luz (A2) no es una ley invariante de Lorentz, y por lo tanto no satisface por sí misma el Principio de Relatividad Restringida como lo supone Einstein en su Suposición (A1).</p>
+<p>En nuestra Parte 4 final de esta serie, presentamos algunas posibles objeciones a nuestros argumentos e intentamos anticipar algunas críticas. Sin embargo, debemos mantener que todos los argumentos anteriores son <em>matemáticamente correctos</em>. Cualquier comentario constructivo o retroalimentación es bienvenido en la dirección del autor jhmLabs &amp;&amp;a.t.&amp;&amp; gmail d&amp;&amp;0t&amp;&amp; com.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+  </div>
+</footer>
+
+
+
+</body></html>
