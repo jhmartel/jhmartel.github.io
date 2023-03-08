@@ -1,5 +1,4 @@
 # jhmartel.github.io
 
-Fastpages has deprecated and we are migrating to Quarto [February 2023]. 
-Please stay tuned this won't take long.
+March 08 2023. Something went wrong, working on fix. 
 -JHM
