@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2022-03-09">
 <meta name="description" content="We sketch a measure-topological argument that P eq NP. The key idea is that random search over an unstructured subset is an irreducible problem, here interpreted as an invariance of domain argument a la Brouwer. The formal development of these ideas will be subject of future post.">
 
-<title>jhmartel.github.io - Sketch of CAF’s proof that \(P eq NP\).</title>
+<title>jhmartel.github.io - Sketch of CAF’s proof that P not equals NP.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Sketch of CAF’s proof that <span class="math inline">\(P eq NP\)</span>.</h1>
+      <h1 class="title">Sketch of CAF’s proof that P not equals NP.</h1>
                   <div>
         <div class="description">
           We sketch a measure-topological argument that <span class="math inline">\(P eq NP\)</span>. The key idea is that random search over an unstructured subset is an <em>irreducible</em> problem, here interpreted as an invariance of domain argument a la Brouwer. The formal development of these ideas will be subject of future post.
@@ -152,14 +152,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Here is a sketch of how to prove that <span class="math inline">\(P\)</span> is not equal to <span class="math inline">\(NP\)</span>. The ideas are all based on discussions with C.A. Feinstein.</p>
+<section id="sketch-of-p-not-equal-to-np" class="level1">
+<h1><em>Sketch of P not equal to NP</em></h1>
+<p>Here is a sketch of how to prove that <span class="math inline">\(P\)</span> is not equal to <span class="math inline">\(NP\)</span>. Our ideas arose and directly developed from discussions with C.A. Feinstein. Ultimately the question is whether random search over unstructured sets is reducible. We argue that it’s <em>not reducible</em>, basically there are no shortcuts to search over a large set. And this is formalized in the whole conception of computation as deciding the supports of measures, and algorithms are compositions of measures.</p>
+</section>
 <section id="measures-and-algorithms" class="level1">
 <h1><em>Measures and Algorithms:</em></h1>
 <ol type="1">
 <li><p>(<em>Deciding supports is the universal decision problem</em>) Every decision problem is equivalent to the problem of deciding the support of a measure <span class="math inline">\(\mu\)</span>. Or almost equivalently, of deciding the support of the image of a function <span class="math inline">\(F\)</span>. E.g. for the subset sum problem, the image is the pushforward onto <span class="math inline">\(\bf{Z}\)</span> of the sum total <span class="math inline">\(\epsilon: 2^X \to {\bf{Z}}\)</span>.</p></li>
 <li><p>(<em>Algorithms are compositions of measures, equivalently paths in the category of finite measure spaces</em>) An algorithm to solve a decision problem is a composition of the measure <span class="math inline">\(\mu\)</span> or the function <span class="math inline">\(F\)</span> into intermediate measures or function evaluations. Here we comment that there is a natural composition of measures, c.f. the proofs of triangle inequalities in Wasserstein spaces.</p></li>
 </ol>
-<p>#<em>What is the Complexity of a Measure or Function or Algorithm?</em></p>
+</section>
+<section id="what-is-the-complexity-of-a-measure-or-function-or-algorithm" class="level1">
+<h1><em>What is the Complexity of a Measure or Function or Algorithm?</em></h1>
 <p>The classic definition of computational complexity counts the number of time steps required, or number of calls to RAM or function evaluations, in the worst-possible case. We require here a definition of complexity for measures. The definition must be absolutely simple, and we can only say that the complexity of a measure is the “size” of its support. In this sense, complexity is equivalent to “entropy” as defined by Gromov [insert ref].</p>
 <ol start="3" type="1">
 <li>(<em>Complexity and Entropy: the Same Quantity</em>) The complexity of a measure or a function is the “size” of the support. Complexity is subadditive (or superadditive?) with respect to composition. This means that decomposing <span class="math inline">\(F\)</span> into a very long composition <span class="math inline">\(F=\cdots \circ F_i \circ F_{i-1} \circ \cdots\)</span> does not necessarily reduce the complexity.</li>
@@ -176,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 <ol start="5" type="1">
 <li>(<em>Invariance of Domain and Irreducibility of Measure Complexity</em>) Brouwer-Lebesgue Invariance of Domain theorem applies. This says there do not exist continuous injective measure-preserving maps from <span class="math inline">\(R^n\)</span> to smaller dimension <span class="math inline">\(R^k\)</span> for <span class="math inline">\(k &lt; n\)</span>.</li>
 </ol>
-<p>The items 1., 2., …, 5. if they can be rigorously established will essentially prove that <span class="math inline">\(P \neq NP\)</span>.</p>
+<p>The items 1., 2., …, 5. when rigorously established will essentially prove that <span class="math inline">\(P \neq NP\)</span>.</p>
 
 
 </section>
