@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JHM">
+<meta name="dcterms.date" content="2022-03-07">
+<meta name="description" content="In Part 2/4 of our critical review of SR we discuss the errors in Einstein’s famous spherical wavefront proof. Ultimately we argue that the Law of Propagation of Light (A2) is not Lorentz invariant, contrary to Einstein’s claims. The error is subtle.">
+
+<title>jhmartel.github.io - Foundations of Special Relativity and Light Propagation in Vacuum. A Critical Review (2/4).</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">jhmartel.github.io</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jhmartel/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/_jhmlabs"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Foundations of Special Relativity and Light Propagation in Vacuum. A Critical Review (2/4).</h1>
+                  <div>
+        <div class="description">
+          In Part 2/4 of our critical review of SR we discuss the errors in Einstein’s famous spherical wavefront proof. Ultimately we argue that the Law of Propagation of Light (A2) is not Lorentz invariant, contrary to Einstein’s claims. The error is subtle.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">SR</div>
+                <div class="quarto-category">es</div>
+                <div class="quarto-category">light</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>JHM </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 7, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>In Part 2/4 of our critical review of SR we discuss the errors in Einstein’s famous spherical wavefront proof. Ultimately we argue that the Law of Propagation of Light (A2) is not Lorentz invariant, contrary to Einstein’s claims. The error is subtle.</p>
+<section id="apparent-difficulties-in-sr-and-einsteins-attempted-resolution" class="level1">
+<h1><em>Apparent Difficulties in SR and Einstein’s Attempted Resolution</em></h1>
+<p>In the previous article (Part 1/4) we reviewed the basic assumptions of SR, represented in assumptions we call (A1) and (A2).</p>
+<ul>
+<li><p>(A1) that the laws of physics are the same in all nonaccelerated reference frames, i.e.&nbsp;if <span class="math inline">\(K'\)</span> is a coordinate system moving uniformly (and devoid of rotation) with respect to a coordinate system <span class="math inline">\(K\)</span>, then natural phenomena run their course with respect to <span class="math inline">\(K'\)</span> according to exactly the same laws as with respect to <span class="math inline">\(K\)</span>.</p></li>
+<li><p>(A2) that light in vacuum propagates along straight lines with constant velocity <span class="math inline">\(c = 300,000 ~km/sec\)</span>.</p></li>
+</ul>
+<p>The conjunction <span class="math inline">\((A12):=(A1) \wedge (A2)\)</span> leads to intellectual difficulties, as Einstein himself admits. But these difficulties are only <em>apparent incompatibilities</em> according to Einstein which are resolved by postulating the Lorentz transformations. The assertion that Lorentz formulae resolve all apparent difficulties in (A12) follows from two claims:</p>
+<ul>
+<li><p>Claim (i): that inertial frames <span class="math inline">\(K, K'\)</span> are related by Lorentz transformations.</p></li>
+<li><p>Claim (ii): that the law of propagation of light (A2) is Lorentz invariant. I.e. if (A2) is satisfied in <span class="math inline">\(K\)</span> , then (A2) is satisfied in every Lorentz translate <span class="math inline">\(K′=\lambda.K\)</span>.</p></li>
+</ul>
+<p>The key issue is verifying whether (A2) really follows from the Claims (i) and (ii). This is the subject of Einstein’s spherical wave front argument which we examine below.</p>
+</section>
+<section id="critique-of-einsteins-proof-of-the-compatibility-of-a12-with-lorentz-transformations" class="level1">
+<h1><em>Critique of Einstein’s Proof of the Compatibility of (A12) with Lorentz Transformations</em></h1>
+<p>We were led to reviewing Einstein’s SR by reading the articles of S.J. Crothers and R. Bryant, which allege that Einstein’s spherical wave proof contains significant errors.</p>
+<p>Einstein’s argument looks to derive Claim (ii) as a mathematical consequence of Claim (i). The starting point is the fundamental property of Lorentz transformations, that the quadratic expression <span class="math display">\[x^2+y^2+z^2 = c^2 t^2\]</span> is invariant with respect to Lorentz transforms. In other words, the null cone <span class="math inline">\(N\)</span> is Lorentz <em>covariant</em>. Thus if <span class="math display">\[(\xi, \eta, \zeta, \tau)=\lambda. (x,y,z,t)\]</span> for a Lorentz transform <span class="math inline">\(\lambda\)</span>, then we have</p>
+<ul>
+<li>[Eq1] <span class="math display">\[\xi^2 + \eta^2+\zeta^2 = c^2 \tau^2.\]</span></li>
+</ul>
+<p>But what does the expression [Eq1] represent?</p>
+<p>Here is Einstein’s first error: his argument <em>misidentifies</em> [Eq1] with “the equation of a sphere.” The error is subtle. But the fact is that [Eq1] is strictly speaking a three-dimensional cone in the four independant variables <span class="math inline">\(\xi, \eta, \zeta, \tau\)</span>. The cone indeed contains many spherical two-dimensional subsets, but our point is that <em>a second independant equation</em> is necessary to specify these spheres. And these independant equations cannot be chosen Lorent invariantly!</p>
+<p>Penrose in his textbook with Rindler is quite careful here. The Penrose approach is to projectivize [Eq1] and obtain a <em>projective sphere</em> with a uniquely defined Lorentz invariant conformal structure.</p>
+<p>But again we must emphasize that there is no canonical metric invariant with respect to the Lorentz group on the projectivization. In otherwords, the null sphere has a Lorentz invariant conformal structure, but it does not have a Lorentz invariant Riemannian structure.</p>
+<p>For instance the standard round sphere <span class="math inline">\(S\)</span> centred at the origin simultaneously satisfies [Eq1] and additionally the equation <span class="math display">\[\frac{1}{2}d(\xi^2+\eta^2+\zeta^2)=\xi d\xi+\eta d\eta +\zeta d\zeta=0.\]</span> In short, the round sphere requires that <em>two</em> quadratic forms <span class="math inline">\(\xi^2+\eta^2+\zeta^2\)</span> and <span class="math inline">\(c^2\tau^2\)</span> be <em>simultaneously constant</em>.</p>
+<p>This leads us to Einstein’s second error, which is the failure to observe that the Lorentz invariance of the quadratic form <span class="math inline">\(h=x^2+y^2+z^2-c^2t^2\)</span> in no way implies the Lorentz invariance of <span class="math inline">\(h_1:=x^2+y^2+z^2\)</span> and <span class="math inline">\(h_2:=c^2 t^2\)</span>.</p>
+<p>Indeed the quadratic forms <span class="math inline">\(h_1, h_2\)</span> are degenerate, with nontrivial radicals <span class="math inline">\(rad(h_1)=\{x=y=z=0\}\)</span> and <span class="math inline">\(rad(h_2)=\{t=0\}.\)</span> The radicals are linear subspaces of <span class="math inline">\({\bf{R}}^4\)</span>. But if <span class="math inline">\(h_1, h_2\)</span> are invariant, then <span class="math inline">\(rad(h_1)\)</span> and <span class="math inline">\(rad(h_2)\)</span> are also nontrivial invariant subspaces. This contradicts the fact that the standard linear representation of the Lorentz group acts irreducibly on <span class="math inline">\({\bf{R}}^4\)</span>.</p>
+<p>To summarize the two errors in Einstein’s famous argument:</p>
+<ul>
+<li><p>the cone <span class="math inline">\(\xi^2 + \eta^2+\zeta^2 = c^2 \tau^2\)</span> is misidentified as the equation of a sphere.</p></li>
+<li><p>the Lorentz invariance of <span class="math inline">\(\xi^2 + \eta^2+\zeta^2 = c^2 \tau^2\)</span> does not imply the Lorentz invariance of the forms <span class="math inline">\(\xi^2 + \eta^2+\zeta^2\)</span> and <span class="math inline">\(c^2 \tau^2\)</span>.</p></li>
+</ul>
+<p>In otherwords, the numerical equality between <span class="math inline">\(\xi^2 + \eta^2+\zeta^2\)</span> and <span class="math inline">\(c^2\tau^2\)</span> is always maintained, but the actual values attained by the expressions is <em>not</em> Lorentz invariant.</p>
+<p>We are repeating ourselves because this is somewhat subtle point which is easily overlooked.</p>
+</section>
+<section id="elementary-computations-in-bfr11" class="level1">
+<h1><em>Elementary Computations in</em> <span class="math inline">\({\bf{R}}^{1,1}\)</span></h1>
+<p>To illustrate the above ideas, it’s convenient to examine some elementary computations in two variables. Thus we consider <span class="math inline">\({\bf{R}^2}\)</span> with <span class="math inline">\((x,t)\)</span> and <span class="math inline">\((\xi, \tau)\)</span> coordinates.</p>
+<p>For numerical convenience we set <span class="math inline">\(c:=1\)</span>.</p>
+<p>Thus <span class="math inline">\(h=x^2-t^2\)</span> is a quadratic form on <span class="math inline">\({\bf{R}}^2\)</span> invariant with respect to the one-dimensional Lorentz group <span class="math inline">\(G=SO(1,1)_0\)</span> generated by <span class="math display">\[a_\theta:=\begin{pmatrix} \cosh \theta &amp; \sinh \theta \\
+\sinh \theta &amp; \cosh \theta
+\end{pmatrix}\]</span> for <span class="math inline">\(\theta\in {\bf{R}}\)</span>.</p>
+<p>In two dimensions the null cone <span class="math display">\[N=\{x^2-t^2=0\}\]</span> projectivizes to a <span class="math inline">\(0\)</span>-dimensional sphere consisting of two projective points represented by the affine lines <span class="math inline">\(x-t=0\)</span> and <span class="math inline">\(x+t=0\)</span>.</p>
+<p>The round <span class="math inline">\(0\)</span>-dimensional sphere <span class="math inline">\(\{x^2=1\}\)</span> consists of two vectors in the null cone, namely <span class="math display">\[\begin{pmatrix} 1 \\ 1\end{pmatrix}, ~~~\begin{pmatrix} -1 \\ 1\end{pmatrix}.\]</span></p>
+<p>Left translating these vectors by <span class="math inline">\(a_\theta\)</span> we find the translates <span class="math display">\[\begin{pmatrix} \xi \\ \tau \end{pmatrix}=\begin{pmatrix} \cosh \theta+\sinh \theta \\ \cosh \theta+\sinh \theta \end{pmatrix}~~\text{and} \begin{pmatrix} -\cosh \theta+\sinh \theta \\ \cosh \theta-\sinh \theta \end{pmatrix}.\]</span></p>
+<p>But evidently <span class="math display">\[\xi^2 \neq x^2=1^2=1\]</span> and <span class="math display">\[\tau^2 \neq t^2=1\]</span> when <span class="math inline">\(\theta\neq 0\)</span>. Thus the quadratic forms <span class="math inline">\(h_1=x^2\)</span> and <span class="math inline">\(h_2=t^2\)</span> <em>are not</em> <span class="math inline">\(a_\theta\)</span>-invariant. Likewise we find the image of the unit sphere <span class="math inline">\(x^2=1\)</span> does not correspond to a spatial sphere in <span class="math inline">\((\xi, \tau)\)</span> coordinates.</p>
+<p>These trivial computations have the effect of falsifying the alleged Lorentz invariance of spherical lightwaves. However the “slope” of <span class="math inline">\(\begin{pmatrix} 1 \\ 1\end{pmatrix}\)</span> and <span class="math display">\[a_\theta.\begin{pmatrix} 1 \\ 1\end{pmatrix}=\begin{pmatrix} \cosh \theta+\sinh \theta \\ \cosh \theta+\sinh \theta \end{pmatrix}\]</span> is identically equal to <span class="math inline">\(c=1\)</span> in accordance with (A2).</p>
+<p>To further illustrate earlier comments on the nonexistence of canonical parameters on <span class="math inline">\(N\)</span>, consider that for any <span class="math inline">\(C^1\)</span> monotonic function <span class="math display">\[ f: {\bf{R}} \to {\bf{R}} \]</span> we obtain a curve <span class="math display">\[\epsilon(t)=\epsilon_f(t)=\begin{pmatrix} f(t) \\ f(t)   \end{pmatrix}=f(t) \begin{pmatrix} 1 \\ 1 \end{pmatrix}\]</span> for <span class="math inline">\(t\in {\bf{R}}\)</span>.</p>
+<p>Then <span class="math inline">\(\epsilon_f(t)\)</span> is supported on a straight line in <span class="math inline">\(N\)</span>, and the “photon” <span class="math inline">\(\epsilon_f\)</span> can be said <em>to propagate in a straight line with constant speed</em> <span class="math inline">\(c=1\)</span>.</p>
+<p>It might be said that <span class="math inline">\(\epsilon_f\)</span> is <em>not uniform</em> in the parameter <span class="math inline">\(t\)</span>, but we argue that there exists no <em>Lorentz invariant</em> definition of “uniform parameter” on the null cone.</p>
+<p>This is related to our discussion in Part 1 on Levi-Civita’s attempt to derive a geodesic equation for light propagation, i.e.&nbsp;the hypothesis that light travels with zero acceleration. We reasoned that this is an arbitrary additional hypothesis, and not a consequence of the formal assumptions (A12).</p>
+<p>In the remaining Parts 3/4 and 4/4 of this article, we consider the homogeneous wave equations and Lorentz transformations. As we have previously indicated, we find (A12) incompatible with <em>both</em> the wave and particle models of light.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
