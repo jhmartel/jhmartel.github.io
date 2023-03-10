@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JHM">
+<meta name="dcterms.date" content="2023-03-11">
+<meta name="description" content="We review Einstein’s Point Coincidence Argument, and the motivation for GR’s tensor field equation Ric-R g = κ T.">
+
+<title>jhmartel.github.io -</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">jhmartel.github.io</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jhmartel/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/_jhmlabs"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+<p>The purpose of this post is to review the principles behind Einstein’s famous gravitational equation <span class="math display">\[R_{ij}-Rg_{ij}=\kappa T_{ij}.\]</span> Here we recall that <span class="math inline">\((R_{ij})\)</span> is the Ricci quadratic tensor, <span class="math inline">\(R\)</span> is the trace of <span class="math inline">\((R_{ij})\)</span>, <span class="math inline">\(g_{ij}\)</span> is the Lorentzian metric, and <span class="math inline">\(T_{ij}\)</span> is the so-called “energy momentum tensor” and <span class="math inline">\(\kappa\)</span> is an absolute constant.</p>
+<section id="tensors-and-einsteins-point-coincidence-argument" class="level1">
+<h1><em>Tensors and Einstein’s Point-Coincidence Argument</em></h1>
+<p>Einstein’s famous GR field equation is a <em>tensor</em> equation, and we recall the historical motivation behind this choice of equations traditionally known as the <em>point coincidence argument</em> (PCA). The point-coincidence argument appears well known to historians of GR, arising from Einstein’s confused “hole argument” and the material meaning of coordinates. This argument however is the key heuristic by which Einstein arrived at tensor equations as the formal basis for his general relativity theory. The following quotation is Einstein’s and is taken from <span class="citation" data-cites="norton1993general">(<a href="#ref-norton1993general" role="doc-biblioref">Norton 1993</a>)</span>:</p>
+<ul>
+<li><p><em>“The general laws of nature are to be expressed by equations which hold good for all systems of coordinates, that is, are covariant with respect to any substitutions whatever (generally covariant). It is clear that a physical theory which satisfies this postulate will also be suitable for the general postulate of relativity. For the sum of all substitutions in any case includes those which correspond to all relative motions of three-dimensional systems of coordinates. <span class="math inline">\(\ldots\)</span></em></p>
+<p><em>That this requirement of general covariance, which takes away from space and time the last remnant of physical objectivity, is a natural one, will be seen from the following reflexion. All our space-time verifications invariably amount to a determination of space-time coincidences. If, for example, events consisted merely in the motion of material points, then ultimately nothing would be observable but the meetings of two or more of these points. Moreover, the results of our measurings are nothing but verifications of such meetings of the material points of our measuring instruments with other material points, coincidences between the hands of a clock and points on the clock dial, and observed point-events happening at the same place and the same time.</em></p>
+<p><em>The introduction of a system of reference serves no other purpose than to facilitate the description of the totality of such coincidences. We allot to the universe four space-time variables <span class="math inline">\(x_0, x_1, x_2, x_3\)</span> in such a way that for every point-event there is a corresponding system of values of the variables <span class="math inline">\(x_0, x_1, x_2, x_3\)</span>. To two coincident point-events there corresponds one system of values of the variables <span class="math inline">\(x_0, x_1, x_2, x_3\)</span>, i.e.&nbsp;coincidence is characterized by the identity of the coordinates. If, in the place of the variables <span class="math inline">\(x_0, x_1, x_2, x_3\)</span> we introduce functions of them, <span class="math inline">\(x'_0, x'_1, x'_2, x'_3\)</span>, as a new system of coordinates, so that the system of values are made to correspond to one another without ambiguity, the equality of all four coordinates in the new system will also serve as an expression for the space-time coincidence of the two point-events. As all our physical experience can be ultimately reduced to such coincidences, there is no immediate reason for preferring certain systems of coordinates to others, that is to say, we arrive at the requirement of general covariance.”</em></p></li>
+</ul>
+</section>
+<section id="covariant-tensors-and-invariant-divisors" class="level1">
+<h1><em>Covariant Tensors and Invariant Divisors</em></h1>
+<p>Einstein was much influenced by the absolute differential tensor calculus of Ricci, Grossmann, Levi-Civita, and especially the fundamental local property of tensors that <span class="citation" data-cites="levi">(<a href="#ref-levi" role="doc-biblioref">Levi-Civita, n.d., sec. IV.12</a>)</span>:</p>
+<ul>
+<li><em>[T]he vanishing of a tensor (i.e.&nbsp;all its elements) is an invariant property, and which holds in general for any change of variables of any kind. In other words, if the elements of a generic tensor <span class="math inline">\(A_{i_1, i_2, \ldots}^{j_1, j_2, \ldots}\)</span> referred to a particular system of variables are zero, we may be sure that the equations <span class="math inline">\(A_{i_1, i_2, \ldots}^{j_1, j_2, \ldots}=0\)</span> continue to hold however the variables may be changed.</em></li>
+</ul>
+<p>Therefore the zero and poles of a tensor (called “divisors” by algebraic geometers) are topologically invariant subsets of the manifold. However, the components and coefficients of a tensor are <em>not</em> invariant. According to Einstein’s PCA, we find <em>covariant and contravariant tensors are the only valid objects of the GR theory</em>.</p>
+<p>The canonical tensor element in Einstein’s GR is the Lorentz quadratic form <span class="math inline">\(g=ds^2\)</span>. The volume form <span class="math inline">\(det(g_{ij})^{1/n}\)</span> is another important tensor canonically associated with <span class="math inline">\(g\)</span>. According to the fundamental property of tensors, the zeros and poles of <span class="math inline">\(g\)</span>, <span class="math inline">\(det(g_{ij})^{1/n}\)</span> are also invariant.</p>
+</section>
+<section id="vacuum-equation" class="level1">
+<h1><em>Vacuum Equation</em></h1>
+<p>Now we consider Einstein’s field equations. The vacuum equation (absence of matter) has the form <span class="math display">\[Ric  -R g =0,\]</span> where <span class="math inline">\(Ric=(R_{ij})\)</span> is the Ricci tensor, <span class="math inline">\(R\)</span> is the trace of Ricci called scalar curvature, and <span class="math inline">\(g=(g_{ij})\)</span> is the Lorentzian metric tensor. All the quantities <span class="math inline">\(Ric\)</span>, <span class="math inline">\(R\)</span>, <span class="math inline">\(g\)</span>, and <span class="math inline">\(Ric-Rg\)</span> are tensorial. Therefore their values are <em>not</em> invariantly defined, but again their zeros and poles <em>are</em> invariantly defined. Notice that <span class="math inline">\(g=(g_{ij})\)</span> is the unknown in the field equations, while <span class="math inline">\(Ric\)</span> and <span class="math inline">\(R\)</span> depend nonlinearly on <span class="math inline">\(g\)</span>.</p>
+<p><span class="math inline">\(\newcommand{\del}{\partial}\)</span></p>
+<p>We pause to make trivial but important observation. The classical expression for particle velocities, namely <span class="math inline">\(\frac{\del x_1}{\del x_0}\)</span> are not tensorial, and therefore not independant of the system of coordinates. Here <span class="math inline">\(x_0\)</span> is assummed to correspond to “time”. But neither is the contravariant derivative <span class="math inline">\(\nabla_{\frac{\del}{\del x_0}} \frac{\del}{\del x_1}\)</span> an object in the theory. The contravariant derivative returns a tensor, and therefore only it’s zeros and poles constitute a coordinate-independant quantity in the theory. This makes the discussion of “velocities” always dependant on the chosen coordinate system, and only vanishing velocities <span class="math inline">\(\nabla=0\)</span> (or diverging to <span class="math inline">\(+\infty\)</span>) are invariantly defined. Likewise if <span class="math inline">\(\gamma\)</span> is a smooth curve in <span class="math inline">\(X\)</span>, then the covariant “acceleration” evaluated as <span class="math inline">\(\nabla_{\gamma'} \gamma'\)</span> is again tensorial, and therefore only its divisors are invariant. For example in special relativity, we have the Lorentzian line element <span class="math inline">\(ds\)</span> which is a Lorentz invariant tensor. Therefore <span class="math inline">\(\delta \int ds=0\)</span> is invariant equation for timelike curves <span class="math inline">\(ds^2&gt;0\)</span>.</p>
+</section>
+<section id="matter-equations-is-the-stress-energy-tensor-defined" class="level1">
+<h1><em>Matter Equations: Is the Stress-Energy Tensor Defined?</em></h1>
+<p>What about Einstein’s field equations in the presence of matter? In the presence of matter, Einstein’s field equations has a nontrivial right hand term, namely <span class="math display">\[Ric - Rg= \kappa T_{ij}\]</span> where <span class="math inline">\(\kappa\)</span> is said to be a constant of proportionality and <span class="math inline">\(T=(T_{ij})\)</span> is the stress-energy tensor. The field equations in the presence of matter raise two objections.</p>
+<ol type="1">
+<li><p>The constant of proportionality <span class="math inline">\(\kappa\)</span> is arguably not a proper object of tensor calculus, unless it is absolutely constant. But if constant, then it has no meaning since it’s absorbed into the tensor vector <span class="math inline">\("\kappa T = T"\)</span>. Typically the purpose of <span class="math inline">\(\kappa\)</span> is to “dimensionally” align the physical units of the left- and right-hand sides of the field equation. But this raises the question, not without it’s own controversy, of <em>“What are the units of the left-hand terms <span class="math inline">\(Ric\)</span> and <span class="math inline">\(Rg\)</span>?”</em></p></li>
+<li><p>Is <span class="math inline">\(T=(T_{ij})\)</span> properly defined as a <em>tensor object</em>? By convention <span class="math inline">\(T\)</span> is assumed to represent all the matter-energy in the spacetime. And in special cases, Einstein establishes formulas for <span class="math inline">\(T\)</span>. Yet do all these examples determine <span class="math inline">\(T\)</span> as a <em>tensor</em>?</p></li>
+</ol>
+<p>Regarding our second objection, we agree that Einstein provided expressions for the stress-energy in certain coordinate systems for various systems. But how does one formula for the tensor in a coordinate system provide the definition of a <em>tensor</em> for all coordinate systems?</p>
+<p>The issues are more subtle than they might first appear…</p>
+</section>
+<section id="units-ds2-and-proper-time" class="level1">
+<h1><em>Units</em>, <span class="math inline">\(ds^2\)</span>, <em>and Proper Time</em></h1>
+<p>The previous section introduced the field equations, tensors, PCA, and raised some questions about physical units in the theory. Here we continue the discussion about <em>units</em>, but now focussing on the quadratic line element <span class="math display">\[g=ds^2=-c^2dt^2+dx^2+dy^2+dz^2.\]</span></p>
+<p>When a Riemannian geometer starts working with Lorentz metrics, they naturally want to use the line element <span class="math inline">\(ds':=\sqrt{-ds^2}\)</span> on timelike curves. They are inclined therefore to refer to integrals <span class="math inline">\(\int_\gamma ds'\)</span> as “lengths” along the curves <span class="math inline">\(\gamma\)</span>. However we warn the reader against taking this interpretation literally, for the reverse triangle inequality really proves the “Lorentz distance” is not a Riemannian distance at all! Related to the Lorentz (non-)distance is the so-called “proper time” function on timelike curves, usually represented by a definition type formula <span class="math inline">\("ds'=cd\tau"\)</span>. However this “definition” of <span class="math inline">\(d\tau\)</span> is no definition at all.</p>
+<p>We make a comment on Pythagorean theorem. In euclidean geometry, the squareroot of a sum of orthogonal squares represents a length because of Pythagorean identity. There are right angled triangles to be constructed whose hypotenuses are the lengths in question. However the squareroot of a sum of is not readily identified as a length to the Pythagorean, even if one assumes the squares are orthogonal. There are no right angled triangles to draw except on the null cone <span class="math inline">\(ds^2=0\)</span> where the Pythagorean reads <span class="math display">\[c^2 dt^2=dx^2+dy^2+dz^2,\]</span> as the hypothesis on the velocity of <span class="math inline">\(c\)</span> in vacuum. Therefore Pythagoreans can reason on the null cone, but nowhere else in the Minkowski spacetime, not even inside the null cone along the timelike curves.</p>
+<p>Yet we acknowledge the temptation of interpreting <span class="math inline">\(\sqrt{-ds^2}\)</span> as a length element along timelike curves. We ask these seemingly pedantic question to clarify whether the supposed identity <span class="math display">\[ds':=\sqrt{-ds^2}=c d\tau\]</span> provides a definition of the so-called “proper time” <span class="math inline">\(d\tau\)</span>, and does <span class="math inline">\(ds'\)</span> really have units of <span class="math inline">\([length]\)</span>? Does <span class="math inline">\(d\tau\)</span> have units of <span class="math inline">\([time]\)</span>?}</p>
+<p>Let us include a frequent argument in the general relativity, alleging to establish the identity <span class="math inline">\(ds'=c d\tau\)</span>, where <span class="math inline">\(d\tau\)</span> represents the so-called “proper time” of an inertial observer as measured by their local “clock”. This interpretation comes from the use of a so-called “instantaneous rest frame”. This requires the observer to find coordinates <span class="math inline">\((\tau, \xi, \eta, \zeta)\)</span> where <span class="math inline">\(\tau\)</span> represents “time” and all the partial derivatives vanish</p>
+<p><span class="math display">\[\frac{\del \xi}{\del \tau}=\frac{\del \eta}{\del \tau}=\frac{\del \zeta}{\del \tau}=0.\]</span></p>
+<p>In this particular coordinate system one finds <span class="math inline">\(ds^2=-c^2d\tau^2\)</span> and <span class="math inline">\(ds'=\sqrt{-ds^2}=c d\tau\)</span>.</p>
+<p>But can we really conclude that <span class="math inline">\(ds'\)</span> has units of <span class="math inline">\([length]\)</span> as a general rule, or equivalently that <span class="math inline">\(ds'/c\)</span> has units of <span class="math inline">\([time]\)</span> based on a computation in one coordinate system? Observe that the system of equations is <em>not</em> tensorial since the partial derivatives <span class="math inline">\(\del \xi/ \del \tau\)</span> are <em>not</em> covariant.</p>
+</section>
+<section id="curiels-arguments" class="level1">
+<h1><em>Curiel’s Arguments</em></h1>
+<p>Our discussions are much influenced by the writings of J.D. Norton and E. Curiel. In the work [ref] Curiel makes the argument that [ref]</p>
+</section>
+<section id="carets-and-non-tensors" class="level1">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Carets and Non Tensors</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-levi" class="csl-entry" role="doc-biblioentry">
+Levi-Civita, Tullio. n.d. <em>The Absolute Differential Calculus (Calculus of Tensors)</em>.
+</div>
+<div id="ref-norton1993general" class="csl-entry" role="doc-biblioentry">
+Norton, John D. 1993. <span>“General Covariance and the Foundations of General Relativity: Eight Decades of Dispute.”</span> <em>Reports on Progress in Physics</em> 56 (7): 791.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
