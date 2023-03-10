@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JHM">
+<meta name="dcterms.date" content="2022-03-10">
+<meta name="description" content="We continue our discussion of Dold-Thom’s Theorem (DT). In this post we look to develop the connections between DT and optimal transportation (OT).">
+
+<title>jhmartel.github.io - (Under Construction) Dold Thom Theorem. Configuration Spaces and Homology. (2/3)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">jhmartel.github.io</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jhmartel/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/_jhmlabs"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">(Under Construction) Dold Thom Theorem. Configuration Spaces and Homology. (2/3)</h1>
+                  <div>
+        <div class="description">
+          We continue our discussion of Dold-Thom’s Theorem (DT). In this post we look to develop the connections between DT and optimal transportation (OT).
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Dold Thom</div>
+                <div class="quarto-category">homology</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>JHM </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 10, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p><span class="math inline">\(\newcommand{\sub}{\partial^c \psi(y)}\)</span> <span class="math inline">\(\newcommand{\del}{\partial}\)</span></p>
+<section id="how-to-represent-homology-cycles-dold-thom-and-steenrods-problem" class="level1">
+<h1><em>How to Represent Homology Cycles: Dold-Thom and Steenrod’s Problem</em></h1>
+<p>In post [ref] we introduced the Dold-Thom group <span class="math inline">\(A(X)\)</span> as the kernel of the augmentation map <span class="math inline">\(\epsilon\)</span>, and the relative Dold-Thom theorem.</p>
+<p>But what are the applications and corollaries of DT? We consider DT as providing a constructive method for building homology cycles, e.g.&nbsp;Steenrod’s problem [ref].</p>
+<p>Let <span class="math inline">\((X,d,\sigma)\)</span> be a source space, say an oriented complete compact Riemannian manifold with <span class="math inline">\(\sigma=vol_X\)</span>. The topologist faces several questions:</p>
+<ul>
+<li><p><em>How to generate nontrivial homological <span class="math inline">\(k\)</span> cycles in <span class="math inline">\(X\)</span>?</em></p></li>
+<li><p><em>How to generate nontrivial <span class="math inline">\(k\)</span> dimensional sweepouts of <span class="math inline">\(X\)</span>?</em></p></li>
+</ul>
+</section>
+<section id="classical-approach-steenrod-eilenberg-maclane-thom" class="level1">
+<h1><em>Classical Approach: Steenrod, Eilenberg, Maclane, Thom,…</em></h1>
+<p>The best treatment in the literature is found in R. Kirby’s lecture notes on Four Dimensional Topology, and this method is similar to R. Thom’s treatment in his paper [ref]. Briefly the idea is this:</p>
+<p>If <span class="math inline">\(G\)</span> is an abelian group, then Eilenberg-Maclane defined <span class="math inline">\(K(G,n)\)</span> to be those topological spaces satisfying <span class="math inline">\(\pi_*(K(G,n), pt)=G\)</span> for <span class="math inline">\(*=n\)</span> and <span class="math inline">\(\pi_*(K(G,n), pt)=0\)</span> otherwise. Moreover if <span class="math inline">\(X\)</span> is any topological space, then there exists natural equivalence between the set of homotopy classes <span class="math inline">\([X,K(G,n)]\)</span> of continuous maps <span class="math inline">\(f:X \to K(G,n)\)</span> and the singular cohomology groups <span class="math inline">\(H^n(X;G)\)</span>. The Hurewicz theorems [ref] imply the singular cohomology of <span class="math inline">\(K(G,n)\)</span> is concentrated in dimension <span class="math inline">\(n\)</span> with a single spherical generator <span class="math inline">\(\iota\)</span>. If <span class="math inline">\(f: X\to K(G,n)\)</span> is a smooth and transverse curve, and homotopically nontrivial, then <span class="math inline">\(f*(\iota)\neq 0\)</span> is a nontrivial cohomology class in <span class="math inline">\(H^n(X)\)</span>. Moreover if <span class="math inline">\(y\in K(G,n)\)</span> is a regular value of <span class="math inline">\(f\)</span>, then <span class="math inline">\(f^{-1}(y)\)</span> represents a homologically nontrivial <span class="math inline">\((N-n)\)</span>-cycle Poincare dual to <span class="math inline">\(f^*(\iota)\)</span>, where <span class="math inline">\(N=\dim(X)\)</span>. Thus we can use the points <span class="math inline">\(y\in Y\approx K(G,n)\)</span> to sweepout cycles on <span class="math inline">\(X\)</span> via the fibres <span class="math inline">\(f^{-1}(y) \hookleftarrow X\)</span>.</p>
+<p>In practice, the transversality hypothesis is generic but also very difficult to obtain. Geometry is not generic in the smooth category. Moreover the models <span class="math inline">\(K(G,n)\)</span> are not generally well known (although compare our earlier remarks). Thom [ref] reasoned that only the lower skeleton of any <span class="math inline">\(K(G,n)\)</span> model is necessary, depending on the cohomological dimension of <span class="math inline">\(X\)</span>.</p>
+<p>For example, constructing <span class="math inline">\(1\)</span>-cycles on a two dimensional surface <span class="math inline">\(S\)</span> requires constructing nontrivial smooth maps <span class="math inline">\(f:S \to A_0(S^1)\)</span>. Evenmore as we vary the fibres <span class="math inline">\(f^{-1}(y)\)</span>, over all the values <span class="math inline">\(y\in image(f)\)</span>, we get a sweepout of <span class="math inline">\(S\)</span> into <em>disjoint</em> cycles, with possibly some blowup at the critical points in <span class="math inline">\(S\)</span>.</p>
+<p><em>Our goal is to generate smooth maps from the regularity theory of optimal transport.</em></p>
+</section>
+<section id="dold-thom-and-optimal-transport" class="level1">
+<h1><em>Dold-Thom and Optimal Transport</em></h1>
+<p>In <span class="citation" data-cites="martel">(<a href="#ref-martel" role="doc-biblioref">Martel</a>)</span> and <span class="citation" data-cites="martel2022">(<a href="#ref-martel2022" role="doc-biblioref">Martel 2022</a>)</span> we introduced a method for applying optimal transportation to algebraic topology, where the main idea was that singularities of optimal transports are well-defined <em>geometric subvarieties</em> whose geometry is described by the differential geometry of the cost function <span class="math inline">\(c\)</span>. Formally given a source <span class="math inline">\((X, \sigma)\)</span>, we introduce target spaces <span class="math inline">\((Y, \tau)\)</span> and costs <span class="math inline">\(c: X\times Y \to \bf{R}\)</span>.</p>
+<p>When the cost <span class="math inline">\(c\)</span> satisfies certain assumptions [detailed below], we find optimal transport solutions and the solutions to Kantorovich’s dual program are unique and have sufficiently regular topology. In the dual program, the key definition is the <span class="math inline">\(c\)</span>-subdifferential <span class="math inline">\(\sub \hookrightarrow X\)</span>.</p>
+<p>Using the <span class="math inline">\(c\)</span>-subdifferential we define <em>Kantorovich’s contravariant functor</em> <span class="math display">\[Z: 2^Y \to 2^X\]</span> by <span class="math display">\[Z(Y_I)=\cap_{y\in Y_I}\sub\]</span> for every closed subset <span class="math inline">\(Y_I \hookrightarrow Y\)</span>. We view <span class="math inline">\(Z\)</span> as defining a <span class="math inline">\((Y, \tau)\)</span>-parameter family of cells <span class="math inline">\(\sub\)</span> in <span class="math inline">\(X\)</span>. The cells need not be disjoint.</p>
+<p>There are standard assumptions on the cost <span class="math inline">\(c\)</span> such that almost every cell <span class="math inline">\(Z(y)=\sub\)</span> is an <span class="math inline">\((n-k)\)</span>-dimensional submanifold of <span class="math inline">\(X\)</span>, and otherwise singular subvarieties. Our main idea is that every pair of target <span class="math inline">\((Y,\tau)\)</span> and cost <span class="math inline">\(c\)</span> determines a unique <span class="math inline">\(Y\)</span>-parameter family of subsets <span class="math inline">\(Z(y)=\sub\)</span> of <span class="math inline">\(X\)</span>.</p>
+<p>These definitions lead to the following problem:</p>
+<ul>
+<li><p>(Problem 1) Find general conditions on <span class="math inline">\(Y, \tau, c\)</span> such that <span class="math inline">\(c\)</span>-optimal transports <span class="math inline">\(\pi\)</span> generate continuous maps <span class="math inline">\(f=f_\pi: X \to A_0(Y)\)</span>, and such that <span class="math inline">\(c\)</span>-optimal transports <span class="math inline">\(\pi\)</span> general nontrivial sweepouts of <span class="math inline">\(X\)</span>.</p></li>
+<li><p>(Problem 2) Find general conditions such that <span class="math inline">\(y\mapsto Z(y)\)</span> is continuous in the Almgren flat-chain topology.</p></li>
+</ul>
+<p>In otherwords <span class="math inline">\(Z(y)=\sub\)</span> defines a <span class="math inline">\(Y\)</span>-parameter family of subvarieties of <span class="math inline">\(X\)</span>. Regularity of the optimal transport corresponding to <span class="math inline">\(Z=\sub\)</span> controls the regularity of the sweepout. Problem 2 appears to be satisfied by the basic cost assumptions (A0)–(A4) in the notation used below.</p>
+<p>For the purposes of generating sweepouts, the geometric homology spheres <span class="math inline">\(S^d\)</span> form a natural class of target spaces. But given a source <span class="math inline">\(X\)</span>, can we readily generate costs <span class="math inline">\(c: X\times S^d \to \bf{R}\)</span>? Already the case of constructing interesting costs <span class="math inline">\(S \times S^1 \to \bf{R}\)</span>, or better yet <span class="math inline">\(S \times A_0(S^1) \to \bf{R}\)</span>, appears nontrivial problem.</p>
+<p><span class="math inline">\(\newcommand{\del}{\partial}\)</span></p>
+</section>
+<section id="regularity-and-sweepouts" class="level1">
+<h1><em>Regularity and Sweepouts</em></h1>
+<p>The regularity of optimal semicouplings is studied in [McCann-Pass] and [McCann-Pass-Chiappori]. We do not enter into the details in this post. We look to construct interesting topological sweepouts of <span class="math inline">\(X\)</span>. The idea is that optimal semicouplings from <span class="math inline">\(X\)</span> to <span class="math inline">\(k\)</span>-dimensional target spaces <span class="math inline">\((Y, \tau)\)</span> with <span class="math inline">\(k &lt; &lt; \dim(X)\)</span> provide interesting sweepouts if the cost <span class="math inline">\(c: X \times Y \to \bf{R}\)</span> satisfies various conditions, to be labelled (A0) – (A3) below.</p>
+<p>The key assumptions require the cost <span class="math inline">\(c\)</span> to be <span class="math inline">\(C^2\)</span> on <span class="math inline">\(X\times Y\)</span>, proper, and satisfying a (Twist) condition. The assumptions imply every <span class="math inline">\(c\)</span>-concave function <span class="math inline">\(\psi: Y\to {\bf{R}}\cup\{+\infty\}\)</span> is Lipschitz and semiconcave, and differentiable <span class="math inline">\(\tau\)</span>-almost everywhere on <span class="math inline">\(Y\)</span>. Therefore <span class="math inline">\(dom(\nabla_x \phi)\)</span> is a full measure subset of the activated domain <span class="math inline">\(A \hookrightarrow\)</span>. The active domain <span class="math inline">\(A\)</span> is naturally defined as <span class="math inline">\(dom(\phi)\)</span> and with a closure equal to <span class="math inline">\(dom(D\phi)\)</span>. Furthermore, <span class="math inline">\(D^2\psi\)</span> is defined <span class="math inline">\(\tau\)</span>-almost everywhere on <span class="math inline">\(dom(D\psi)\)</span>.</p>
+<p>If <span class="math inline">\(\psi\)</span> is a <span class="math inline">\(c\)</span>-concave function on the target <span class="math inline">\(Y\)</span> which solves the dual Kantorovich program for the <span class="math inline">\(c\)</span>-optimal semicoupling from source to target, then we obtain the Kantorovich functor <span class="math inline">\(Z: 2^Y \to 2^X\)</span> as defined previously. For our study of sweepouts, it’s convenient to study semicoupling programs where <span class="math inline">\(Z\)</span> is supported on the singletons <span class="math inline">\(Y \hookrightarrow 2^Y\)</span>. This allows us to represent <span class="math inline">\(Z\)</span> as a function <span class="math inline">\(Z: Y \to 2^X\)</span>, with <span class="math inline">\(y\mapsto Z(y)=\del^c \psi(y)\)</span>. Thus our study of sweepouts is complementary to our study of singularities. The regularity of the above map <span class="math inline">\(y\mapsto Z(y)\)</span> is an important question. Under mild assumptions (given below) we easily find <span class="math inline">\(Z(y)\)</span> are <em>closed</em> subsets of the source for every <span class="math inline">\(y\in Y\)</span>. Moreover an application of Sard’s theorem implies <span class="math inline">\(Z(y)\)</span> are smooth submanifolds for almost every <span class="math inline">\(y\in Y\)</span>. For application to sweepouts, we do not expect all <span class="math inline">\(Z(y)\)</span> to be smooth, for indeed there <em>must</em> exist <em>some</em> singular values. However we do seek sweepouts where <span class="math inline">\(Z(y)\)</span> varies continuously with respect to the <span class="math inline">\(y\)</span> parameter. In the language of sweepouts [Guth], we find it necessary to establish the following elementary result.</p>
+<ul>
+<li>(Almgren Continuity) If <span class="math inline">\(y_0, y_1\)</span> are sufficiently close in <span class="math inline">\(Y\)</span>, then the <span class="math inline">\((n-k)\)</span>-cycles <span class="math inline">\(Z(y_0)\)</span> and <span class="math inline">\(Z(y_1)\)</span> bound a Lipschitz <span class="math inline">\((n-k+1)\)</span>-chain of small area, i.e.&nbsp;there exists a chain <span class="math inline">\(C\)</span> such that <span class="math inline">\(\del C = Z(y_1)-Z(y_0)\)</span> and <span class="math inline">\(C\)</span> has arbitrarily small area.</li>
+</ul>
+<p>We assume that <span class="math inline">\(Z\)</span> is Almgren continuous when the cost satisfies assumptions (A0123). We reason that the functions are proper Lipschitz and the gradients, and therefore the unit normal areas are bounded from above, implying that the bounding surface is not <em>too</em> large. [Insert details]</p>
+</section>
+<section id="technical-assumptions-on-the-cost" class="level1">
+<h1><em>Technical Assumptions on the Cost</em></h1>
+<p>To begin the study of optimal transport from source <span class="math inline">\((X,\sigma)\)</span> to targets <span class="math inline">\((Y,\tau)\)</span>, we require a choice of cost function <span class="math inline">\(c\)</span> which satisfies some geometric assumptions.</p>
+<ul>
+<li><p>[(A0)] The cost <span class="math inline">\(c\)</span> is twice-continuously differentiable throughout its domain, jointly in the source and target variables <span class="math inline">\((x,y)\)</span>, and nonnegative, and proper. Thus <span class="math inline">\(c(x,y)\geq 0\)</span> and all proper closed sublevels are compact.</p></li>
+<li><p>[(A1)] For every <span class="math inline">\(y\in Y\)</span>, we assume <span class="math inline">\(x\mapsto c(x,y)\)</span> is nonconstant on every open subset of <span class="math inline">\(X\)</span>.</p></li>
+<li><p>[(A2)] The cost satisfies (Twist) condition with respect to the source variable throughout <span class="math inline">\(dom(c)\)</span>: for every <span class="math inline">\(x'\in X\)</span> the rule <span class="math inline">\(y\mapsto \nabla_x c(x',y)\)</span> defines an injective mapping <span class="math inline">\(dom(c_{x'}) \to T_{x'} X\)</span>.</p></li>
+</ul>
+<p>It is extremely useful to allow the cost <span class="math inline">\(c\)</span> to have poles, for example <span class="math inline">\(c(x,y)=+\infty\)</span> whenever <span class="math inline">\(x\in Y\subset X\)</span>.</p>
+<p>The (Twist) condition (A2) is properly understood through Kantorovich duality, as we will discuss below. It essentially guarantees the uniqueness a.e. of <span class="math inline">\(c\)</span>-optimal transports. It moreover gives important equation describing the fibres of the optimal transport mapping.</p>
+<p>Now suppose we have a source <span class="math inline">\(\sigma\)</span>, target <span class="math inline">\(\tau\)</span>, and cost <span class="math inline">\(c\)</span> satisfying the assumptions (A012). If the <span class="math inline">\(c\)</span>-optimal transport is regular and continuously single-valued, then the functor <span class="math inline">\(Z\)</span> reduces to a map <span class="math inline">\(Y\to 2^X\)</span> defined by <span class="math inline">\(Z(y)=\sub\)</span>. As we vary <span class="math inline">\(y\)</span> over the target <span class="math inline">\((Y, \tau)\)</span> we obtain <span class="math inline">\(Y\)</span>-parameter family of closed subsets <span class="math inline">\(Z(y)\)</span> on <span class="math inline">\(X\)</span>. Now we need assumptions on the cost to guarantee the cells <span class="math inline">\(Z(y)\)</span> are closed <span class="math inline">\((n-k)\)</span>-dimensional Lipschitz subvarieties of <span class="math inline">\(X\)</span>, and even smooth <span class="math inline">\((n-k)\)</span>-submanifolds for a.e. every <span class="math inline">\(y\in Y\)</span>. The Assumptions (A012) do not imply the cells <span class="math inline">\(Z(y)\)</span> have empty boundary. This requires a further hypothesis depending on the <span class="math inline">\(c\)</span>-convex potential, namely:</p>
+<ul>
+<li>[(A3)] If <span class="math inline">\(\phi\)</span> is a <span class="math inline">\(c\)</span>-convex potential on <span class="math inline">\(X\)</span>, then for every <span class="math inline">\(y\in Y\)</span>, we require the gradient <span class="math inline">\(\nabla_x (c(x,y)+\phi(x))\)</span> be uniformly bounded away from zero for all <span class="math inline">\(x\in \sub\)</span>.</li>
+</ul>
+<p>Again these are technical conditions which we do not expect the reader to appreciate at first glance. However they arise naturally from the analysis. For example, (A3) is simply a strong form of Clarke’s nonsmooth implicit function theorem.</p>
+<p>So where do we go from here?</p>
+<p>To summarize:</p>
+<ol type="1">
+<li><p>We want to construct sweepouts from optimal transport, and specifically from optimal semicouplings. Given a source <span class="math inline">\((X, \sigma)\)</span>, we require targets <span class="math inline">\((Y, \tau)\)</span> and costs <span class="math inline">\(c\)</span> on <span class="math inline">\(X\times Y\)</span> under various conditions. Generally <span class="math inline">\(\dim(Y) &lt;&lt; \dim(X)\)</span>. Here the assumptions (A0)–(A2) are relevant.</p></li>
+<li><p>Regularity of the sweepouts is attained via regularity of the <span class="math inline">\(c\)</span>-subdifferentials <span class="math inline">\(Z(y)=\sub\)</span> where <span class="math inline">\(\psi=\psi^{cc}\)</span> is the <span class="math inline">\(c\)</span>-concave potential solving Kantorovich’s dual max program. Here the assumption (A3) enters, which is dependant on the gradient of <span class="math inline">\(\psi\)</span>.</p></li>
+</ol>
+<p>There are various problems which one might consider.</p>
+</section>
+<section id="preliminary-remarks-on-gromov-guth-width-inequality" class="level1">
+<h1><em>Preliminary Remarks on Gromov Guth Width Inequality</em></h1>
+<p>We conclude this post with a question relating to Gromov-Guth’s width inequalities, and a certain line of enquiry which we could not complete. The previous section introduced the possibility of constructing topological sweepouts via solutions of OT programs. Now we study the possibility of representing minimal sweepouts by such solutions motivated by Guth-Gromov’s width inequality <span class="citation" data-cites="guth2007width">(<a href="#ref-guth2007width" role="doc-biblioref">Guth 2007</a>)</span> and <span class="citation" data-cites="guth2009minimax">(<a href="#ref-guth2009minimax" role="doc-biblioref">Guth 2009</a>)</span>.</p>
+<ul>
+<li><em>If <span class="math inline">\(X=(X,g)\)</span> is a closed <span class="math inline">\(n\)</span>-dimensional Riemannian manifold, then there exists a universal constant <span class="math inline">\(C(n)\)</span> depending only on the dimension such that</em> <span class="math inline">\(width_k(X,g)^{1/k}\leq C(n) vol(X,g)^{1/n}.\)</span></li>
+</ul>
+<p>Recall that the <span class="math inline">\(k\)</span>-width of <span class="math inline">\((X,g)\)</span> is defined by a min-max problem, namely <span class="math display">\[width_k(X,g):=\min_{\{z_t\}} \max_{t} vol_k(z_t),\]</span> where the minimum ranges over all <span class="math inline">\(k\)</span>-parameter sweepouts <span class="math inline">\(z\)</span> of <span class="math inline">\(X\)</span>, and the volume is with respect to the metric <span class="math inline">\(g\)</span>. Estimates on <span class="math inline">\(width_k\)</span> imply every <span class="math inline">\(k\)</span>-sweepout of <span class="math inline">\(X\)</span> contains at least one cycle of large volume.</p>
+<p>Our goal is to interpret <span class="math inline">\(width_k\)</span> in terms of optimal transportation. As we described above, the <span class="math inline">\(c\)</span>-optimal transport from source <span class="math inline">\(X\)</span> to target <span class="math inline">\(Y\)</span> yields an <span class="math inline">\((n-k)\)</span>-dimensional sweepout <span class="math inline">\(y\mapsto Z(y)\)</span>. This assuming the cost <span class="math inline">\(c\)</span> satisfies Assumptions (A0123). A priori it is possible, even likely, that not every <span class="math inline">\((n-k)\)</span>-sweepout <span class="math inline">\(\{z_t\}\)</span> is representable by a <span class="math inline">\(c\)</span>-optimal transport <span class="math inline">\(Z(y)\)</span>. All the same, the optimal transport datum yields much more geometric information on the sweepout. Let <span class="math inline">\(\sigma, \tau, c\)</span> be as above, with <span class="math inline">\(Z(y):=\sub\)</span>. The assumptions (A0123) imply the existence of a measurable map <span class="math inline">\(T: X\to Y\)</span> defined <span class="math inline">\(\sigma\)</span>-a.e. satisfying <span class="math inline">\(T\# \sigma = \tau\)</span>, and such that <span class="math display">\[g(y)=\int_{T^{-1}(y)} \frac{1}{|JT|} f(x) d\mathscr{H}^{n-k}(x) \]</span> for <span class="math inline">\(\tau\)</span>-a.e. <span class="math inline">\(y\in Y\)</span>. Here <span class="math inline">\(|JT|\)</span> denotes Jacobian of <span class="math inline">\(T\)</span> defined by <span class="math inline">\(|JT|=\sqrt{DT . {}^t DT}\)</span>. Recall the Cauchy-Binet formula which expresses <span class="math inline">\(JF\)</span> as the euclidean norm of all <span class="math inline">\(k\times k\)</span>-square subdeterminants of <span class="math inline">\(DF\)</span>.</p>
+<p>To compare <span class="math inline">\(g(y)\)</span> with the volume of the fibres, we write <span class="math display">\[vol_{n-k}[T^{-1}(y)]=vol_{n-k} [\sub]=\int_{T^{-1}(y)} 1 . f(x) d\mathscr{H}^{n-k}(x).\]</span> <em>If</em> the Jacobian <span class="math inline">\(JT\)</span> has constant magnitude along the fibre <span class="math inline">\(T^{-1}(y)\)</span>, then we can immediately compare the density <span class="math inline">\(g(y)=\frac{d\tau}{d\mathscr{H}^{k}}(y)\)</span> with the <span class="math inline">\((n-k)\)</span>-volume of the fibre <span class="math inline">\(T^{-1}(y)\)</span>, namely <span class="math inline">\(g(y) . |JT| = vol[T^{-1}(y)]\)</span>. But in general, we cannot expect <span class="math inline">\(|JT|\)</span> to be constant along fibres. Furthermore the width of the sweepout depends on the fibre of <em>maximal</em> volume. So the question arises: how can we use OT to identify the maximal fibres and their respective volumes? How can we generate the <em>extremal</em> width volume inequalities using OT?</p>
+<ul>
+<li>(Problem:) Under the above hypotheses, determine method such that the volume of the fibres <span class="math inline">\(T^{-1}(y)=\sub\)</span> can be estimated and bounded by <span class="math inline">\(g(y)\)</span>. That is, approximate the <span class="math inline">\((n-k)\)</span>-width of the sweepout <span class="math inline">\(y\mapsto Z(y)\)</span> in terms of the optimal transport data <span class="math inline">\(\sigma, \tau, c, \psi^{cc}=\psi\)</span>.</li>
+</ul>
+</section>
+<section id="conclusion" class="level1">
+<h1><em>Conclusion</em></h1>
+<p>This post has more questions than answers. But we trying to indicate something of how OT applies to geometric topology. Naturally we continue studying the Kantorovich functor <span class="math inline">\(Z\)</span>. Here we seek basic regularity in <span class="math inline">\(Z(y)=\sub\)</span> that we might obtain regular sweepouts.</p>
+<p>-JHM.</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-guth2007width" class="csl-entry" role="doc-biblioentry">
+Guth, Larry. 2007. <span>“The Width-Volume Inequality.”</span> <em>Geometric and Functional Analysis</em> 17 (4): 1139–79.
+</div>
+<div id="ref-guth2009minimax" class="csl-entry" role="doc-biblioentry">
+———. 2009. <span>“Minimax Problems Related to Cup Powers and Steenrod Squares.”</span> <em>Geometric And Functional Analysis</em> 18 (6): 1917–87.
+</div>
+<div id="ref-martel" class="csl-entry" role="doc-biblioentry">
+Martel, J. H. <span>“Applications of Optimal Transport to Algebraic Topology: How to Build Spines from Singularity.”</span> PhD thesis, University of Toronto. <a href="https://github.com/jhmartel/Thesis2019">https://github.com/jhmartel/Thesis2019</a>.
+</div>
+<div id="ref-martel2022" class="csl-entry" role="doc-biblioentry">
+———. 2022. <span>“Topology of Singularities of Optimal Semicouplings.”</span> <em>arXiv Preprint arXiv:2201.12817</em>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

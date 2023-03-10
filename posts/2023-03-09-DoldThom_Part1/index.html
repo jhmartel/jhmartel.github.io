@@ -134,6 +134,7 @@ div.csl-indent {
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">Dold Thom</div>
+                <div class="quarto-category">homology</div>
               </div>
                   </div>
   </div>
@@ -177,11 +178,9 @@ div.csl-indent {
 <li><ol type="1">
 <li>Hard disks (where collisions of point particles is prohibited);</li>
 </ol></li>
-</ul>
-<ol start="2" type="1">
+<li><ol start="2" type="1">
 <li>Hard disks with basepoint (where collisions are prohibited except with an annihilating basepoint);</li>
-</ol>
-<ul>
+</ol></li>
 <li><ol start="3" type="1">
 <li>Water droplets (c.f. Gromov’s category of finite probability spaces [ref], where collisions are additive);</li>
 </ol></li>
@@ -191,8 +190,7 @@ div.csl-indent {
 </ul>
 <p>In example (1) the configuration space forms a monoid without identity, and the disks are not allowed to collide or intersect or join, just as hard disks cannot be joined together.</p>
 <p>In example (2), a basepoint <span class="math inline">\(pt\)</span> can be chosen on <span class="math inline">\(X\)</span> and this basepoint serves as zero element, thus rendering the monoid into an additive topological group. However, as we commented above, a choice of basepoint is noncanonical when <span class="math inline">\(\pi_1\neq 0\)</span>.</p>
-<p>The formal construction of earlier configuration spaces in the literature involves symmetric products with the diagonal removed, e.g.&nbsp;limits <span class="math inline">\(\lim_{N\to +\infty} X^N - \Delta/Symm_N\)</span>. Here <span class="math inline">\(Symm_N\)</span> denotes the symmetric group on <span class="math inline">\(N\)</span> letters.</p>
-<p>Example (3) arises from Gromov’s category of finite probability spaces [ref], where the objects are so-called reductions <span class="math inline">\(f: \mu \to \nu\)</span> between finite probability spaces <span class="math inline">\(\mu, \nu\)</span>.</p>
+<p>The formal construction of earlier configuration spaces in the literature involves symmetric products with the diagonal removed, e.g.&nbsp;limits <span class="math inline">\(\lim_{N\to +\infty} (X^N - \Delta)/Symm_N\)</span>. Here <span class="math inline">\(Symm_N\)</span> denotes the symmetric group on <span class="math inline">\(N\)</span> letters. Example (3) arises from Gromov’s category of finite probability spaces, where the objects are so-called reductions <span class="math inline">\(f: \mu \to \nu\)</span> between finite probability spaces <span class="math inline">\(\mu, \nu\)</span>. See <span class="citation" data-cites="Gromov2 Gromov1">(<a href="#ref-Gromov2" role="doc-biblioref">Gromov 2014</a>, <a href="#ref-Gromov1" role="doc-biblioref">2012</a>)</span>.</p>
 <p>The category of (4) consists of finite electroneutral configurations, where the objects are again reductions <span class="math inline">\(f:\mu \to \nu\)</span>. The proper formalization of (4) into a topological abelian group is provided below in the definition of <span class="math inline">\(A_0(X)\)</span>.</p>
 </section>
 <section id="basepoints" class="level1">
@@ -204,8 +202,8 @@ div.csl-indent {
 <p>We introduce the basic definitions:</p>
 <ul>
 <li><p>(Def. 1) Let <span class="math inline">\(X\)</span> be a topological space and <span class="math inline">\(G\)</span> a topological group, e.g.&nbsp;<span class="math inline">\(G=\bf{Z}\)</span>. Let <span class="math inline">\(G(X)\)</span> be the group of of finitely-supported <span class="math inline">\(G\)</span>-valued distributions on <span class="math inline">\(X\)</span>, i.e.&nbsp;<span class="math display">\[G(X):=\{ \sum n_x .x ~|~\text{only finitely many nonzero~} n_x \in G\}.\]</span></p></li>
-<li><p>Let <span class="math inline">\(\epsilon_X: G(X) \to G\)</span>, $ ~~_X(n_x x)= n_x$ be the canonical augmentation map.</p></li>
-<li><p>Let <span class="math inline">\(A_0(X):=\ker(\epsilon_X)\)</span> be the kernel of the augmentation map.</p></li>
+<li><p>Let <span class="math inline">\(\epsilon_X: G(X) \to G\)</span> defined by <span class="math inline">\(\epsilon_X(\sum n_x x)= \sum n_x\)</span> be the canonical augmentation map.</p></li>
+<li><p>Let <span class="math inline">\(A=A(X)=A_0(X):=\ker(\epsilon_X)\)</span> be the kernel of the augmentation map.</p></li>
 </ul>
 <p>We make some remarks:</p>
 <ul>
@@ -243,7 +241,32 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="dt-circle.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Basic Loop on <span class="math inline">\(S^1\)</span></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Nontrivial <span class="math inline">\(1\)</span>-cycle on <span class="math inline">\(S^1\)</span> represented as a loop in <span class="math inline">\(A(X)\)</span></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="naive-electrical-interpretation-of-relative-dold-thom" class="level1">
+<h1><em>Naive Electrical Interpretation of Relative Dold-Thom</em></h1>
+<p>As a consequence of the Dold-Thom Theorem we have the following lemma:</p>
+<ul>
+<li>(Lemma) If <span class="math inline">\(Y\)</span> is closed subset of <span class="math inline">\(X\)</span>, then we have canonical isomorphism <span class="math display">\[H_*(X,Y) / image(H_*(X)) = \ker(H_{*-1}(Y) \to H_{*-1}(X)),\]</span> where <span class="math inline">\(image(H_*(X))\)</span> is the image of <span class="math inline">\(H_*(X)\)</span> in the relative homology group <span class="math inline">\(H_*(X,Y)\)</span>, and the morphism <span class="math inline">\(H_{*-1}(Y) \to H_{*-1}(X)\)</span> is induced by the inclusion <span class="math inline">\(Y\hookrightarrow X\)</span>.</li>
+</ul>
+<p><em>Proof:</em> Long exactness in DT’s theorem implies <span class="math display">\[image(H_*(X))=\ker(\delta)\]</span> and <span class="math display">\[image(\delta)=\ker(H_{*-1}(Y) \to H_{*-1}(X)).\]</span> But we have canonical isomorphism <span class="math display">\[H_*(X,Y)/\ker(\delta)=image(\delta),\]</span> and the result follows.</p>
+<p>When the source space <span class="math inline">\(X\)</span> is contractible, then we find the isomorphism <span class="math inline">\(H_*(X,Y) \approx H_{*-1}(Y)\)</span> is canonical between homology groups. However the morphism is <em>noncanonical</em> on the singular chain groups. The construction of such a morphism requires a well-defined “filling” operation by which the cycles on <span class="math inline">\(Y\)</span> can be filled to relative cycles on <span class="math inline">\(X\)</span> mod <span class="math inline">\(Y\)</span>.</p>
+<p>Here is our “electrical” interpretation of the above lemma. We see that relative cycles on <span class="math inline">\(X\)</span> (mod <span class="math inline">\(Y\)</span>) are represented either by:</p>
+<ul>
+<li><ol type="i">
+<li>chains <span class="math inline">\(w\)</span> which are already cycles <span class="math inline">\(\del w=0\)</span> on <span class="math inline">\(X\)</span>, or</li>
+</ol></li>
+<li><ol start="2" type="i">
+<li>chains <span class="math inline">\(w\)</span> whose chain boundaries <span class="math inline">\(\del w\)</span> are nontrivial on <span class="math inline">\(Y\)</span> but null homologous in <span class="math inline">\(X\)</span>.</li>
+</ol></li>
+</ul>
+<p>In terms of DT, this says that if <span class="math inline">\(Y\)</span> is a ground reservoir for charges on <span class="math inline">\(X\)</span>, then recombinations of <span class="math inline">\(\emptyset\)</span> will have parts which are recombinations in <span class="math inline">\(X\)</span> separated from <span class="math inline">\(Y\)</span> and other parts representing charges grounding out at <span class="math inline">\(Y\)</span>. For example, any excess charge on a conductive plate will either ground out at the boundary, or recombine and neutralize in the interior. For the relative homology groups, we can identify a component of <span class="math inline">\(A_0(X/Y)\)</span> which is represented by “spontaneous” transports from <span class="math inline">\(\emptyset\)</span> to the reservoir <span class="math inline">\(Y\)</span>. These relative cycles one the one-dimensional disk with boundary are represented in the figure below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="dt-toboundary.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Nontrivial relative 1-cycle on the interval</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -259,6 +282,12 @@ div.csl-indent {
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-DT" class="csl-entry" role="doc-biblioentry">
 Dold, A., and R. Thom. 1958. <span>“Quasifaserungen Und Unendliche Symmetrische Produkte.”</span> <em>Annals of Mathematics</em> 67 (2): 239–81. <a href="http://www.jstor.org/stable/1970005">http://www.jstor.org/stable/1970005</a>.
+</div>
+<div id="ref-Gromov1" class="csl-entry" role="doc-biblioentry">
+Gromov, M. 2012. <span>“In a Search for a Structure, Part 1: On Entropy.”</span> <a href="http://www.ihes.fr/~gromov/PDF/structre-serch-entropy-july5-2012.pdf">http://www.ihes.fr/~gromov/PDF/structre-serch-entropy-july5-2012.pdf</a>.
+</div>
+<div id="ref-Gromov2" class="csl-entry" role="doc-biblioentry">
+———. 2014. <span>“Six Lectures on Probability, Symmetry, Linearity.”</span> <a href="http://www.ihes.fr/~gromov/PDF/probability-huge-Lecture-Nov-2014.pdf">http://www.ihes.fr/~gromov/PDF/probability-huge-Lecture-Nov-2014.pdf</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
