@@ -8,9 +8,9 @@
 
 <meta name="author" content="JHM">
 <meta name="dcterms.date" content="2022-03-09">
-<meta name="description" content="The purpose of this article is to describe the greatest theorem you’ve never heard of, namely Dold-Thom. We will present a general relative version of Dold Thom which leads to the canonical isomorphism between the long exact sequence in homotopy with the long exact sequence in relative homology. This leads to many interesting questions in optimal transport, which this margin is too small to contain.">
+<meta name="description" content="We begin our discussion of the greatest theorem you’ve never heard of, namely Dold-Thom’s Theorem. We will present a general relative version of Dold-Thom which leads for example, to the canonical isomorphism between the long exact sequence in homotopy with the long exact sequence in relative homology. The ideas behind DT lead to many interesting questions in optimal transport, which this margin is too small to contain.">
 
-<title>jhmartel.github.io - Dold Thom Theorem. Configurations Spaces and Homology. (1/3)</title>
+<title>jhmartel.github.io - Dold Thom Theorem. Configuration Spaces and Homology. (1/3)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -107,10 +126,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Dold Thom Theorem. Configurations Spaces and Homology. (1/3)</h1>
+      <h1 class="title">Dold Thom Theorem. Configuration Spaces and Homology. (1/3)</h1>
                   <div>
         <div class="description">
-          The purpose of this article is to describe the greatest theorem you’ve never heard of, namely Dold-Thom. We will present a general relative version of Dold Thom which leads to the canonical isomorphism between the long exact sequence in homotopy with the long exact sequence in relative homology. This leads to many interesting questions in optimal transport, which this margin is too small to contain.
+          We begin our discussion of the greatest theorem you’ve never heard of, namely Dold-Thom’s Theorem. We will present a general relative version of Dold-Thom which leads for example, to the canonical isomorphism between the long exact sequence in homotopy with the long exact sequence in relative homology. The ideas behind DT lead to many interesting questions in optimal transport, which this margin is too small to contain.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -158,9 +177,11 @@ ul.task-list li input[type="checkbox"] {
 <li><ol type="1">
 <li>Hard disks (where collisions of point particles is prohibited);</li>
 </ol></li>
-<li><ol start="2" type="1">
+</ul>
+<ol start="2" type="1">
 <li>Hard disks with basepoint (where collisions are prohibited except with an annihilating basepoint);</li>
-</ol></li>
+</ol>
+<ul>
 <li><ol start="3" type="1">
 <li>Water droplets (c.f. Gromov’s category of finite probability spaces [ref], where collisions are additive);</li>
 </ol></li>
@@ -178,8 +199,8 @@ ul.task-list li input[type="checkbox"] {
 <h1><em>Basepoints</em></h1>
 <p>The difficulty with the standard configuration spaces is their choice of <em>basepoint</em>. The usual models are based on the category of pointed topological spaces, from which we define the pointed fundamental group. But homology and reduced homology are essentially basepoint-free. This article was motivated by the author’s desiring a basepoint-free version of DT’s theorem for which the long exact sequence of relative homology is naturally isomorphic to the long exact sequence in homotopy (see DT theorem below).</p>
 </section>
-<section id="dold-thom" class="level1">
-<h1><em>Dold-Thom</em></h1>
+<section id="dold-thoms-topological-group-ax" class="level1">
+<h1><em>Dold-Thom’s Topological Group <span class="math inline">\(A(X)\)</span></em></h1>
 <p>We introduce the basic definitions:</p>
 <ul>
 <li><p>(Def. 1) Let <span class="math inline">\(X\)</span> be a topological space and <span class="math inline">\(G\)</span> a topological group, e.g.&nbsp;<span class="math inline">\(G=\bf{Z}\)</span>. Let <span class="math inline">\(G(X)\)</span> be the group of of finitely-supported <span class="math inline">\(G\)</span>-valued distributions on <span class="math inline">\(X\)</span>, i.e.&nbsp;<span class="math display">\[G(X):=\{ \sum n_x .x ~|~\text{only finitely many nonzero~} n_x \in G\}.\]</span></p></li>
@@ -196,14 +217,14 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>The essence of DT theorems is to represent homology groups in terms of homotopy groups on configuration spaces. In otherwords to identify the homology functors as homotopy functors. The basic idea of this article is that the vacuum state <span class="math inline">\(\emptyset\)</span> serves as a type of “canonical basepoint on <span class="math inline">\(X\)</span>”, and this enables a natural equivalence between the long exact sequences of relative homology and homotopy.</p>
 </section>
-<section id="relative-dold-thom" class="level1">
-<h1><em>Relative Dold Thom</em></h1>
+<section id="relative-dold-thom-group" class="level1">
+<h1><em>Relative Dold-Thom Group</em></h1>
 <p>It’s important to establish the relative version of DT. Let <span class="math inline">\(Y\)</span> be a closed subset of <span class="math inline">\(X\)</span>. Our goal is to define a relative configuration space <span class="math inline">\(A_0(X/Y)\)</span>, and the key identification will be the canonical isomorphism <span class="math display">\[A_0(X/Y)=A_0(X)/A_0(Y).\]</span> In terms of net zero charged particle configurations, the idea is to view <span class="math inline">\(Y\)</span> as a where excess charges can “ground out”. That is, spheres in the relative DT group <span class="math inline">\(A_0(X/Y)\)</span> basepointed at <span class="math inline">\(\emptyset\)</span> are recombinations which either neutralize away from <span class="math inline">\(Y\)</span>, or neutralize at <span class="math inline">\(Y\)</span>.</p>
 <p>Here is the formal definition. If <span class="math inline">\(Y\)</span> is a closed subset of <span class="math inline">\(X\)</span>, then <span class="math inline">\(G(Y)\)</span> and <span class="math inline">\(A_0(Y)\)</span> is a closed subgroup of <span class="math inline">\(G(X)\)</span> and there is a canonical quotient <span class="math inline">\(G(X) \to G(X)/A_0(Y).\)</span> Morever the augmentation map <span class="math inline">\(\epsilon_X\)</span> canonically descends to the quotient as a type of augmentation map <span class="math display">\[\epsilon_{ X / Y}: G(X)/A_0(Y) \to G, \]</span> and we identify <span class="math display">\[A_0(X/Y):=\ker(\epsilon_{X/Y}).\]</span></p>
 </section>
 <section id="dold-thoms-theorem" class="level1">
 <h1><em>Dold-Thom’s Theorem</em></h1>
-<p>We follow the original approach of , which theorems are stated in terms of natural quasifibrations between the configuration spaces.</p>
+<p>We follow the original approach of <span class="citation" data-cites="DT">(<a href="#ref-DT" role="doc-biblioref">Dold and Thom 1958</a>)</span>, which theorems are stated in terms of natural quasifibrations between the configuration spaces.</p>
 <p>Recall the definition of quasifibration:</p>
 <ul>
 <li>(Def. 2) A continuous map <span class="math inline">\(f: X\to Y\)</span> between topological spaces <span class="math inline">\(X, Y\)</span> is a <em>quasifibration</em> if the canonical inclusion of fibres <span class="math inline">\(f^{-1}(y)\)</span> into the homotopy fibre of <span class="math inline">\(f\)</span> is a weak homotopy equivalence for every <span class="math inline">\(y\in Y\)</span>.</li>
@@ -212,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>(<strong><em>Dold Thom Theorem</em></strong>) Let <span class="math inline">\(Y\)</span> be closed subspace of <span class="math inline">\(X\)</span>. Then the short exact sequence of topological abelian groups <span class="math display">\[0\to A_0(Y) \to A_0(X) \to A_0(X /Y) \to 0,\]</span> is a quasifibration inducing a long exact sequence of <span class="math inline">\(\emptyset\)</span>-pointed homotopy groups <span class="math display">\[\cdots \to \pi_{*+1}(A_0(Y), \emptyset) \to \pi_{*+1}(A_0(X), \emptyset) \to \pi_{*+1}(A_0(X/Y), \emptyset) \to \pi_{*}(A_0(Y), \emptyset) \to \cdots\]</span> which is naturally equivalent to the long-exact sequence of relative homology groups <span class="math display">\[\cdots \to \tilde{H}_{*+1}(Y) \to \tilde{H}_{*+1}(X) \to H_{*+1}(X,Y) \to \tilde{H}_*(Y) \to \cdots .\]</span></li>
 </ul>
-<p>(<em>Sketch of proof:</em>) Following the original argument of Dold–Thom, the theorem reduces to verifying that the functors <span class="math inline">\(X\mapsto \pi_* A_0(X)\)</span> satisfy the Eilenberg–Steenrod axioms. By a standard argument it follows that the functors <span class="math inline">\(\pi_* A_0\)</span> and <span class="math inline">\(\tilde{H}_*\)</span> are naturally equivalent.</p>
+<p>(<em>Sketch of proof:</em>) Following the original argument of Dold-Thom, the theorem reduces to verifying that the functors <span class="math inline">\(X\mapsto \pi_* A_0(X)\)</span> satisfy the Eilenberg–Steenrod axioms. By a standard argument it follows that the functors <span class="math inline">\(\pi_* A_0\)</span> and <span class="math inline">\(\tilde{H}_*\)</span> are naturally equivalent.</p>
 <p>Some remarks.</p>
 <ul>
 <li><p>In terms of category theory, DT says that if <span class="math inline">\(G\)</span> is an abelian group, then the functor <span class="math inline">\(X\mapsto \pi_*(A_0(X;G), \emptyset)\)</span> is naturally equivalent to the reduced singular homology functor <span class="math inline">\(X\mapsto \tilde{H}_*(X;G)\)</span> in the category <span class="math inline">\(TOP\)</span> of basepoint-free topological spaces. Again, we emphasize that Dold-Thom Theorem is basepoint independant, with the vacuum state <span class="math inline">\(\emptyset\)</span> serving as “canonical basepoint” on <span class="math inline">\(X\)</span>.</p></li>
@@ -232,9 +253,14 @@ ul.task-list li input[type="checkbox"] {
 <p>-JHM.</p>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-DT" class="csl-entry" role="doc-biblioentry">
+Dold, A., and R. Thom. 1958. <span>“Quasifaserungen Und Unendliche Symmetrische Produkte.”</span> <em>Annals of Mathematics</em> 67 (2): 239–81. <a href="http://www.jstor.org/stable/1970005">http://www.jstor.org/stable/1970005</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
