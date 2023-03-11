@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-03-11">
 <meta name="description" content="We review Einstein’s Point Coincidence Argument, and the motivation for GR’s tensor field equation Ric-R g = κ T.">
 
-<title>jhmartel.github.io - (Under Construction) Einstein’s Field Equations, Tensors, and the Point Coincidence Argument.</title>
+<title>jhmartel.github.io - Einstein’s Field Equations, Tensors, and the Point Coincidence Argument.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,7 +126,7 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">(Under Construction) Einstein’s Field Equations, Tensors, and the Point Coincidence Argument.</h1>
+      <h1 class="title">Einstein’s Field Equations, Tensors, and the Point Coincidence Argument.</h1>
                   <div>
         <div class="description">
           We review Einstein’s Point Coincidence Argument, and the motivation for GR’s tensor field equation Ric-R g = κ T.
@@ -172,10 +172,17 @@ div.csl-indent {
 
 
 
-<p>The purpose of this post is to review the principles behind Einstein’s famous gravitational equation <span class="math display">\[R_{ij}-Rg_{ij}=\kappa T_{ij}.\]</span> Here we recall that <span class="math inline">\((R_{ij})\)</span> is the Ricci quadratic tensor, <span class="math inline">\(R\)</span> is the trace of <span class="math inline">\((R_{ij})\)</span>, <span class="math inline">\(g_{ij}\)</span> is the Lorentzian metric, and <span class="math inline">\(T_{ij}\)</span> is the so-called “energy momentum tensor” and <span class="math inline">\(\kappa\)</span> is an absolute constant.</p>
+<p>The purpose of this post is to review the principles behind Einstein’s famous gravitational equation <span class="math display">\[R_{ij}-R g_{ij}=\kappa T_{ij}.\]</span> We do not develop any analytic or mathematical properties of the equation, but rather indicate it’s history and motivation. Recall that:</p>
+<ul>
+<li><span class="math inline">\((R_{ij})\)</span> is the Ricci quadratic tensor,</li>
+<li><span class="math inline">\(R\)</span> is the trace of <span class="math inline">\((R_{ij})\)</span>,</li>
+<li><span class="math inline">\(g_{ij}\)</span> is the Lorentzian metric,</li>
+<li><span class="math inline">\(T_{ij}\)</span> is the so-called “energy momentum tensor”, and</li>
+<li><span class="math inline">\(\kappa\)</span> is an absolute constant.</li>
+</ul>
 <section id="tensors-and-einsteins-point-coincidence-argument" class="level1">
 <h1><em>Tensors and Einstein’s Point-Coincidence Argument</em></h1>
-<p>Einstein’s famous GR field equation is a <em>tensor</em> equation, and we recall the historical motivation behind this choice of equations traditionally known as the <em>point coincidence argument</em> (PCA). The point-coincidence argument appears well known to historians of GR, arising from Einstein’s confused “hole argument” and the material meaning of coordinates. This argument however is the key heuristic by which Einstein arrived at tensor equations as the formal basis for his general relativity theory. The following quotation is Einstein’s and is taken from <span class="citation" data-cites="norton1993general">(<a href="#ref-norton1993general" role="doc-biblioref">Norton 1993</a>)</span>:</p>
+<p>Einstein’s famous GR field equation is a <em>tensor</em> equation, and we recall the historical motivation behind this choice traditionally known as the <em>point coincidence argument</em> (PCA). The point-coincidence argument appears well known to historians of GR, arising from Einstein’s confused “hole argument” and the material meaning of coordinates. This argument however is the key heuristic by which Einstein arrived at tensor equations as the formal basis for his general relativity theory. The following quotation is Einstein’s and is taken from <span class="citation" data-cites="norton1993general">(<a href="#ref-norton1993general" role="doc-biblioref">Norton 1993</a>)</span>:</p>
 <ul>
 <li><p><em>“The general laws of nature are to be expressed by equations which hold good for all systems of coordinates, that is, are covariant with respect to any substitutions whatever (generally covariant). It is clear that a physical theory which satisfies this postulate will also be suitable for the general postulate of relativity. For the sum of all substitutions in any case includes those which correspond to all relative motions of three-dimensional systems of coordinates. <span class="math inline">\(\ldots\)</span></em></p>
 <p><em>That this requirement of general covariance, which takes away from space and time the last remnant of physical objectivity, is a natural one, will be seen from the following reflexion. All our space-time verifications invariably amount to a determination of space-time coincidences. If, for example, events consisted merely in the motion of material points, then ultimately nothing would be observable but the meetings of two or more of these points. Moreover, the results of our measurings are nothing but verifications of such meetings of the material points of our measuring instruments with other material points, coincidences between the hands of a clock and points on the clock dial, and observed point-events happening at the same place and the same time.</em></p>
@@ -186,16 +193,29 @@ div.csl-indent {
 <h1><em>Covariant Tensors and Invariant Divisors</em></h1>
 <p>Einstein was much influenced by the absolute differential tensor calculus of Ricci, Grossmann, Levi-Civita, and especially the fundamental local property of tensors that <span class="citation" data-cites="levi">(<a href="#ref-levi" role="doc-biblioref">Levi-Civita, n.d., sec. IV.12</a>)</span>:</p>
 <ul>
-<li><em>[T]he vanishing of a tensor (i.e.&nbsp;all its elements) is an invariant property, and which holds in general for any change of variables of any kind. In other words, if the elements of a generic tensor <span class="math inline">\(A_{i_1, i_2, \ldots}^{j_1, j_2, \ldots}\)</span> referred to a particular system of variables are zero, we may be sure that the equations <span class="math inline">\(A_{i_1, i_2, \ldots}^{j_1, j_2, \ldots}=0\)</span> continue to hold however the variables may be changed.</em></li>
+<li><em>[T]he vanishing of a tensor (i.e.&nbsp;all its elements) is an invariant property, and which holds in general for any change of variables of any kind. In other words, if <em>all</em> the elements of a generic tensor <span class="math inline">\(A_{i_1, i_2, \ldots}^{j_1, j_2, \ldots}\)</span> referred to a particular system of variables are zero, we may be sure that the equations <span class="math inline">\(A_{i_1, i_2, \ldots}^{j_1, j_2, \ldots}=0\)</span> continue to hold however the variables may be changed.</em></li>
 </ul>
-<p>Therefore the zero and poles of a tensor (called “divisors” by algebraic geometers) are topologically invariant subsets of the manifold. However, the components and coefficients of a tensor are <em>not</em> invariant. According to Einstein’s PCA, we find <em>covariant and contravariant tensors are the only valid objects of the GR theory</em>.</p>
+<p>It follows that tensors are covariant objects whose zeros and poles (called “divisors” by algebraic geometers) are topologically invariant subsets of the manifold. But again we must emphasize that the components and coefficients of a tensor are <em>not</em> invariant. According to Einstein’s PCA, we find <em>covariant and contravariant tensors are the only valid objects of the GR theory</em>.</p>
 <p>The canonical tensor element in Einstein’s GR is the Lorentz quadratic form <span class="math inline">\(g=ds^2\)</span>. The volume form <span class="math inline">\(det(g_{ij})^{1/n}\)</span> is another important tensor canonically associated with <span class="math inline">\(g\)</span>. According to the fundamental property of tensors, the zeros and poles of <span class="math inline">\(g\)</span>, <span class="math inline">\(det(g_{ij})^{1/n}\)</span> are also invariant.</p>
+</section>
+<section id="coordinate-versus-physical-versus-curvature-singularities" class="level1">
+<h1><em>Coordinate versus Physical versus Curvature Singularities:</em></h1>
+<p>Now regarding the common terminology of “coordinate singularities” versus “physical singularity” (or more accurately “curvature singularity”), we make the following observation. The so-called coordinate singularity represents the locus of points where <span class="math inline">\(det(g_{ij})=0\)</span>, and here <span class="math inline">\(det\)</span> represents the full four-dimensional determinant of the Lorentz metric <span class="math inline">\((g_{ij})\)</span>. But <span class="math inline">\(g\)</span> and <span class="math inline">\(det(g)\)</span> are well-defined tensors, so only their zero locus and poles is coordinate independant and “physical” according to Einstein’s PCA.</p>
+<p>For example in spherical coordinates <span class="math inline">\((r, \theta)\)</span> on the usual Euclidean space <span class="math inline">\(\bf{R}^2\)</span>, the Riemannian metric has volume form <span class="math inline">\(\det(g)= r dr \wedge d\theta\)</span>. But this form vanishes at <span class="math inline">\(r=0\)</span>. Therefore we would argue that this zero <em>is invariant</em> with respect to diffeomorphisms.</p>
+<p>By contrast, there is a rather ridiculous image in Misner-Thorne-Wheeler’s textbook “Gravitation” <span class="citation" data-cites="thorne2000gravitation">(<a href="#ref-thorne2000gravitation" role="doc-biblioref">Thorne, Wheeler, and Misner 2000</a>)</span>. In our view their “mere” coordinate singularity is a bonafide singularity, being formed by the external force of the boot! It seems evident to us that a boot crushing a coordinate system <em>is</em> a physical singularity.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="MTW_image.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">MTW’s “mere” coordinate singularity</figcaption><p></p>
+</figure>
+</div>
+<p>MTW’s viewpoint leads to their introduction of “carets” and their so-called “geometrodynamic” approach, which approach we find unncessessary and not as rigorous as claimed.</p>
 </section>
 <section id="vacuum-equation" class="level1">
 <h1><em>Vacuum Equation</em></h1>
-<p>Now we consider Einstein’s field equations. The vacuum equation (absence of matter) has the form <span class="math display">\[Ric  -R g =0,\]</span> where <span class="math inline">\(Ric=(R_{ij})\)</span> is the Ricci tensor, <span class="math inline">\(R\)</span> is the trace of Ricci called scalar curvature, and <span class="math inline">\(g=(g_{ij})\)</span> is the Lorentzian metric tensor. All the quantities <span class="math inline">\(Ric\)</span>, <span class="math inline">\(R\)</span>, <span class="math inline">\(g\)</span>, and <span class="math inline">\(Ric-Rg\)</span> are tensorial. Therefore their values are <em>not</em> invariantly defined, but again their zeros and poles <em>are</em> invariantly defined. Notice that <span class="math inline">\(g=(g_{ij})\)</span> is the unknown in the field equations, while <span class="math inline">\(Ric\)</span> and <span class="math inline">\(R\)</span> depend nonlinearly on <span class="math inline">\(g\)</span>.</p>
+<p>Now we consider Einstein’s field equations. The vacuum equation (absence of matter) has the form <span class="math display">\[Ric  -R g =0.\]</span> All the quantities <span class="math inline">\(Ric\)</span>, <span class="math inline">\(R\)</span>, <span class="math inline">\(g\)</span>, and <span class="math inline">\(Ric-Rg\)</span> are tensorial. Therefore their values are <em>not</em> invariantly defined, but their zeros and poles <em>are</em> invariantly defined. Notice that <span class="math inline">\(g=(g_{ij})\)</span> is the unknown in the field equations, while <span class="math inline">\(Ric\)</span> and <span class="math inline">\(R\)</span> depend nonlinearly on <span class="math inline">\(g\)</span>.</p>
 <p><span class="math inline">\(\newcommand{\del}{\partial}\)</span></p>
-<p>We pause to make trivial but important observation. The classical expression for particle velocities, namely <span class="math inline">\(\frac{\del x_1}{\del x_0}\)</span> are not tensorial, and therefore not independant of the system of coordinates. Here <span class="math inline">\(x_0\)</span> is assummed to correspond to “time”. But neither is the contravariant derivative <span class="math inline">\(\nabla_{\frac{\del}{\del x_0}} \frac{\del}{\del x_1}\)</span> an object in the theory. The contravariant derivative returns a tensor, and therefore only it’s zeros and poles constitute a coordinate-independant quantity in the theory. This makes the discussion of “velocities” always dependant on the chosen coordinate system, and only vanishing velocities <span class="math inline">\(\nabla=0\)</span> (or diverging to <span class="math inline">\(+\infty\)</span>) are invariantly defined. Likewise if <span class="math inline">\(\gamma\)</span> is a smooth curve in <span class="math inline">\(X\)</span>, then the covariant “acceleration” evaluated as <span class="math inline">\(\nabla_{\gamma'} \gamma'\)</span> is again tensorial, and therefore only its divisors are invariant. For example in special relativity, we have the Lorentzian line element <span class="math inline">\(ds\)</span> which is a Lorentz invariant tensor. Therefore <span class="math inline">\(\delta \int ds=0\)</span> is invariant equation for timelike curves <span class="math inline">\(ds^2&gt;0\)</span>.</p>
+<p>We pause to make trivial but important observation. The classical expression for particle velocities, namely <span class="math inline">\(\frac{\del x_1}{\del x_0}\)</span> are not tensorial, and therefore not independant of the system of coordinates. Here <span class="math inline">\(x_0\)</span> is assumed to correspond to “time”. But neither is the contravariant derivative <span class="math inline">\(\nabla_{\frac{\del}{\del x_0}} \frac{\del}{\del x_1}\)</span> an <em>invariant</em> object in the theory. The contravariant derivative returns a tensor, and therefore only it’s zeros and poles constitute a coordinate-independant quantity in the theory. This makes the discussion of “velocities” always dependant on the chosen coordinate system, and only vanishing velocities <span class="math inline">\(\nabla=0\)</span> (or diverging to <span class="math inline">\(+\infty\)</span>) are invariantly defined. Likewise if <span class="math inline">\(\gamma\)</span> is a smooth curve in <span class="math inline">\(X\)</span>, then the covariant “acceleration” evaluated as <span class="math inline">\(\nabla_{\gamma'} \gamma'\)</span> is again tensorial, and therefore only its divisors are invariant. For example in special relativity, we have the Lorentzian line element <span class="math inline">\(ds\)</span> which is a Lorentz invariant tensor. Therefore <span class="math inline">\(\delta \int ds=0\)</span> is invariant equation for timelike curves <span class="math inline">\(ds^2&gt;0\)</span>.</p>
 </section>
 <section id="matter-equations-is-the-stress-energy-tensor-defined" class="level1">
 <h1><em>Matter Equations: Is the Stress-Energy Tensor Defined?</em></h1>
@@ -220,22 +240,34 @@ div.csl-indent {
 </section>
 <section id="curiels-arguments" class="level1">
 <h1><em>Curiel’s Arguments</em></h1>
-<p>Our discussions are much influenced by the writings of J.D. Norton and E. Curiel. In the work [ref] Curiel makes the argument that the Einstein tensor <span class="math inline">\(Ric - Rg\)</span> <em>is</em> the variation of Gauss curvature, therefore the gravitational energy tensor, so reasons Curiel, must depend <em>solely</em> on the Riemannian curvature tensor. But this essentially recovers Einstein’s original critique <em>against</em> Grossman and Levi-Civita’s suggestion that the Einstein tensor itself represents the gravitational energy tensor! But Einstein objected that such a definition would render the total energy of any closed system equal to zero. In the end, the gravitational energy tensor remains undefined and somewhat evasive in the standard treatments. [Insert more details]</p>
+<p>Our discussions are much influenced by the writings of <a href="https://sites.pitt.edu/~jdnorton/homepage/research/index.html">J.D. Norton</a> and <a href="http://strangebeautiful.com/phil-phys.html">E. Curiel</a>.</p>
+<p>Curiel makes the argument that the Einstein tensor <span class="math inline">\(Ric - Rg\)</span> <em>is</em> the variation of Gauss curvature, therefore the gravitational energy tensor must depend <em>solely</em> on the Riemannian curvature tensor. But this essentially recovers Einstein’s original critique <em>against</em> Grossman and Levi-Civita’s suggestion that the Einstein tensor itself represents the gravitational energy tensor! For Einstein objected that such a definition would render the total energy of any closed system equal to zero. Curiel documents the rather confusing state-of-affairs involved in attempting to defined gravitational energy tensor and it’s role in Einstein’s field equations.</p>
+<p>[Incomplete]</p>
 </section>
 <section id="carets-and-non-tensors" class="level1">
 <h1><em>Carets and Non Tensors</em></h1>
-<p>[Incomplete]</p>
+<p>The mere coordinate singularities, so named by MTW, leads to the introduction of “geometrodynamics” and “carets” in the GR. For example, an introduction to these ideas are discussed in <span class="citation" data-cites="klauber">(<a href="#ref-klauber" role="doc-biblioref">Klauber 2001</a>)</span> and briefly in <span class="citation" data-cites="thorne2000gravitation">(<a href="#ref-thorne2000gravitation" role="doc-biblioref">Thorne, Wheeler, and Misner 2000</a>)</span>.</p>
+<p>The caret argument is that despite the components of the tensors being not invariantly defined, the projections of the components on a “local Lorentz frame” <em>are</em> well-defined and physical relative to the local frame. Taking projections, they claim the results of tensor equations can be compared to laboratory measurements.</p>
+<p>This idea of taking projections in a local Lorentz frame is curious, and though perhaps intuitively appealing, the mathematics is not clear.</p>
+<p>In our view, there is no canonical local Lorentz frame. And even given a frame, there is no well-defined projection from the tensors onto the frame. In practice, they take a projection by dividing and renormalizing “component wise”, but this appears to be ad hoc and only convenient when the metric is diagonal. By analogy, in euclidean geometry, there is no canonical choice of orthogonal basis. Projections onto the coordinate axes will all be different, and the only invariant quantity is the sum of squares. That is the essence of Pythagoras: that the sum of squares is the only invariant quantity that can be measured by different choices of orthogonal bases. Likewise for Lorentz frames: it is only the Lorentz line element which is invariant.</p>
+<p>But again, most mathematicians/physicists are not persuaded by these critiques.</p>
 
 
 
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-klauber" class="csl-entry" role="doc-biblioentry">
+Klauber, Robert D. 2001. <span>“Physical Components, Coordinate Components, and the Speed of Light.”</span> arXiv. <a href="https://doi.org/10.48550/ARXIV.GR-QC/0105071">https://doi.org/10.48550/ARXIV.GR-QC/0105071</a>.
+</div>
 <div id="ref-levi" class="csl-entry" role="doc-biblioentry">
 Levi-Civita, Tullio. n.d. <em>The Absolute Differential Calculus (Calculus of Tensors)</em>.
 </div>
 <div id="ref-norton1993general" class="csl-entry" role="doc-biblioentry">
 Norton, John D. 1993. <span>“General Covariance and the Foundations of General Relativity: Eight Decades of Dispute.”</span> <em>Reports on Progress in Physics</em> 56 (7): 791.
+</div>
+<div id="ref-thorne2000gravitation" class="csl-entry" role="doc-biblioentry">
+Thorne, Kip S, John Archibald Wheeler, and Charles W Misner. 2000. <em>Gravitation</em>. Freeman San Francisco, CA.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
