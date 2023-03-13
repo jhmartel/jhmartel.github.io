@@ -198,6 +198,35 @@ div.csl-indent {
 <li><p><em>How to generate nontrivial <span class="math inline">\(k\)</span> dimensional sweepouts of <span class="math inline">\(X\)</span>?</em></p></li>
 </ul>
 <p><em>Our goal is to generate smooth maps from the regularity theory of optimal transport.</em></p>
+<p><span class="math inline">\(\newcommand{\sub}{\partial^c \psi(y)}\)</span> <span class="math inline">\(\newcommand{\del}{\partial}\)</span></p>
+<p>In <a href="https://jhmartel.github.io/posts/2023-03-09-DoldThom_Part1/">post</a> we introduced the Dold-Thom group <span class="math inline">\(A(X)\)</span> as the kernel of the augmentation map <span class="math inline">\(\epsilon\)</span>, and the relative Dold-Thom theorems. Ultimately we look to construct topological sweepouts via OT.</p>
+<p>For convenience we recall the basic definition. - (Definition Dold Thom Group <span class="math inline">\(A(X)\)</span>) If <span class="math inline">\(X\)</span> is topological space, and <span class="math inline">\(G\)</span> is finitely-generated abelian group, then the Dold-Thom group is the kernel <span class="math inline">\(A(X;G):=\ker(\epsilon)\)</span> of the augmentation map <span class="math inline">\(\epsilon: G(X) \to G,\)</span> defined by <span class="math inline">\(\epsilon(\sum' g_x .x)=\sum' g_x\)</span>.</p>
+<p>Therefore <span class="math inline">\(A(X;G)\)</span> consists of all finitely-supported <span class="math inline">\(G\)</span>-valued distributions on <span class="math inline">\(X\)</span> with zero net sum. Here <span class="math inline">\(\emptyset\)</span> represents the constant <span class="math inline">\(0\)</span>-valued distribution on <span class="math inline">\(X\)</span>. The vacuum state <span class="math inline">\(\emptyset\)</span> serves as canonical basepoint on <span class="math inline">\(A(X)\)</span>.</p>
+<ul>
+<li>(Dold Thom Theorem) The singular reduced homology functor <span class="math inline">\(X\mapsto \tilde{H}_*(X;G)\)</span> is naturally equivalent to the functor of <span class="math inline">\(\emptyset\)</span>-pointed homotopy groups <span class="math inline">\(X\mapsto \pi_*(A(X;G), \emptyset)\)</span>.</li>
+</ul>
+<p>For applications we choose <span class="math inline">\(G=\mathbb{Z}\)</span> or <span class="math inline">\(\mathbb{Z}/2\)</span>, and will suppress ‘<span class="math inline">\(G\)</span>’ for the remainder of this article. As basic corollary we find:</p>
+<ul>
+<li>(Corollary) If <span class="math inline">\(Y\)</span> is a Moore space, e.g.&nbsp;<span class="math inline">\(Y=\mathbb{S}^q\)</span> is a <span class="math inline">\(q\)</span>-sphere, then <span class="math inline">\(A(Y;G)\)</span> is a model of an Eilenberg-Maclane classifying space <span class="math inline">\(K(G,q)\)</span>.</li>
+</ul>
+</section>
+<section id="how-to-represent-homology-cycles-dold-thom-and-steenrods-problem-1" class="level1">
+<h1><em>How to Represent Homology Cycles: Dold-Thom and Steenrod’s Problem</em></h1>
+<p>Thus DT provides an apparently new source of classifying spaces for abelian coefficient groups <span class="math inline">\(G\)</span>. According to the obstruction methods of Steenrod, Eilenberg, Maclane, it follows that there is a natural equivalence between free homotopy classes <span class="math display">\[[X, A_0(Y;G)]\]</span> and singular cohomology groups <span class="math display">\[H^q(X;G)\]</span>. Thus Dold-Thom allows the construction of cohomology cycles via the construction of topologically nontrivial maps <span class="math inline">\(X\to A_0(Y;G)\)</span> whenever <span class="math inline">\(H^q(X;G)\neq 0\)</span>. This leads us to a general topological problem:</p>
+<ul>
+<li><p>(Problem 1) Construct and classify homotopically nontrivial continuous maps <span class="math display">\[f: X \to A_0(Y)\]</span> for given topological space <span class="math inline">\(X\)</span> and <span class="math inline">\(q\)</span>-sphere <span class="math inline">\(Y=\mathbb{S}^q\)</span> whenever <span class="math inline">\(H^q(X)\neq 0\)</span>.</p></li>
+<li><p>E.g., If <span class="math inline">\(X\)</span> is compact oriented without boundary, then <span class="math inline">\(H^n(X)\)</span> is nontrivial cyclic group when <span class="math inline">\(n=\dim(X)\)</span>. Can we construct explicit maps <span class="math inline">\(f: X \to A_0(S^n)\)</span> realizing the orientation class in <span class="math inline">\(H^n\)</span>?</p></li>
+<li><p>If <span class="math inline">\(X=S_g\)</span> is a hyperbolic Riemann surface, can we construct maps <span class="math inline">\(f: S_g \to A_0(\mathbb{S}^1)\)</span>?</p></li>
+</ul>
+<p>We remark that maps <span class="math inline">\(f\)</span> solving Problem 1 generate homological cycles on <span class="math inline">\(X\)</span>. The argument is described in R. Kirby’s book <span class="citation" data-cites="kirby">(<a href="#ref-kirby" role="doc-biblioref">Kirby 2006</a>)</span>. If <span class="math inline">\(f\)</span> is a continuous map solving Problem 1, then regular fibres <span class="math inline">\(f^{-1}(pt)\)</span>, where <span class="math inline">\(pt\)</span> represents a distribution on <span class="math inline">\(Y\)</span>, are cycles in <span class="math inline">\(X\)</span>. These cycles are nontrivial whenever <span class="math inline">\(f\)</span> is homotopically nontrivial, and even Poincare dual to the cocycle generated by <span class="math inline">\(f\)</span> when <span class="math inline">\(X\)</span> is compact oriented and <span class="math inline">\(Y\)</span> is a Moore space). A similar idea is found in <span class="citation" data-cites="thom1954">(<a href="#ref-thom1954" role="doc-biblioref">Thom 1954</a>)</span>.</p>
+<p>But what are the applications and corollaries of DT?</p>
+<p>We consider DT as providing a constructive method for building homology cycles, e.g.&nbsp;Steenrod’s problem [ref].</p>
+<p>Let <span class="math inline">\((X,d,\sigma)\)</span> be a source space, say an oriented complete compact Riemannian manifold with <span class="math inline">\(\sigma=vol_X\)</span>. The topologist faces several questions:</p>
+<ul>
+<li><p><em>How to generate nontrivial homological <span class="math inline">\(k\)</span> cycles in <span class="math inline">\(X\)</span>?</em></p></li>
+<li><p><em>How to generate nontrivial <span class="math inline">\(k\)</span> dimensional sweepouts of <span class="math inline">\(X\)</span>?</em></p></li>
+</ul>
+<p><em>Our goal is to generate smooth maps from the regularity theory of optimal transport.</em></p>
 </section>
 <section id="dold-thom-and-optimal-transport" class="level1">
 <h1><em>Dold-Thom and Optimal Transport</em></h1>
