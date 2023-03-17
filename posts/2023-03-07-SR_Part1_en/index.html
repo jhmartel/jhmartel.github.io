@@ -23,6 +23,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -152,9 +171,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p>Here we begin our presentation of a critical review of the mathematical foundations of special relativity (SR) and propagation of light <em>in vacuum</em>. The present work developed from the author reviewing the articles of <span class="citation" data-cites="bryant">(<a href="#ref-bryant" role="doc-biblioref">Bryant, n.d.</a>)</span> and <span class="citation" data-cites="crothers">(<a href="#ref-crothers" role="doc-biblioref">Crothers 2019</a>)</span>. Our goal is to present these mathematical controversies in the simplest possible terms.</p>
 <section id="assumptions-of-sr" class="level1">
 <h1><em>Assumptions of SR</em></h1>
-<p>We begin with Einstein’s introduction to his theory of Special Relativity (SR):</p>
+<p>We begin with Einstein’s introduction to his theory of Special Relativity (SR). See <span class="citation" data-cites="einstein1905electrodynamics">(<a href="#ref-einstein1905electrodynamics" role="doc-biblioref">Einstein et al. 1905</a>)</span> and <span class="citation" data-cites="einstein2019relativity">(<a href="#ref-einstein2019relativity" role="doc-biblioref">Einstein 2019, Ch.7, 11</a>)</span>:</p>
 <p><em>“There is hardly a simpler law in physics than that according to which light is propagated in empty space. Every child at school knows, or believes he knows, that this propagation takes place in straight lines with velocity <span class="math inline">\(c=300,000 ~km/sec\)</span>. Who would imagine that this simple law has plunged the conscientiously thoughtful physicist into the greatest intellectual difficulties?”</em></p>
 <p>The elaboration of these intellectual difficulties arising from this seemingly “simple law” is the subject of our discussion today.</p>
 <p>What are these difficulties? Namely to reconcile the following axiomatic assumptions of SR:</p>
@@ -184,15 +204,15 @@ ul.task-list li input[type="checkbox"] {
 <p>The linear algebra of Minkowski space and Lorentz transformations plays a definitive role in SR.</p>
 <p>Lorentz transformations in the setting of SR can be defined as the group of linear transformations <span class="math inline">\(\lambda: {\bf{R}}^{4} \to {\bf{R}}^4\)</span> which satisfy <span class="math inline">\(\lambda^*(h)=h\)</span> where <span class="math inline">\(h=ds^2\)</span> is the Minkowski-Lorentz quadratic form <span class="math display">\[h:=ds^2=-c^2dt^2+dx^2+dy^2+dz^2.\]</span> Here <span class="math inline">\(c\)</span> is the constant luminal velocity in vacuum posited by (A2).</p>
 <p>The Lorentz invariance of <span class="math inline">\(h\)</span> says <span class="math display">\[\xi^2+\eta^2+\zeta^2-c^2 \tau^2\]</span> is numerically equal to <span class="math display">\[x^2+y^2+z^2-c^2 t^2\]</span> for every Lorentz transform <span class="math inline">\(\lambda\)</span> satisfying <span class="math display">\[(\xi, \eta, \zeta, \tau)=\lambda.(x,y,z,t).\]</span> Thus it is assumed that <span class="math inline">\(h\)</span> is a scalar invariant for all inertial observers.</p>
-<p>The group of Lorentz transformations was hypothesized as an attempt to explain the observed null result of Michelson-Morley’s interferometer experiment. The experiment was intended to measure variations of the speed of light relative to the <em>aether</em>. No such variations were discovered, and it was <em>postulated</em> that the usual space and time coordinates <span class="math inline">\((x,y,z,t)\)</span> and <span class="math inline">\((\xi, \eta, \zeta, \tau)\)</span> of two inertial observers <span class="math inline">\(K\)</span> and <span class="math inline">\(K'\)</span>, respectively, were not related by Galilean transformations, but related by the Lorentz-Fitzgerald formulae. Incredibly and contrary to all expectations, the material arm of the interferometer contracted in the direction of motion and simultaneously the time parameter was contracted by the same ratio, namely the so-called beta factor <span class="math inline">\(\beta = 1/\sqrt{1-v^2/c^2}\)</span>.</p>
+<p>The group of Lorentz transformations was hypothesized as an attempt to explain the observed null result of Michelson-Morley’s interferometer experiment. See <span class="citation" data-cites="michelson">(<a href="#ref-michelson" role="doc-biblioref">Michelson 1995</a>, Ch. XIV)</span> for historical reference. The experiment was intended to measure variations of the speed of light relative to the <em>aether</em>. No such variations were discovered, and it was <em>postulated</em> that the usual space and time coordinates <span class="math inline">\((x,y,z,t)\)</span> and <span class="math inline">\((\xi, \eta, \zeta, \tau)\)</span> of two inertial observers <span class="math inline">\(K\)</span> and <span class="math inline">\(K'\)</span>, respectively, were not related by Galilean transformations, but related by the Lorentz-Fitzgerald formulae. Incredibly and contrary to all expectations, the material arm of the interferometer contracted in the direction of motion and simultaneously the time parameter was contracted by the same ratio, namely the so-called beta factor <span class="math inline">\(\beta = 1/\sqrt{1-v^2/c^2}\)</span>.</p>
 </section>
 <section id="uniqueness-of-lorentz-invariant-quadratic-forms" class="level1">
 <h1><em>Uniqueness of Lorentz Invariant Quadratic Forms</em></h1>
-<p>It’s interesting result of Elton and Arminjon [insert ref] that Minkowski’s form <span class="math inline">\(h\)</span> is the <em>only</em> Lorentz invariant quadratic form on <span class="math inline">\({\bf{R}}^4\)</span> modulo homothety. This has useful consequence for the homogeneous wave equation, as we discuss below.</p>
+<p>It’s interesting result of Elton and Arminjo <span class="citation" data-cites="elton2010indefinite arminjon2018lorentz">(<a href="#ref-elton2010indefinite" role="doc-biblioref">Elton 2010</a>; <a href="#ref-arminjon2018lorentz" role="doc-biblioref">Arminjon et al. 2018</a>)</span> that Minkowski’s form <span class="math inline">\(h\)</span> is the <em>only</em> Lorentz invariant quadratic form on <span class="math inline">\({\bf{R}}^4\)</span> modulo homothety. This has useful consequence for the homogeneous wave equation, as we discuss below.</p>
 </section>
 <section id="minkowski-space-and-null-cone" class="level1">
 <h1><em>Minkowski Space and Null Cone</em></h1>
-<p>Now we say something about the photon model of light as treated in Levi-Civita’s book [III.XI.6, pp.301]. If light satisfies (A2), then in a reference frame <span class="math inline">\(K\)</span>, light is <em>something</em> <span class="math display">\[\gamma(t)=(x(t),y(t),z(t))\]</span> that travels through space with time, and whose velocity <span class="math inline">\(\gamma'\)</span> <em>if it could be materially measured as a function of <span class="math inline">\(t\)</span></em> would satisfy - [Eq1] <span class="math display">\[||\gamma'||^2=(dx/dt)^2+(dy/dt)^2+(dz/dt)^2=c^2.\]</span></p>
+<p>Now we say something about the photon model of light as treated in Levi-Civita’s book <span class="citation" data-cites="levi">(<a href="#ref-levi" role="doc-biblioref">Levi-Civita 1977, III.XI.6, pp.301</a>)</span>. If light satisfies (A2), then in a reference frame <span class="math inline">\(K\)</span>, light is <em>something</em> <span class="math display">\[\gamma(t)=(x(t),y(t),z(t))\]</span> that travels through space with time, and whose velocity <span class="math inline">\(\gamma'\)</span> <em>if it could be materially measured as a function of <span class="math inline">\(t\)</span></em> would satisfy - [Eq1] <span class="math display">\[||\gamma'||^2=(dx/dt)^2+(dy/dt)^2+(dz/dt)^2=c^2.\]</span></p>
 <p>Thus it is argued that light trajectories are constrained to the null cone <span class="math display">\[N:=\{h=0\} \subset {\bf{R}}^4\]</span> of Minkowski’s metric <span class="math inline">\(h\)</span>. Obviously the null cone <span class="math inline">\(N\)</span> is Lorentz invariant subspace, and defined by the equation <span class="math display">\[x^2+y^2+z^2=c^2 t^2\]</span> in any reference frame <span class="math inline">\(K\)</span> with coordinates <span class="math inline">\((x,y,z,t)\)</span>.</p>
 </section>
 <section id="what-does-eq1-say-about-the-propagation-of-light" class="level1">
@@ -217,9 +237,35 @@ ul.task-list li input[type="checkbox"] {
 <p>Our viewpoint is that <span class="math inline">\(\nabla_{\gamma'} \gamma'=0\)</span> is an <em>independant</em> hypothesis, and by no means a formal consequence of [Eq2]. This is related to our contention that contrary to Levi-Civita’s claims, the variational equation [Eq2] on <span class="math inline">\(N=\{ds=0\}\)</span> is trivial. In Riemannian geometric terms, we find straight lines on <span class="math inline">\(N\)</span> have <em>no</em> canonical parameterizations, even affine. This reveals a clear distinction between Riemannian straight lines which <em>do</em> have a canonical arclength parameter <span class="math inline">\(ds\)</span>, and the null lines <span class="math inline">\(\ell \subset N\)</span> which do <em>not</em> admit canonical <span class="math inline">\(ds\)</span> arclength parameter <em>except the trivial <span class="math inline">\(ds=0\)</span></em>.</p>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-arminjon2018lorentz" class="csl-entry" role="doc-biblioentry">
+Arminjon, Mayeul et al. 2018. <span>“Lorentz-Invariant Second-Order Tensors and an Irreducible Set of Matrices.”</span> <em>Journal of Geometry and Symmetry in Physics</em> 50: 1–10.
+</div>
+<div id="ref-bryant" class="csl-entry" role="doc-biblioentry">
+Bryant, Steven. n.d. <span>“The Failure of the Einstein-Lorentz Spherical Wave Proof.”</span> <em>Proceedings of the NPA</em> 8: 64.
+</div>
+<div id="ref-crothers" class="csl-entry" role="doc-biblioentry">
+Crothers, S. J. 2019. <em>Special Relativity and the Lorentz Sphere</em>. <a href="https://vixra.org/abs/1911.0013">https://vixra.org/abs/1911.0013</a>.
+</div>
+<div id="ref-einstein1905electrodynamics" class="csl-entry" role="doc-biblioentry">
+Einstein, Albert et al. 1905. <span>“On the Electrodynamics of Moving Bodies.”</span> <em>Annalen Der Physik</em> 17 (10): 891–921.
+</div>
+<div id="ref-einstein2019relativity" class="csl-entry" role="doc-biblioentry">
+Einstein, Albert. 2019. <em>Relativity: The Special and the General Theory-100th Anniversary Edition</em>. Princeton University Press.
+</div>
+<div id="ref-elton2010indefinite" class="csl-entry" role="doc-biblioentry">
+Elton, John H. 2010. <span>“Indefinite Quadratic Forms and the Invariance of the Interval in Special Relativity.”</span> <em>The American Mathematical Monthly</em> 117 (6): 540–47.
+</div>
+<div id="ref-levi" class="csl-entry" role="doc-biblioentry">
+Levi-Civita, T. 1977. <em>The Absolute Differential Calculus (Calculus of Tensors), Blackie, London, 1927</em>. Reprinted Dover, New York.
+</div>
+<div id="ref-michelson" class="csl-entry" role="doc-biblioentry">
+Michelson, Albert Abraham. 1995. <em>Studies in Optics</em>. Dover Publishing.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
