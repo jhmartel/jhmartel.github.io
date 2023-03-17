@@ -23,6 +23,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -155,13 +174,13 @@ ul.task-list li input[type="checkbox"] {
 <p>In Part 3/4 of our critical review of SR we examine the homogeneous wave equation and its properties under Lorentz transformations.</p>
 <section id="homogeneous-wave-equation-lorentz-transformations-and-sr" class="level1">
 <h1><em>Homogeneous Wave Equation, Lorentz Transformations and SR</em></h1>
-<p>In Parts 1 and 2 of this series we focussed on Minkowski space, linear algebra of Lorentz transformations, and the null cone. These discussions were mainly based on the photon model of light.</p>
+<p>In Parts <a href="https://jhmartel.github.io/posts/2023-03-07-SR_Part1_en/">1</a> and <a href="https://jhmartel.github.io/posts/2023-03-07-SR_Part2_en/">2</a> of this series we focussed on Minkowski space, linear algebra of Lorentz transformations, and the null cone. These discussions were mainly based on the photon model of light.</p>
 <p>In Part 3 we consider the wave model of light, and specifically properties of Lorentz transformations and the homogeneous wave equation (HWE).</p>
-<p>Briefly, Einstein’s attempted proof of Claims (i) and (ii) that the Lorentz formulae resolves all the apparent contradictions of (A12) is based on the idea of light propagating a constant speed <span class="math inline">\(c\)</span> which is identical for all observers. From Einstein’s spherical wavefront argument, we see that Einstein understood (A12) as implying that light pulses propagate in geometrically spherical wave fronts in <em>every</em> inertial reference frame <span class="math inline">\(K\)</span>. In terms of the HWE this implies that there exists a Lorentz invariant class of radial solutions to (HWE). As we discuss below, radial solutions exist canonically for any single reference frame <span class="math inline">\(K\)</span>. However the arguments from Parts 1 and 2 demonstrate that no Lorentz invariant set of radial solutions can exist simultaneously for all reference frames <span class="math inline">\(K'\)</span>.</p>
+<p>Briefly, Einstein’s attempted proof of Claims (i) and (ii) that the Lorentz formulae resolves all the apparent contradictions of (A12) is based on the idea of light propagating <em>in vacuum</em> at a constant speed <span class="math inline">\(c\)</span> which is identical for all observers. From Einstein’s spherical wavefront argument, we see that Einstein understood (A12) as implying that light pulses propagate in geometrically spherical wave fronts in <em>every</em> inertial reference frame <span class="math inline">\(K\)</span>. In terms of the HWE this implies that there exists a Lorentz invariant class of <em>radial solutions</em> to (HWE). As we discuss below, radial solutions exist canonically for any single reference frame <span class="math inline">\(K\)</span>. However the arguments from Parts 1/4 and 2/4 demonstrate that no Lorentz invariant set of radial solutions can exist simultaneously for all reference frames <span class="math inline">\(K'\)</span>.</p>
 </section>
 <section id="dalembert-square-is-unique-lorentz-invariant-2nd-order-linear-differential-operator" class="level1">
 <h1><em>d’Alembert</em> <span class="math inline">\(\square\)</span> <em>is Unique Lorentz Invariant 2nd Order Linear Differential Operator</em></h1>
-<p>In Part 1 we briefly mentioned an interesting result of Elton-Arminjon on the Minkowski metric <span class="math display">\[h=d\xi^2 + d\eta^2 + d \zeta^2 - c^2 \tau^2\]</span> being the unique Lorentz invariant symmetric quadratic form on <span class="math inline">\({\bf{R}}^4\)</span> (modulo homothety). Their proof has useful corollary in terms of the HWE.</p>
+<p>In Part 1 we briefly mentioned an interesting result of Elton-Arminjon on the Minkowski metric <span class="math display">\[h=d\xi^2 + d\eta^2 + d \zeta^2 - c^2 \tau^2\]</span> being the unique Lorentz invariant symmetric quadratic form on <span class="math inline">\({\bf{R}}^4\)</span> (modulo homothety). Their proof has useful corollary in terms of the HWE. See [<span class="citation" data-cites="elton2010indefinite">Elton (<a href="#ref-elton2010indefinite" role="doc-biblioref">2010</a>)</span>; arminjon2018lorentz] for reference.</p>
 <p>Let <span class="math inline">\(\square\)</span> be d’Alembert’s wave operator. Then <span class="math inline">\(\square\)</span> is a second order homogeneous linear differential operator, in coordinates having the form <span class="math display">\[\square = \frac{\partial^2}{\partial \xi^2} +\frac{\partial^2}{\partial \eta^2}+\frac{\partial^2}{\partial \zeta^2}-\frac{1}{c^2}\frac{\partial^2}{\partial \tau^2}.\]</span></p>
 <p>Informally we view <span class="math inline">\(\square\)</span> as essentially dual to Minkowski’s form <span class="math inline">\(h\)</span>. Somewhat more rigorously, we find Elton-Arminjon’s argument proves the following:</p>
 <ul>
@@ -187,9 +206,14 @@ ul.task-list li input[type="checkbox"] {
 <p>In our final Part 4 of this series, we present some potential objections to our arguments and attempt to anticipate some criticisms. However we must maintain that all the above arguments are <em>mathematically correct</em>. Any constructive comments or feedback are welcome at the author’s address jhmLabs &amp;&amp;a.t.&amp;&amp; gmail d&amp;&amp;0t&amp;&amp; com.</p>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-elton2010indefinite" class="csl-entry" role="doc-biblioentry">
+Elton, John H. 2010. <span>“Indefinite Quadratic Forms and the Invariance of the Interval in Special Relativity.”</span> <em>The American Mathematical Monthly</em> 117 (6): 540–47.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

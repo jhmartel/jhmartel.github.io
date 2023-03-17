@@ -23,6 +23,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -160,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>(A1) that the laws of physics are the same in all nonaccelerated reference frames, i.e.&nbsp;if <span class="math inline">\(K'\)</span> is a coordinate system moving uniformly (and devoid of rotation) with respect to a coordinate system <span class="math inline">\(K\)</span>, then natural phenomena run their course with respect to <span class="math inline">\(K'\)</span> according to exactly the same laws as with respect to <span class="math inline">\(K\)</span>.</p></li>
 <li><p>(A2) that light in vacuum propagates along straight lines with constant velocity <span class="math inline">\(c = 300,000 ~km/sec\)</span>.</p></li>
 </ul>
-<p>The conjunction <span class="math inline">\((A12):=(A1) \wedge (A2)\)</span> leads to intellectual difficulties, as Einstein himself admits. But these difficulties are only <em>apparent incompatibilities</em> according to Einstein which are resolved by postulating the Lorentz transformations. The assertion that Lorentz formulae resolve all apparent difficulties in (A12) follows from two claims:</p>
+<p>The conjunction <span class="math inline">\((A12):=(A1) \wedge (A2)\)</span> leads to intellectual difficulties, as Einstein himself admits. But these difficulties are only <em>apparent incompatibilities</em> according to Einstein which are resolved by postulating the Lorentz transformations. See <span class="citation" data-cites="einstein2019relativity einstein1905electrodynamics">(<a href="#ref-einstein2019relativity" role="doc-biblioref">Einstein 2019</a>; <a href="#ref-einstein1905electrodynamics" role="doc-biblioref">Einstein et al. 1905</a>)</span> for historical reference. The assertion that Lorentz formulae resolve all apparent difficulties in (A12) follows from two claims:</p>
 <ul>
 <li><p>Claim (i): that inertial frames <span class="math inline">\(K, K'\)</span> are related by Lorentz transformations.</p></li>
 <li><p>Claim (ii): that the law of propagation of light (A2) is Lorentz invariant. I.e. if (A2) is satisfied in <span class="math inline">\(K\)</span> , then (A2) is satisfied in every Lorentz translate <span class="math inline">\(K′=\lambda.K\)</span>.</p></li>
@@ -169,14 +188,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="critique-of-einsteins-proof-of-the-compatibility-of-a12-with-lorentz-transformations" class="level1">
 <h1><em>Critique of Einstein’s Proof of the Compatibility of (A12) with Lorentz Transformations</em></h1>
-<p>We were led to reviewing Einstein’s SR by reading the articles of S.J. Crothers and R. Bryant, which allege that Einstein’s spherical wave proof contains significant errors.</p>
+<p>We were led to reviewing Einstein’s SR by reading the articles of S.J. Crothers and R. Bryant, which allege that Einstein’s spherical wave proof contains significant errors. <span class="citation" data-cites="bryant crothers">(<a href="#ref-bryant" role="doc-biblioref">Bryant, n.d.</a>; <a href="#ref-crothers" role="doc-biblioref">Crothers 2019</a>)</span></p>
 <p>Einstein’s argument looks to derive Claim (ii) as a mathematical consequence of Claim (i). The starting point is the fundamental property of Lorentz transformations, that the quadratic expression <span class="math display">\[x^2+y^2+z^2 = c^2 t^2\]</span> is invariant with respect to Lorentz transforms. In other words, the null cone <span class="math inline">\(N\)</span> is Lorentz <em>covariant</em>. Thus if <span class="math display">\[(\xi, \eta, \zeta, \tau)=\lambda. (x,y,z,t)\]</span> for a Lorentz transform <span class="math inline">\(\lambda\)</span>, then we have</p>
 <ul>
 <li>[Eq1] <span class="math display">\[\xi^2 + \eta^2+\zeta^2 = c^2 \tau^2.\]</span></li>
 </ul>
 <p>But what does the expression [Eq1] represent?</p>
 <p>Here is Einstein’s first error: his argument <em>misidentifies</em> [Eq1] with “the equation of a sphere.” The error is subtle. But the fact is that [Eq1] is strictly speaking a three-dimensional cone in the four independant variables <span class="math inline">\(\xi, \eta, \zeta, \tau\)</span>. The cone indeed contains many spherical two-dimensional subsets, but our point is that <em>a second independant equation</em> is necessary to specify these spheres. And these independant equations cannot be chosen Lorent invariantly!</p>
-<p>Penrose in his textbook with Rindler is quite careful here. The Penrose approach is to projectivize [Eq1] and obtain a <em>projective sphere</em> with a uniquely defined Lorentz invariant conformal structure.</p>
+<p>Penrose in his textbook with Rindler <span class="citation" data-cites="penrose1984spinors">(<a href="#ref-penrose1984spinors" role="doc-biblioref">Penrose and Rindler 1984</a>)</span> is quite careful here. The Penrose approach is to projectivize [Eq1] and obtain a <em>projective sphere</em> with a uniquely defined Lorentz invariant conformal structure.</p>
 <p>But again we must emphasize that there is no canonical metric invariant with respect to the Lorentz group on the projectivization. In otherwords, the null sphere has a Lorentz invariant conformal structure, but it does not have a Lorentz invariant Riemannian structure.</p>
 <p>For instance the standard round sphere <span class="math inline">\(S\)</span> centred at the origin simultaneously satisfies [Eq1] and additionally the equation <span class="math display">\[\frac{1}{2}d(\xi^2+\eta^2+\zeta^2)=\xi d\xi+\eta d\eta +\zeta d\zeta=0.\]</span> In short, the round sphere requires that <em>two</em> quadratic forms <span class="math inline">\(\xi^2+\eta^2+\zeta^2\)</span> and <span class="math inline">\(c^2\tau^2\)</span> be <em>simultaneously constant</em>.</p>
 <p>This leads us to Einstein’s second error, which is the failure to observe that the Lorentz invariance of the quadratic form <span class="math inline">\(h=x^2+y^2+z^2-c^2t^2\)</span> in no way implies the Lorentz invariance of <span class="math inline">\(h_1:=x^2+y^2+z^2\)</span> and <span class="math inline">\(h_2:=c^2 t^2\)</span>.</p>
@@ -208,9 +227,26 @@ ul.task-list li input[type="checkbox"] {
 <p>In the remaining Parts 3/4 and 4/4 of this article, we consider the homogeneous wave equations and Lorentz transformations. As we have previously indicated, we find (A12) incompatible with <em>both</em> the wave and particle models of light.</p>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-bryant" class="csl-entry" role="doc-biblioentry">
+Bryant, Steven. n.d. <span>“The Failure of the Einstein-Lorentz Spherical Wave Proof.”</span> <em>Proceedings of the NPA</em> 8: 64.
+</div>
+<div id="ref-crothers" class="csl-entry" role="doc-biblioentry">
+Crothers, S. J. 2019. <em>Special Relativity and the Lorentz Sphere</em>. <a href="https://vixra.org/abs/1911.0013">https://vixra.org/abs/1911.0013</a>.
+</div>
+<div id="ref-einstein1905electrodynamics" class="csl-entry" role="doc-biblioentry">
+Einstein, Albert et al. 1905. <span>“On the Electrodynamics of Moving Bodies.”</span> <em>Annalen Der Physik</em> 17 (10): 891–921.
+</div>
+<div id="ref-einstein2019relativity" class="csl-entry" role="doc-biblioentry">
+Einstein, Albert. 2019. <em>Relativity: The Special and the General Theory-100th Anniversary Edition</em>. Princeton University Press.
+</div>
+<div id="ref-penrose1984spinors" class="csl-entry" role="doc-biblioentry">
+Penrose, Roger, and Wolfgang Rindler. 1984. <em>Spinors and Space-Time: Volume 1, Two-Spinor Calculus and Relativistic Fields</em>. Vol. 1. Cambridge University Press.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
