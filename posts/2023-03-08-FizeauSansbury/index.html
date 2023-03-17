@@ -23,6 +23,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -154,18 +173,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>In this post we discuss our modified Fizeau-Sansbury spinning sawtooth experiment. To begin we review Fizeau’s original 1849 experiment and introduce our modification which allows for testing R. Sansbury’s apparatus. While Fizeau studies a saw tooth wheel in uniform motion on the order of twenty rotations per second, Sansbury’s setup can be interpreted as either the same wheel in nonuniform motion, or a wheel with variable saw tooth length in uniform motion. We argue that Sansbury’s predictions could be tested if Fizeau’s wheel could increase it’s angular velocity from 20 revolutions per second, to 80 revolutions or 160 revolutions per second. This is not easily realized.</p>
-<p>As described in previous posts, our critical <a href="https://github.com/jhmartel/SR/">essay</a> on foundations in SR is basically stable and readable. Here we begin to elaborate on the concluding section, which briefly mentions Ralph Sansbury’s proposed experiment. Sansbury’s experiment is this. We take <span class="math inline">\(c\)</span> the speed of light as equal to <span class="math inline">\(1\)</span> foot per nanosecond <span class="math inline">\([\mu s]=10^{-8}\)</span> seconds.</p>
+<p>In this post we discuss our modified Fizeau-Sansbury spinning sawtooth experiment. To begin we review Fizeau’s original 1849 experiment and introduce our modification which allows for testing Ralph Sansbury’s apparatus as outlined in <span class="citation" data-cites="sansburylight sansburyspeed">(<a href="#ref-sansburylight" role="doc-biblioref">Sansbury, n.d.</a>, <a href="#ref-sansburyspeed" role="doc-biblioref">2012</a>)</span>. While Fizeau studies a saw tooth wheel in uniform motion on the order of twenty rotations per second, Sansbury’s setup can be interpreted as either the same wheel in nonuniform motion, or a wheel with variable saw tooth length in uniform motion. We argue that Sansbury’s predictions could be tested if Fizeau’s wheel could increase it’s angular velocity from 20 revolutions per second, to 80 revolutions or 160 revolutions per second. This is not easily realized.</p>
+<p>As described in previous posts, our critical <a href="https://github.com/jhmartel/SR/">essay</a> on foundations in SR is basically stable and readable. Recently this document has been rewritten into four posts, of which this post is the fifth post, which is centred on Sansbury’s experiment.</p>
+<p>Sansbury’s experiment is this. We take <span class="math inline">\(c\)</span> the speed of light as equal to <span class="math inline">\(1\)</span> foot per nanosecond <span class="math inline">\([\mu s]=10^{-8}\)</span> seconds.</p>
 <section id="sansburys-experiment" class="level1">
 <h1>Sansbury’s Experiment</h1>
-<p>We quote from Sansbury’s <a href="http://www.naturalphilosophy.org/pdf/abstracts/abstracts_5955.pdf">paper</a> and his book <a href="https://www.amazon.ca/Faster-Than-Light-Relativity-Reconsidered-ebook/dp/B00LQT8056">“Faster than Light”</a>.</p>
+<p>We quote from <span class="citation" data-cites="sansburylight">(<a href="#ref-sansburylight" role="doc-biblioref">Sansbury, n.d.</a>)</span> and his book <span class="citation" data-cites="sansburyspeed">(<a href="#ref-sansburyspeed" role="doc-biblioref">Sansbury 2012</a>)</span>.</p>
 <p><strong>(Case 1)</strong> <em>A <span class="math inline">\(15\)</span> nanosecond light pulse from a laser was sent to a light detector, <span class="math inline">\(30\)</span> feet away. When the light pulse was blocked at the photodiode during the time of emission, but unblocked at the expected time of arrival, <span class="math inline">\(31.2\)</span> nanoseconds after the beginning of the time of emission, for <span class="math inline">\(15\)</span> nanosecond duration, little light was received. (A little more than the <span class="math inline">\(4mV\)</span> noise on the oscilloscope). This process was repeated thousands of times per second.</em></p>
 <p><strong>(Case 2)</strong> <em>When the light was unblocked at the photodiode during the time of emission (<span class="math inline">\(15\)</span> nanoseconds) but blocked after the beginning of the time of emission, during the expected time of arrival for <span class="math inline">\(15\)</span> nanoseconds, twice as much light was received (<span class="math inline">\(8mV\)</span>). This process was repeated thousands of times per second.</em></p>
 <p>Sansbury’s conclusion? That <em>this indicated that light is not a moving wave or photon, but rather the cumulative effect of instantaneous forces at a distance. That is, undetectable oscillations of charge can occur in the atomic nuclei of the photodiode that spill over as detectable oscillations of electrons after a delay.</em></p>
 <p>Sansbury found the equipment necessary for the experiment too expensive to rent for an extended period of time, and he was possibly not a sufficient expert in calibrating the equipment. So Sansbury’s experiment appears to have not been sufficiently investigated, and we would argue that the experiment has neither been reproduced nor properly reviewed. Thus we turn to the classical Fizeau experiment, and consider its similarities to Sansbury’s setup.</p>
 </section>
 <section id="fizeaus-saw-tooth-experiment-1849" class="level1">
-<h1>Fizeau’s Saw Tooth Experiment (1849)</h1>
+<h1><em>Fizeau’s Saw Tooth Experiment (1849)</em></h1>
 <p>Now Sansbury’s apparatus has some similarity with Fizeau’s sawtooth apparatus, as used circa 1849 to prove some of the first sensible measurements of luminal velocity.</p>
 <p><a href="https://skullsinthestars.com/2008/03/31/fizeaus-experiment-the-original-paper/">Here</a> is a blog which inlcudes a transcription of Fizeau’s original 1849 paper in Comptes Rendus.</p>
 <p><a href="https://youtu.be/7CUE1Bpz4hM">Here</a> is an interesting youtube video en francais sur la mesure de Fizeau. Around the 4-5 minute mark is the most interesting. While the speed of the wheel is increased, the received light signal becomes increasingly erratic and intermittent, until a sufficiently high speed of rotation is achieved and the received light signal becomes eventually null and <em>no light is received</em>.</p>
@@ -192,18 +212,26 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 <section id="faster-fizeau-wheels" class="level1">
-<h1>Faster Fizeau Wheels</h1>
+<h1><em>Faster Fizeau Wheels</em></h1>
 <p>We could test some of Sansbury’s ideas if we could increase the angular velocity of the Fizeau wheel by factor of <span class="math inline">\(4\)</span>, i.e.&nbsp;we need a wheel of roughly <span class="math inline">\(100\)</span> revolutions per second instead of <span class="math inline">\(20\)</span> revolutions per second.</p>
 <p>Given such a revolution speed, then we could change the sawtooth pattern of the wheels, having some that are <span class="math inline">\(1/4\)</span> closed, <span class="math inline">\(1/2\)</span> closed, and <span class="math inline">\(3/4\)</span> closed wheels. For example, we could have the alternating sawtooth <span class="math display">\[\ldots 0101010101 \ldots\]</span> or we could have <span class="math display">\[\ldots 001100110011 \ldots\]</span> both of which are <span class="math inline">\(1/2\)</span> closed but having different patterns. And these patterns would have different predictions depending on the photon model or Sansbury’s cumulative action-at-a-distance. Likewise it would be interesting to compare the predictions given a wheel having a <span class="math inline">\(1/4\)</span>-closed sawtooth pattern <span class="math display">\[\ldots 0001000100010001 \ldots\]</span> versus a <span class="math inline">\(3/4\)</span>-closed pattern <span class="math display">\[ \ldots 0111011101110111\ldots.\]</span></p>
 <p>If we could get the Fizeau wheel to spin <span class="math inline">\(200\)</span> revolutions per second, then we could test the theories according to <span class="math inline">\(8\)</span>-periodic patterns, i.e.&nbsp;with sawtooth patterns being <span class="math inline">\(1/8, 2/8\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(7/8\)</span>ths closed.</p>
 <p>If we could build a larger wheel with more teeth, say, <span class="math inline">\(1440\)</span> teeth, then <span class="math inline">\(2880\)</span> teeth, then basic gear ratio would increase the speed of the initial <em>pinion</em> wheel by factor of <span class="math inline">\(\times 2\)</span>, <span class="math inline">\(\times 4\)</span>, etc..</p>
 <p>The heuristics by which we can determine reasonable revolutions per second depends probably on some energy estimates and would require smaller and smaller radii.</p>
-<p>[To be continued…]</p>
+<p>To be continued. -JHM</p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-sansburyspeed" class="csl-entry" role="doc-biblioentry">
+Sansbury, Ralph. 2012. <em>The Speed of Light: Cumulative Instantaneous Forces at a Distance</em>.
+</div>
+<div id="ref-sansburylight" class="csl-entry" role="doc-biblioentry">
+———. n.d. <span>“Light Speed Measurements from Roemer and Bradley to the GPS System.”</span> <a href="http://www.naturalphilosophy.org/pdf/abstracts/abstracts_5955.pdf">http://www.naturalphilosophy.org/pdf/abstracts/abstracts_5955.pdf</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
