@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="JHM">
-<meta name="dcterms.date" content="2023-03-13">
 
-<title>jhmartel.github.io - Dold Thom Theorem. Configuration Spaces and Homology. (3/3)</title>
+<title>jhmartel.github.io - On Function and Measure Composition.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,32 +108,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Dold Thom Theorem. Configuration Spaces and Homology. (3/3)</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Dold Thom</div>
-                <div class="quarto-category">homology</div>
-                <div class="quarto-category">sweepouts</div>
-                <div class="quarto-category">OT</div>
-              </div>
-                  </div>
+      <h1 class="title">On Function and Measure Composition.</h1>
+                      </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>JHM </p>
-            </div>
-    </div>
       
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">March 13, 2023</p>
-      </div>
-    </div>
     
       
     </div>
@@ -151,37 +131,24 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><span class="math inline">\(\newcommand{\sub}{\partial^c \psi(y)}\)</span></p>
-<p>This will be final post on Dold-Thom theorem for a while. It’s a strange result which gives a reconceptualization of homology. The key is the introduction of the topological group Dold Thom group <span class="math inline">\(A(X)\)</span> defined as the kernel of the augmentation map <span class="math inline">\(\epsilon: G(X) \to G\)</span>.</p>
-<p>With these posts we have presented the main statement of a relative Dold-Thom theorem which allows us to further prove the natural equivalence between the long exact sequence in homotopy with the long exact sequence in reduced and relative homology, as arising from the short exact sequence and quasifibration <span class="math display">\[0 \to A(Y) \to A(X) \to A(X/ (Y \cup \emptyset)) \to 0.\]</span></p>
-<p>We were initially motivated by electric ideas, how charges behave and neutralize on a conductive plate. They either cancel/neutralize in the interior, or they escape to the boundary. That is the same idea in the short exact sequence above. Cycles are either cycles in the interior, or they are cycles modulo <span class="math inline">\(Y\)</span> by their escaping to <span class="math inline">\(Y\)</span> as a reservoir.</p>
-<section id="sweepouts-and-optimal-transport" class="level1">
-<h1><em>Sweepouts and Optimal Transport</em></h1>
-<p>From Dold-Thom we moved to sweepouts and optimal transportation (OT). The goal is to construct interesting sweepouts of a given source Riemannian manifold <span class="math inline">\((X,\sigma)\)</span> using optimal transportation methods and variational data. If <span class="math inline">\((Y, \tau)\)</span> is a target space satisfying <span class="math inline">\(\dim(X) \geq \dim(Y)\)</span> and $_X _Y , $ then costs <span class="math inline">\(c: X\times Y \to \bf{R}\)</span> which satisfy assumptions labelled (A0123) admit unique <span class="math inline">\(c\)</span>-optimal semicouplings and potentials solving Kantorovich’s dual max program, namely <span class="math inline">\(c\)</span>-concave potentials <span class="math inline">\(\psi\)</span> on the target <span class="math inline">\(Y\)</span>. The <span class="math inline">\(c\)</span>-concave potential, or specifically it’s <span class="math inline">\(c\)</span>-subdifferential, generates a <span class="math inline">\(Y\)</span>-parameter family of subsets <span class="math inline">\(Z(y):=\sub\)</span>. We study <span class="math inline">\(y\mapsto Z(y)\)</span> as a <em>topological sweepout</em> of <span class="math inline">\(X\)</span> in the sense of [Almgren, Guth]. This requires hypotheses on <span class="math inline">\(c\)</span>, <span class="math inline">\(\tau\)</span>, <span class="math inline">\(\psi\)</span>, such that:</p>
-<ul>
-<li><ol type="a">
-<li>the cells <span class="math inline">\(Z(y) \hookrightarrow X\)</span> are closed cycles on <span class="math inline">\(X\)</span>, i.e.&nbsp;<span class="math inline">\(Z(y)\)</span> has vanishing boundary;</li>
-</ol></li>
-<li><ol start="2" type="a">
-<li>and the <span class="math inline">\(Y\)</span>-parameter sweepout <span class="math inline">\(y\mapsto Z(y)\)</span> of <span class="math inline">\(X\)</span> is continuous in the flat Almgren topology: namely if <span class="math inline">\(y_0, y_1\in Y\)</span> are sufficiently close, then <span class="math inline">\(Z(y_0)\)</span>, <span class="math inline">\(Z(y_1)\)</span> bound a Lipschitz chain <span class="math inline">\(C\)</span> of arbitrarily small area with <span class="math inline">\(\partial C= Z(y_1)-Z(y_0)\)</span>.</li>
-</ol></li>
-</ul>
-<p>The Almgren continuity follows from the <span class="math inline">\(c\)</span>-concave potential <span class="math inline">\(\psi\)</span> and its <span class="math inline">\(c\)</span>-convex transform <span class="math inline">\(\phi:=\psi^c\)</span> being <em>locally Lipschitz</em> on its domain. In otherwords, the source potential <span class="math inline">\(\phi\)</span> has locally bounded gradient everywhere and this keeps the area of bounding chains small.</p>
-<p>N.B. Without <span class="math inline">\(\phi, \psi\)</span> being locally Lipschitz, it would be difficult to control the cell in the limit <span class="math inline">\(\lim_{y\to y_1} Z(y)\)</span>.</p>
-</section>
-<section id="problem-of-constructing-costs-on-dold-thom-groups" class="level1">
-<h1><em>Problem of Constructing Costs on Dold-Thom Groups</em></h1>
-<p>We need emphasize that geometry in OT begins with the construction of geometric costs <span class="math inline">\(c: X\times Y \to \bf{R}\)</span>. Applications with DT would require costs defined say by <span class="math inline">\(c: X \times A(S^q) \to \bf{R}\)</span>, where <span class="math inline">\(S^q\)</span> is the topological <span class="math inline">\(q\)</span>-sphere and <span class="math inline">\(A(S^q)\)</span> is the DT group on the sphere.</p>
-<p>Constructing continuous maps <span class="math inline">\(S^d \to A(S^q)\)</span> involves different ideas from the construction of continuous maps <span class="math inline">\(S^d \to S^q\)</span>. It’s an interesting problem.</p>
-<p>Naive question: consider the Hopf mapping <span class="math inline">\(S^3 \to S^2\)</span>. <em>Is there a natural cost <span class="math inline">\(c: S^3\times S^2 \to \bf{R}\)</span> for which the Hopf map arises as <span class="math inline">\(c\)</span>-optimal transport between the canonical measures on</em> <span class="math inline">\(S^3, S^2\)</span>, respectively?</p>
-</section>
-<section id="two-sweepouts-on-s2" class="level1">
-<h1><em>Two sweepouts on <span class="math inline">\(S^2\)</span></em></h1>
-<p>To illustrate the basic idea, we consider two different sweepouts of <span class="math inline">\(S^2\)</span> into <span class="math inline">\(1\)</span>-cycles. In both cases, we see an explosion of (+), (-) charges emerging from the equator.</p>
-<p>In the first case, the (+), (-) charges accumulate at the north, south poles, respectively, and then travelling in a group annihilate each other along some longitudinal line.</p>
-<p>In the second case, the (+), (-) charges emerge from the equator and pass through the north, south poles, respectively, and without stopping continue through the poles eventually annihilating again along the equator lines.</p>
-<p><em>Which of these two sweepouts is canonical?</em></p>
-<p>In our view, the second sweepout, wherein momentum is preserved, is the more canonical. But it’s another interesting question.</p>
+<p>Here we review the most basic property of functions and function composition.</p>
+<p>Let <span class="math inline">\(f: X \to Y\)</span> and <span class="math inline">\(g: Y\to Z\)</span> be functions. The composition <span class="math inline">\(g\circ f\)</span> is <em>defined</em> to be the function $h:=(gf):X Z $ according to the rule <span class="math display">\[x \mapsto g(f(x)).\]</span></p>
+<p>Now here is the tricky question: <em>“What resources are necessary to evaluate the function <span class="math inline">\(h: X\to Z\)</span> ?”</em></p>
+<p>Naively one might assume that only <span class="math inline">\(X, Z\)</span> are required to evaluate <span class="math inline">\(h\)</span>. But what is <span class="math inline">\(h\)</span>? We say <span class="math inline">\(h\)</span> is a function according to the definition <span class="math inline">\(h:=g\circ f\)</span>. But the definition of <span class="math inline">\(h\)</span> only provides an <em>implicit</em> function <span class="math inline">\(h: X\to Z\)</span> since there is no reference to <span class="math inline">\(Y\)</span>. The explicit evaluation of <span class="math inline">\(h\)</span> necessarily involves resources on <span class="math inline">\(Y\)</span>, i.e.&nbsp;<span class="math inline">\(h(x)=g(y)\)</span> where <span class="math inline">\(y:=f(x)\)</span>.</p>
+<p>Therefore we <em>caution</em> the reader against <em>assuming</em> that the resources of a function <span class="math inline">\(h: X\to Z\)</span> are exclusively the domain and range <span class="math inline">\(X, Z\)</span>. Rather the definition of composition requires the intermediate <span class="math inline">\(Y\)</span>, and therefore <span class="math inline">\(h\)</span> as defined above really depends on <span class="math inline">\(X,Z\)</span> and <span class="math inline">\(Y\)</span>.</p>
+<p>Here we are somehow tracking <em>how</em> the function is defined in measuring it’s complexity. If the composition <span class="math inline">\(h=g\circ f\)</span> can be <em>reduced</em> using algebraic identities, then it’s sometimes possible to obtain representations of the composition <span class="math inline">\(h: X \to Z\)</span> directly using only <span class="math inline">\(x,z\)</span> variables. But this is exception and not the rule.</p>
+<p>As we have discussed in previous posts, functions are special cases of correlation measures as arising in optimal transport. If <span class="math inline">\(\pi_{01}\)</span> and <span class="math inline">\(\pi_{12}\)</span> are correlations between measures on <span class="math inline">\(X,Y\)</span> and <span class="math inline">\(Y,Z\)</span>, then there is a natural composition defined <span class="math display">\[\pi':=\pi_{12}\circ \pi_{01}.\]</span> But the previous observations apply, and we find <span class="math inline">\(\pi'\)</span> is <em>implicitly</em> a correlation between measures on <span class="math inline">\(X,Z\)</span>, but <em>explicitly</em> the correlation depends on correlations between measures on <span class="math inline">\(X,Y,Z\)</span>. In otherwords, the intermediate <span class="math inline">\(Y\)</span> <em>cannot be forgotten</em> when evaluating the resources required to evaluate and compute using the measures. In otherwords, we think the composition <span class="math inline">\(\pi'\)</span> should have an entropy measure which is <em>dependant</em> on the composition.</p>
+<p>That the entropy measure should be made dependant on the composition means distinguishing “<span class="math inline">\(\pi'\)</span> the composition” from “<span class="math inline">\(\pi'\)</span> the correlation on <span class="math inline">\(X, Z\)</span>” (with no reference to <span class="math inline">\(Y\)</span>). Here we need be cautious, because we are arguing that the entropy measures should be <em>representation dependant</em>. Some readers might reject this outright, but it seems natural if we are accounting for the <em>resources</em> required for actual computation. In practice, the function <span class="math inline">\(h=g \circ f\)</span> is <em>not</em> an identity but a definition, and the definition of the composition <span class="math inline">\(g\circ f\)</span> necessarily involves <span class="math inline">\(Y\)</span>.</p>
+<p>Question: Is there a more natural way to track the resources of a correlation <span class="math inline">\(\pi\)</span>?</p>
+<p>Question: If a measure <span class="math inline">\(\pi'\)</span> <em>is</em> a composition, then how many ways can the composition be defined. I.e. is the composition structure of <span class="math inline">\(\pi'\)</span> <em>unique</em>?</p>
+<p>Evidently there is no uniqueness because we can always compose the measures on <span class="math inline">\(X, Z\)</span> with measure preserving self-mappings (i.e.&nbsp;permutations). But modulo this action, is there uniqueness?</p>
+<section id="entropy-and-complexity-of-correlations" class="level1">
+<h1>Entropy and Complexity of Correlations</h1>
+<p>Question: How to measure the <em>complexity</em> of a correlation? Specifically, the resources required to generate/run the correlation?</p>
+<p>Option 1. Define <span class="math inline">\(k(\pi'):=\log \# spt(\pi')\)</span> when <span class="math inline">\(\pi'\)</span> is a correlation measure between homogeneous measures on <span class="math inline">\(X,Y\)</span>. If <span class="math inline">\(\pi'\)</span> is a bijection, then <span class="math inline">\(k(\pi')\)</span> coincides with <span class="math inline">\(k(proj_X\# \pi')\)</span>, the complexity of the pushforward measure. If <span class="math inline">\(\pi'\)</span> is <em>not</em> a bijection, then we see the support of <span class="math inline">\(\pi'\)</span> necessarily <em>increases</em>. In the extreme case, we find <span class="math inline">\(k(\pi')\)</span> equal to the log of the product <span class="math display">\[\# spt(proj_X \# \pi') \times \# spt(proj_Y \# \pi').\]</span> This is case where the correlation <span class="math inline">\(\pi'\)</span> is like a product measure and the correlation is supported on the Cartesian product of the supports of <span class="math inline">\(proj_X \# \pi'\)</span>, <span class="math inline">\(\proj_Y \# pi'\)</span>.</p>
+<p>Option 2. We could define <span class="math inline">\(k(\pi')\)</span> as the <em>entropy</em> of <span class="math inline">\(\pi'\)</span>. Following [Baez, et.al] one is tempted to define <span class="math inline">\(k(\pi'):= k(proj_Y \# \pi') - k(proj_X \# \pi')\)</span>. This would mean <span class="math inline">\(k\)</span> represents the relative entropy between the source and image measures. This definition of entropy is well-behaved (additive) with respect to measure composition. Moreover this definition of entropy yields the following formula [insert].</p>
+<p>Remark. The complexity defined in Option 1 remains somewhat dependant on the factors defining the composition <span class="math inline">\(\pi'\)</span>. The definition in Option 2 is better behaved with respect to composition. But which option is correct?</p>
+<p>Remark. In QC the correlations are represented as unitary transformations. The composition of unitary transformations is again unitary, so we ask the question: <em>What is the correct definition of “complexity” of unitary transforms?</em> Moreover how does this complexity behave with respect to composition?</p>
 
 
 </section>
