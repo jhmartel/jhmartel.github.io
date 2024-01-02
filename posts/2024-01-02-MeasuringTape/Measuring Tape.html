@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JHM">
+<meta name="dcterms.date" content="2024-01-02">
+<meta name="description" content="We present our preliminary thoughts on a new digital measuring tape. This is our answer to the question of dude would you hold my tape.">
+
+<title>jhm - Measuring Tapes and Physics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">jhm</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jhmartel/" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/_jhmlabs" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Measuring Tapes and Physics</h1>
+                  <div>
+        <div class="description">
+          We present our preliminary thoughts on a new digital measuring tape. This is our answer to the question of dude would you hold my tape.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">measuring tape</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>JHM </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 2, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="digital-measuring-tapes.-our-answer-to-dude-would-you-hold-my-tape" class="level2">
+<h2 class="anchored" data-anchor-id="digital-measuring-tapes.-our-answer-to-dude-would-you-hold-my-tape">Digital Measuring Tapes. Our Answer to Dude would you hold my tape</h2>
+<p>We have an idea about digital measuring tapes motivated from repeatedly overhearing the question <em>“Dude would you hold my tape?”</em> on work sites. We think it’s absurd question, and two people are not needed to take an accurate measurement. Our goal is a “point and click” tool to find distances between arbitrary points in an open space volume.</p>
+<p>If we are measuring distances inside a volume <span class="math inline">\(V\)</span> with boundary <span class="math inline">\(\partial V\)</span>, this means evaluating distances for arbitrary pairs $ (x,y) V V$. All the laser pointers currently on the markey, e.g.&nbsp;Amazon, strictly find distances between boundary points <span class="math inline">\((x,y) \in \partial V \times \partial V\)</span>. This distinction between distances in the volume and distance on the boundary is key.</p>
+<p>Formally the problem is this: let <span class="math inline">\(C\subset {\bf{R}}^3\)</span> be a set of centres in space. Suppose we are given two arbitrary points <span class="math inline">\(x, y\in {\bf{R}}^3\)</span> and we are given the pairwise distances from <span class="math inline">\(x,y\)</span> to the centres, i.e.&nbsp;we are given the distances $ { dist(x,c)}$ and <span class="math inline">\(\{dist(y,c)\}\)</span> for every <span class="math inline">\(c\in C\)</span>. The problem is how to decide <span class="math inline">\(dist(x,y)\)</span> from these measurements. In the literature this problem is called “trilation” as opposed to “triangulation” where distances are inferred from distances instead of angles. There is direct interpretation of the trilation problem via sphere intersections. We also explore a Choquet max entropy method below.</p>
+<p>Remark. We must admit there is wonderful simplicity to conventional measuring tapes. The contractor spans the tape across the distance, hooking the edge of the tape at a given edge, and then estimates the distance with his eye looking at the “end” of the tape in their hand. This basic application requires the tape have a well layed position and be human readable. For simple situations this works fine. But the contractor has many instances throughout a day where awkward measurements need be taken. Here we think the point and click distance finder could work. No physical spans are required.</p>
+</section>
+<section id="sphere-intersections" class="level2">
+<h2 class="anchored" data-anchor-id="sphere-intersections">Sphere Intersections</h2>
+<p>The measuring tape problem is related to the fast solving of sphere intersections. If <span class="math inline">\(S_1 = S(c_1, r_1)\)</span> and <span class="math inline">\(S_2 = S(c_2, r_2)\)</span> are spheres in <span class="math inline">\({\bf{R}}^3\)</span>, then their intersection <span class="math inline">\(S_1 \cap S_2\)</span> is a sphere orthogonal to the vector <span class="math inline">\(c_{12}:=c_1-c_2\)</span>. This is immediately seen in figure below [insert image]. Thus the immediate problem is to decide when spheres have empty or nonempty intersection. Generically the intersection is either empty or a codimension one sphere orthogonal to <span class="math inline">\(c_{12}\)</span>. Thus we have a bisection type method to decide sphere intersections, namely $S_1 S_2 S_3 $ is equal to <span class="math inline">\(S_{12} \cap S_{34} \cap \cdots\)</span> which is equal to <span class="math inline">\(S_{1234} \cap \cdots\)</span> etc.</p>
+<p>Remark. If the centres <span class="math inline">\(c\in C\)</span> are infinitely far away from the points <span class="math inline">\(x,y\)</span>. Then the spheres centred at <span class="math inline">\(c\)</span> will intersect <span class="math inline">\(x,y\)</span> at large radius and appear as affine subspaces. Therefore when the centres <span class="math inline">\(C\)</span> are at infinity, the problem reduces to linear algebra. Given normal vectors <span class="math inline">\(\{n_i\}\)</span>, decide the distance <span class="math inline">\(dist(x,y)\)</span> from the values of the linear functionals <span class="math inline">\(\{\langle n_i, x \rangle\}_i\)</span>, <span class="math inline">\(\{\langle n_i, y \rangle\}_i\)</span> for given <span class="math inline">\(x,y\)</span>. This means solving an inhomogeneous linear system of equations.</p>
+</section>
+<section id="euclidean-distance-formula-from-choquet-representation." class="level2">
+<h2 class="anchored" data-anchor-id="euclidean-distance-formula-from-choquet-representation.">Euclidean Distance Formula from Choquet Representation.</h2>
+<p>Now our idea is to use Choquet representation theorem. Given the distance to centres <span class="math inline">\(dist(x,c)\)</span>, <span class="math inline">\(c\in C\)</span>, we construct the maximal entropy measure <span class="math inline">\(\lambda_x\)</span> supported on <span class="math inline">\(C\)</span> which represents <span class="math inline">\(x\)</span>. The measure <span class="math inline">\(\lambda_x\)</span> represents <span class="math inline">\(x\)</span> in the sense of Choquet Representation theorem [ref] if <span class="math display">\[\ell(x)=\int_C \ell(\bar{x}) d\lambda_x(\bar{x})\]</span> for every linear functional <span class="math inline">\(\ell\)</span> on <span class="math inline">\({\bf{R}}^3\)</span>. We emphasize the linearity of <span class="math inline">\(\ell\)</span>.</p>
+<p>If we study the Euclidean distance, then we deduce the following representation formula:</p>
+<p><span class="math display">\[dist(x,y)^2:=|x-y|^2~=~\iint_{C \times C} \langle c_i, c_j \rangle ~~ d(\lambda_x - \lambda_y) \otimes d(\lambda_x - \lambda_y).\]</span> Therefore we find the squared euclidean distance is a <span class="math inline">\(\lambda_x\)</span> weighted sum of the signed dot products <span class="math inline">\(\langle c_i, c_j \rangle\)</span> of centres .</p>
+<p>We define <span class="math inline">\(\lambda=\lambda_x\)</span> as the unique probability measure on <span class="math inline">\(C\)</span> which maximizes the entropy <span class="math inline">\(H(\lambda)\)</span> subject to the linear constraints <span class="math inline">\(\sum_i \lambda_i = 1\)</span> and <span class="math inline">\(\sum_i \lambda_i c_i=x\)</span>. For [eq1] to be an efficient formula, we need a fast algorithm to represent <span class="math inline">\(\lambda_x\)</span> given the distance to centres <span class="math inline">\(dist(x,c)\)</span>.</p>
+<p>The method of Lagrange multipliers is based on the observation that <span class="math inline">\(H\)</span> is optimized given the constraints when <span class="math inline">\(\nabla_\lambda H\)</span> is <em>linearly dependant</em> with the constraint gradients. The Lagrangian for this optimization problem is <span class="math display">\[L(\lambda, \alpha, \beta):=H(\lambda)+\alpha(\sum_i \lambda_i -1) + \langle \beta, ~~\sum_i \lambda_i c_i -x \rangle\]</span> where <span class="math inline">\(\lambda \in {{\bf{R}}^I}\)</span>, <span class="math inline">\(\alpha \in \bf{R}\)</span>, <span class="math inline">\(\beta \in {\bf{R}}^3\)</span>.</p>
+<p>If <span class="math inline">\(\lambda\)</span> is maximizer, then we have vanishing partial derivatives <span class="math display">\[\frac{\partial L}{\partial \lambda_i}=\log \lambda_i +1  + \alpha + \langle \beta, ~ c_i \rangle=0, ~~\frac{\partial L}{\partial \alpha}=0, ~~ \nabla_\beta L=0.\]</span></p>
+<p>Now we need solve for the variables <span class="math inline">\(\alpha, \beta, \lambda\)</span> using the above equations. We reproduce the calculation below.</p>
+<p>First we have <span class="math inline">\(\lambda_i = e^{-(1+\alpha)} ~~ e^{-\langle \beta, c_i \rangle}.\)</span></p>
+<p>The condition <span class="math inline">\(\sum \lambda_i=1\)</span> implies <span class="math inline">\(e^{1+\alpha} =\sum_i e^{-\langle \beta, c_i \rangle}\)</span>. Consequently we find</p>
+<p><span class="math display">\[\lambda_i = \frac{1}{\sum_i e^{-\langle \beta, c_i \rangle}}~~ e^{-\langle \beta, c_i \rangle}.\]</span></p>
+<p>Next the condition <span class="math inline">\(\sum \lambda_i c_i = x\)</span> implies <span class="math display">\[\sum_i e^{-\langle \beta, c_i \rangle} ~ (c_i - x)=0.\]</span> Thus we have reduced everything to solving for <span class="math inline">\(\beta \in {\bf{R}}^3\)</span> in this equation. In this case the auxiliary mapping <span class="math inline">\(F:{\bf{R}}^3 \to {\bf{R}}^3\)</span> defined by <span class="math inline">\(F(\beta):= \sum_i e^{-\langle \beta, c_i \rangle} ~ (c_i - x)\)</span> is <em>nonlinear</em>. The max entropy measure <span class="math inline">\(\lambda\)</span> is defined by the equation [<em>lambda</em>] where <span class="math inline">\(\beta\)</span> is the solution to <span class="math inline">\(F(\beta)=0\)</span>. We observe that <span class="math inline">\(F(0)=\sum_i c_i-x\)</span>. The basic idea is that <span class="math inline">\(F\)</span> is monotone in <span class="math inline">\(\beta \in {\bf{R}}^3\)</span>, i.e.&nbsp;the partial derivatives <span class="math inline">\(\frac{\partial F}{\partial \beta_1}\)</span>, <span class="math inline">\(\frac{\partial F}{\partial \beta_2}\)</span>, <span class="math inline">\(\frac{\partial F}{\partial \beta_3}\)</span> are nonvanishing and have constant sign.</p>
+</section>
+<section id="action-at-a-distance-how-to-physically-measure-distances" class="level2">
+<h2 class="anchored" data-anchor-id="action-at-a-distance-how-to-physically-measure-distances">Action at a Distance: How to Physically Measure Distances</h2>
+<p>We have commented on the simplicity of the physical measuring tape. But are there other physical principles to determine distances? Evidently the measuring tape requires a physical tape connecting two distinct points in space. <em>But can we measure distance at a distance?</em> How did the Mars rovers determine their positions on the Mars surface. Was position and distance found indirectly via satellite imagery? For example, how does one really decide the Earth-Moon distance?</p>
+<p><a href="https://starchild.gsfc.nasa.gov/docs/StarChild/questions/parallax.html">Stellar Parallax Method</a></p>
+<p>We are inspired to reconsider action at a distance forces.</p>
+<p><em>Can we use forces to measure distances?</em></p>
+<p>Sir Isaac Newton’s 1640s gravitational force law introduced instantaneous action at a distance into physics. Newton unified the forces of the tides, the moon, orbits of the planets, falling bodies. Before Newton it was believed that the orbits of the planets were circular, and that uniform circular motion was perfect and requiring no external causes to persist. However for our purposes gravity is too weak a force to use for interaction measurements.</p>
+<p>Electrostatic forces between a proton-electron pair has a magnitude <span class="math inline">\(39 x\)</span> greater than gravitational attraction. For example, one might naively consider using Coloumb’s law of electrostatic repulsion to determine distance. This would involve a unit charge at position <span class="math inline">\(x_1\)</span>, and a unit charge at <span class="math inline">\(x_2\)</span>, and measuring the net force. However the net resultant force <span class="math inline">\(F\)</span> at <span class="math inline">\(x_1\)</span> is <em>not</em> necessarily equal to the Coulomb force <span class="math inline">\(F_{21}\)</span>. This is because the system is not necessarily electrically isolated! Instead we consider <span class="math display">\[F_{\text{net}, 1}=F_{21} + F_{\text{env},1}\]</span> where <span class="math inline">\(F_{\text{env},1}\)</span> is the resultant environmental force on <span class="math inline">\(x_1\)</span>. In this formula assume that the introduction of the electrical charge at <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> does not affect the environmental forces <span class="math inline">\(F_{\text{env},1}\)</span>, <span class="math inline">\(F_{\text{env},2}\)</span>. This is an idealized situation. The Coulomb force is <em>deduced</em> only after subtracting the net background force <span class="math inline">\(F_{\text{env},1}\)</span> from the resultant force. And this is the main idea: we have to make two measurements for <span class="math inline">\(F_{\text{env}}\)</span> and <span class="math inline">\(F_{\text{net}}\)</span> and deduce the interaction as a difference.</p>
+<p>We emphasize the deduction because this is a logical construct. As we have commented there is possibility that the introduction of the electric charges at <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span> has an effect on the environmental forces.</p>
+<p>The basic interaction <span class="math inline">\(F_{21}\)</span> does not necessarily have to be Coulomb’s interaction. We could replace the point charges at <span class="math inline">\(x_1, x_2\)</span> with, say, ring currents or dipoles.</p>
+<p>[to be continued … JHM]</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
