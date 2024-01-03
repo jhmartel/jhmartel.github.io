@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JHM">
+<meta name="dcterms.date" content="2024-01-03">
+<meta name="description" content="We provide a self-contained construction of a minimal dimension equivariant spine for Teichmueller space of hyperbolic surfaces. The spine is essentially Thurston’s, and the result is becoming well known in the literature, and here we present our own proof.">
+
+<title>jhm - Spine for Teichmueller Space of Closed Hyperbolic Surfaces</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">jhm</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jhmartel/" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/_jhmlabs" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Spine for Teichmueller Space of Closed Hyperbolic Surfaces</h1>
+                  <div>
+        <div class="description">
+          We provide a self-contained construction of a minimal dimension equivariant spine for Teichmueller space of hyperbolic surfaces. The spine is essentially Thurston’s, and the result is becoming well known in the literature, and here we present our own proof.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Teichmueller</div>
+                <div class="quarto-category">hyperbolic</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>JHM </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 3, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The main purpose of this article is to establish the following:</p>
+<ul>
+<li>** Proposition:** <em>We claim a minimal dimension spine <span class="math inline">\(W\)</span> of Teichmueller space <span class="math inline">\(Teich(S)\)</span> consists of surfaces which are filled by their shortest essential nonseparating geodesics.</em></li>
+</ul>
+<p>This has been recently announced by [ref] on arxiv. Our work is independant of this paper, which upon quick review, is based on tedious cellular arguments which we avoid.</p>
+<p>A complete proof of this fact requires: - (i) that we construct continuous equivariant deformation retract <span class="math inline">\(\text{Teich} \leadsto W\)</span>; - (ii) that we prove <span class="math inline">\(\dim W = \dim Teich - (2g-1)\)</span></p>
+<p>Our retraction is based on constructing harmonic one forms on the surface which are “adapted” to the short curves on <span class="math inline">\(S\)</span>. The key fact is that we can simultaneously increase the lengths of these short curves by flowing along a Teichmueller deformation in the direction of the above harmonic one form.</p>
+</section>
+<section id="c-systoles-homological-rank-and-filling." class="level2">
+<h2 class="anchored" data-anchor-id="c-systoles-homological-rank-and-filling.">C-Systoles, Homological Rank, and Filling.</h2>
+<p>We let <span class="math inline">\((S,g)\)</span> be a closed hyperbolic surface with constant Gauss curvature <span class="math inline">\(K=-1\)</span>. We begin with some definitions and notation.</p>
+<p><strong>Definitions</strong>: A collection <span class="math inline">\(C\)</span> of curves is <em>essential</em> if the curves are homotopically nontrivial. The collection is <em>nonseparating</em> if the curves are nonzero <span class="math inline">\([\alpha]\neq 0\)</span> in <span class="math inline">\(H_1(S, \bf{Z})\)</span> for <span class="math inline">\(\alpha \in C\)</span>. Let <span class="math inline">\(C=C(g)\)</span> be the set of geodesic nonseparating essential curves on <span class="math inline">\((S,g)\)</span>.</p>
+<p><strong>Definition</strong>: Let <span class="math inline">\(C'\)</span> be a subset of <span class="math inline">\(C\)</span>. The complexity of <span class="math inline">\(C'\)</span> is defined as the rank of the homological image of <span class="math inline">\(C'\)</span>, namely <span class="math display">\[\xi(C'):=\dim \text{span} (H_1(C')).\]</span></p>
+<p>We observe <span class="math inline">\(\xi=\xi(C')\)</span> is an integer taking every integral value between <span class="math inline">\(1 \leq \xi \leq 2g\)</span> where <span class="math inline">\(g\)</span> is the genus of the surface <span class="math inline">\(S\)</span>.</p>
+<p><strong>Definition</strong>: The <span class="math inline">\(C\)</span>-systole of <span class="math inline">\((S,g)\)</span> consists of the shortest curves in <span class="math inline">\(C\)</span> relative to <span class="math inline">\(g\)</span>-length. We denote the <span class="math inline">\(C\)</span>-systoles of a given metric <span class="math inline">\(g\)</span> by <span class="math inline">\(C'=C'(g)\)</span>.</p>
+<p><strong>Definition</strong>: A collection of curves <span class="math inline">\(C_0\)</span> fills the surface <span class="math inline">\(S\)</span> if the complement <span class="math inline">\(S-C_0\)</span> is a disjoint union of topological disks.</p>
+<p><strong>Lemma</strong>: A subset <span class="math inline">\(C_0 \subset C\)</span> is filling if and only if <span class="math inline">\(\xi(C_0)=2g\)</span>.</p>
+<p><em>Proof:</em> [Incomplete]</p>
+</section>
+<section id="belt-tightening-lemma" class="level2">
+<h2 class="anchored" data-anchor-id="belt-tightening-lemma">Belt Tightening Lemma</h2>
+<p>The following Lemma is our main observation:</p>
+<p><strong>Belt Tightening Lemma</strong>: Let <span class="math inline">\((S,g)\)</span> be hyperbolic surface with <span class="math inline">\(C\)</span>-systoles <span class="math inline">\(C'\)</span>. There exists a one-parameter deformation <span class="math inline">\(\{g_t\}\)</span> in <span class="math inline">\(Teich(S)\)</span> such that:</p>
+<ul>
+<li><p>the metric <span class="math inline">\(g_t\)</span> is hyperbolic for all <span class="math inline">\(t\geq 0\)</span> and <span class="math inline">\(g_0=g\)</span>;</p></li>
+<li><p>the curve lengths <span class="math inline">\(\ell(\gamma, g_t)\)</span> are simultaneously increasing for all <span class="math inline">\(t \geq 0\)</span> and all <span class="math inline">\(\gamma \in C'\)</span>.</p></li>
+</ul>
+<p>The proof depends on the construction of an explicit harmonic function on the surface-with-corners <span class="math inline">\(S - C'\)</span>. This construction is provided in Lemma [ref].</p>
+<p><em>Proof:</em> Let <span class="math inline">\(\phi=d\hat{u}\)</span> be the unique harmonic one-form constructed in Lemma [ref]. Let $ q_t:= (e^t + i e^{-t} ^{*})^2$ for <span class="math inline">\(t\geq 0\)</span>. Define <span class="math inline">\(g_t\)</span> to be the resultant hyperbolic structure <span class="math inline">\((q_t)\# g\)</span>. [Incomplete]</p>
+<p><em>Claim:</em> The lengths of the curves in <span class="math inline">\(C'\)</span> are provided by [formula] and the lengths are simultaneously increasing with respect to the deformation. QED.</p>
+</section>
+<section id="harmonic-functions-on-surfaces-with-corners" class="level2">
+<h2 class="anchored" data-anchor-id="harmonic-functions-on-surfaces-with-corners">Harmonic Functions on Surfaces-With-Corners</h2>
+<p>On a Riemann surface <span class="math inline">\((S,g)\)</span> we let <span class="math inline">\(*\)</span> (“star”) denote the Hodge star operator. The Cauchy-Riemann theorem says harmonic one-forms on Riemann surfaces are precisely the real parts of analytic complex differentials. In Lemma [ref] we construct a holomorphic one-form <span class="math inline">\(\phi + i \phi^*\)</span> which is canonically defined by the <span class="math inline">\(C\)</span>-systoles of a Riemann surface <span class="math inline">\(S\)</span>. The complex square <span class="math inline">\(q:=(\phi+i \phi^*)^2\)</span> defines a holomorphic quadratic differential on the surface. The transverse invariant foliations of this quadratic differential are the real and imaginary parts of <span class="math inline">\(\sqrt{q}\)</span>, and indeed defined by <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\phi^*\)</span>. The retraction constructed in Lemma [ref] depends on repeated application of a flow <span class="math inline">\(t\mapsto e^{-t} \phi + i e^t \phi^*\)</span> constructed from the harmonic one-form <span class="math inline">\(\phi\)</span>.</p>
+<p>In general the systoles <span class="math inline">\(C'=C'(g)\)</span> define a link in the surface. This means <span class="math inline">\(C'\)</span> has an almost everywhere uniquely defined normal vector except at the geometric intersections of certain curves <span class="math inline">\(\gamma \cap \gamma'\)</span>. But these intersections are finite. Therefore we consider the normal derivative <span class="math inline">\(n\)</span> as defined everywhere except some isolated finite number of points on <span class="math inline">\(C\)</span> in <span class="math inline">\(S\)</span>.</p>
+<p><strong>Lemma:</strong> (Unique Harmonic Extensions) Let <span class="math inline">\((S,g)\)</span> be a hyperbolic surface with <span class="math inline">\(C\)</span>-systoles <span class="math inline">\(C'\)</span>. There exists harmonic extensions <span class="math inline">\(\hat{u}\)</span> on <span class="math inline">\(S\)</span> satisfying the measurable Neumann boundary condition <span class="math display">\[\frac{\partial u}{\partial n}=1~~\text{almost everywhere on}~~C'.\]</span> The harmonic extension <span class="math inline">\(\hat{u}\)</span> is unique up to additive constant.</p>
+<p><em>Proof:</em> The curves <span class="math inline">\(C'\)</span> are geodesics in the surface <span class="math inline">\(S\)</span>, and <span class="math inline">\(C'\hookrightarrow S\)</span> is a link. We cut the surface along this link to obtain the hyperbolic surface with corners <span class="math inline">\(S-C'\)</span>. Poisson’s fundamental theorem [insert ref] says there exists a unique harmonic extension <span class="math inline">\(\hat{u}\)</span> onto <span class="math inline">\(S-C'\)</span> with prescribed normal derivative on the boundary.</p>
+<p><em>Claim:</em> The extension <span class="math inline">\(\hat{u}\)</span> is nonconstant since <span class="math inline">\(n\cdot \nabla u =1 \neq 0\)</span> by hypothesis and is unique up to additive constant. Therefore the harmonic one-form <span class="math inline">\(\phi:=d\hat{u}\)</span> is uniquely defined on <span class="math inline">\(S\)</span>.</p>
+<p><em>Remark:</em> The purpose of the harmonic one form <span class="math inline">\(\phi\)</span> is to define the quadratic holomorphic differential <span class="math inline">\(q=(\phi+i \phi^{*})^2\)</span> whose measured foliations are precisely given by <span class="math inline">\(\phi, \phi^*\)</span>. The key point is that Teichmueller type deformations $ q_t:= (e^t + e^{-t} ^*) $ for <span class="math inline">\(t \geq 0\)</span> are well-defined analytic deformations on Teichmueller space. In otherwords <span class="math inline">\(\{~ q_t~|~t\geq 0 ~ \}\)</span> is an explicit variation of hyperbolic structure, and there is a pushforward of hyperbolic structures <span class="math inline">\(g_t:=q_t\#g.\)</span></p>
+<p><em>Remark:</em> We want to relate <span class="math inline">\(\phi=d\hat{u}\)</span> to the hypothesis that <span class="math inline">\(\xi(C') &lt;2g\)</span>. In otherwords, we need a comment on cohomology and Hodge theorem to say that <span class="math inline">\(\phi\)</span> is nonzero when <span class="math inline">\(\xi &lt; 2g\)</span>. This could be established by period arguments, since by construction it’s evident that <span class="math inline">\(\int_\gamma \phi \neq 0\)</span> (?) [Error Careful]</p>
+<p><strong>Lemma:</strong>(?) If <span class="math inline">\(C'\)</span> does not fill <span class="math inline">\(S\)</span>, then the harmonic extension <span class="math inline">\(\bar{u}\)</span> constructed in Lemma [ref] is nonconstant on <span class="math inline">\(S\)</span>.</p>
+<p>Proof. [Incomplete]</p>
+</section>
+<section id="well-rounded-retract-of-teichmueller-space" class="level2">
+<h2 class="anchored" data-anchor-id="well-rounded-retract-of-teichmueller-space">Well-Rounded Retract of Teichmueller Space</h2>
+<p>Here is our proposal for constructing well-rounded retracts of <span class="math inline">\(Teich(S)\)</span>.</p>
+<p><strong>Remark</strong>: We observe that if <span class="math inline">\(C'\)</span> does <em>not</em> fill <span class="math inline">\(S\)</span>, then the harmonic extensions <span class="math inline">\(\hat{u}\)</span> are everywhere nonconstant by Lemma [ref]. This implies the Teichmueller deformations <span class="math inline">\(q_t\)</span> are nontrivial for <span class="math inline">\(t \geq 0\)</span>.</p>
+<p><strong>Definition</strong>: For every index <span class="math inline">\(1 \leq j \leq 2g\)</span>, let <span class="math inline">\(W_j\)</span> be the subvariety of <span class="math inline">\(Teich(S)\)</span> consisting of hyperbolic metrics whose <span class="math inline">\(C\)</span>-systoles satisfy <span class="math inline">\(\xi(C) \geq j\)</span>.</p>
+<p><strong><em>Theorem</em></strong>: <em>The Teichmueller space <span class="math inline">\(Teich\)</span> continuously and equivariantly retracts onto <span class="math inline">\(W=W_{2g}\)</span>. Moreover <span class="math inline">\(W\)</span> has codimension <span class="math inline">\(2g-1\)</span> in <span class="math inline">\(Teich\)</span> and therefore is a minimal dimension spine of <span class="math inline">\(Teich\)</span>.</em></p>
+<p><strong>Proof</strong>: The retract <span class="math inline">\(Teich \to W\)</span> is defined as a composition of retracts <span class="math inline">\(W_1 \to W_2 \to \cdots \to W_{2g}.\)</span> The general retract <span class="math inline">\(W_{j} \to W_{j+1}\)</span> is defined as follows:</p>
+<p>Let <span class="math inline">\((S,g)\)</span> be a hyperbolic surface in <span class="math inline">\(W_j\)</span> with <span class="math inline">\(\xi(C(g))=j &lt; 2g\)</span>. Let <span class="math inline">\(\{g_t\}\)</span> be the unique one-parameter deformation of hyperbolic metrics constructed in Belt Tightening Lemma which simultaneously expands the lengths of <span class="math inline">\(C'\)</span>.</p>
+<p><em>Claim</em>: There exists a minimal stopping time <span class="math inline">\(\tau=\tau(g)\)</span> which depends continuously on <span class="math inline">\(g\)</span> such that <span class="math inline">\(g_\tau \in W_{j+1}\)</span>. Equivalently <span class="math inline">\(\tau\)</span> is the unique minimal time such that a new <em>independant</em> <span class="math inline">\(C\)</span>-systole appears and which <em>strictly increases the complexity <span class="math inline">\(\xi\)</span></em>. Analytically <span class="math inline">\(\tau\)</span> is defined as the least time <span class="math inline">\(t\)</span> such that <span class="math display">\[\xi(S_0(g_t)) &gt; \xi(S_0(g)).\]</span></p>
+<p><em>Claim</em>: The one-parameter deformation defines a continuously well-posed global retraction <span class="math inline">\(g\mapsto g_\tau\)</span> from <span class="math inline">\(W_j\)</span> to <span class="math inline">\(W_{j+1}\)</span>.</p>
+<p><em>Claim</em>: The subvariety <span class="math inline">\(W_{j+1}\)</span> is a codimension one subvariety of <span class="math inline">\(W_j\)</span>. Therefore <span class="math inline">\(W_{2g}\)</span> is a codimension <span class="math inline">\(2g-1\)</span> subvariety of <span class="math inline">\(Teich\)</span>. This is the minimal possible dimension according to Bieri-Eckmann homological duality. QED.</p>
+<p><strong>Remark</strong>: Geometric minimality requires a further homological duality argument a la [Souto-Pettet].</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>We still need to complete the above proofs. But the idea of the construction is clear, with the critical point being the construction of harmonic one forms, and the possibility of simultaneously increasing lengths of non filling curves along Teichmueller deformations.</p>
+<p>[To be continued – JHM]</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
