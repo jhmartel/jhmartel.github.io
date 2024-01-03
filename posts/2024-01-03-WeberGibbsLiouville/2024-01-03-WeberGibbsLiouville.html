@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="JHM">
+<meta name="dcterms.date" content="2024-01-03">
+<meta name="description" content="We examine the Hamilton equations for Weber’s potential in an isolated two-body system. We construct an invariant measure on the xv state space which is distinct from the conventional Gibbs Liouville measure. The invariant measure is necessary background measure from which we can define entropy of distributions.">
 
-<title>jhm - Weber, Hamilton, Liouville, Gibbs:</title>
+<title>jhm - Weber Hamiltonian Gibbs Liouville Measure on State Space.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,14 +145,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Weber, Hamilton, Liouville, Gibbs:</h1>
-                      </div>
+      <h1 class="title">Weber Hamiltonian Gibbs Liouville Measure on State Space.</h1>
+                  <div>
+        <div class="description">
+          We examine the Hamilton equations for Weber’s potential in an isolated two-body system. We construct an invariant measure on the xv state space which is distinct from the conventional Gibbs Liouville measure. The invariant measure is necessary background measure from which we can define entropy of distributions.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">weber</div>
+                <div class="quarto-category">atom</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>JHM </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 3, 2024</p>
+      </div>
+    </div>
     
       
     </div>
@@ -165,9 +189,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>title: “Weber Hamiltonian Gibbs Liouville Measure on State Space.” author: “JHM” date: “2024-01-03” categories: [weber, atom] description: “We examine the Hamilton equations for Weber’s potential in an isolated two-body system. We construct an invariant measure on the xv state space which is distinct from the conventional Gibbs Liouville measure. The invariant measure is necessary background measure from which we can define entropy of distributions.” image: “”</p>
-<hr>
 <p>What are Hamilton’s equations? In a sense the equations are a trivial formalization of Newton’s equations. But when applied to Weber’s force law, the Hamilton equations provide a useful formalism.</p>
+<section id="weber-hamilton-liouville-gibbs" class="level1">
+<h1>Weber, Hamilton, Liouville, Gibbs:</h1>
 <section id="two-dimensional-xv-relational-state-space" class="level2">
 <h2 class="anchored" data-anchor-id="two-dimensional-xv-relational-state-space">Two Dimensional xv Relational State Space</h2>
 <p>We let <span class="math inline">\(x,v\)</span> be position and velocity state variables. Let <span class="math inline">\(J\)</span> be the standard almost-complex structure, i.e.&nbsp;<span class="math inline">\(J=\begin{pmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{pmatrix}\)</span> with <span class="math inline">\(J^2 = -Id\)</span>.</p>
@@ -177,6 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>[Another example?]</p>
 <p>Our interpretation of the time evolution being volume invariant means the overall “uncertainty” in the state is constant with respect to time. In other words if we know position <span class="math inline">\(x\)</span> with some error <span class="math inline">\(dx\)</span> and velocity <span class="math inline">\(v\)</span> with error <span class="math inline">\(dv\)</span>, then the overall uncertainty of the system remains <span class="math inline">\(dx dv\)</span> square-error throughout the evolution. This is relatively good, for example if the particles are spatially closeby (so <span class="math inline">\(dx\)</span> is small), then we are certain that <span class="math inline">\(dv\)</span> is large (i.e.&nbsp;they have large relative motion). Likewise if the particles have very small relative motion (<span class="math inline">\(dv\)</span> small) then the particles have large relative position (<span class="math inline">\(dx\)</span> large).</p>
 <p>The existence of an invariant background measure <span class="math inline">\(dx dv\)</span> on state space is necessary to define the <em>entropy</em> of states <span class="math inline">\(\rho\)</span>, where entropy is defined relative to this background mesaure. However our researches into Weber electrodynamics has led us to review the basic Gibbs Liouville measure. We find the usual Gibbs-Liouville volume form <span class="math inline">\(dx dv\)</span> is <em>not invariant</em> when the state space evolves according to Weber’s Hamiltonian. Our goal in this article is to derive the proper Weberian invariant measure on state space.</p>
+</section>
 </section>
 <section id="webers-electrodynamic-two-body-hamiltonian" class="level1">
 <h1>Weber’s Electrodynamic Two-Body Hamiltonian:</h1>
