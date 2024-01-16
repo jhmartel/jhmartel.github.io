@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="JHM">
+<meta name="dcterms.date" content="2024-01-15">
+<meta name="description" content="We maintain that P is not equal to NP (following C.A. Feinstein) and that classical encryption is as secure as ever, quantum or no quantum computer. In this brief note we observe a compound risk inherent in premature quantum adoption. Quantum algorithms simultaneously claim to break the classical encryption protocols, while also claiming to offer quantum secure schemes. This double pressure is prompting authorities to a risky proposition. But why replace a system that remains secure with a replacement where everything is in beta stage.">
 
-<title>jhm - About</title>
+<title>jhm - Remark on Classical versus Quantum: Inherent Risks in Early Adoption of Beta Technologies</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,24 +23,44 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -59,8 +82,10 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -70,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">jhm</span>
     </a>
   </div>
@@ -81,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -102,76 +127,75 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Remark on Classical versus Quantum: Inherent Risks in Early Adoption of Beta Technologies</h1>
+                  <div>
+        <div class="description">
+          We maintain that <span class="math inline">\(P\)</span> is not equal to <span class="math inline">\(NP\)</span> (following C.A. Feinstein) and that classical encryption is as secure as ever, quantum or no quantum computer. In this brief note we observe a compound risk inherent in premature quantum adoption. Quantum algorithms simultaneously claim to break the classical encryption protocols, while also claiming to offer quantum secure schemes. This double pressure is prompting authorities to a risky proposition. But why replace a system that remains secure with a replacement where everything is in beta stage.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">classical</div>
+                <div class="quarto-category">quantum</div>
+                <div class="quarto-category">security</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>JHM </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 15, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-solana column-body">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header> 
-      <div class="about-contents"><main class="content" id="quarto-document-content">
-<p><em><a href="https://github.com/jhmartel">JHM</a> is a mathematician, physicist, writer, historian, teacher, entertainer, musician who investigates Weber electrodynamics, singularities in optimal transport, computability, mapping class groups, closing steinberg symbols, etc..</em>.</p>
-<section id="selected-writings" class="level2">
-<h2 data-anchor-id="selected-writings">Selected Writings</h2>
-<ul>
-<li><p><a href="https://github.com/jhmartel/SR/"><strong>Foundations of Special Relativity and Light Propagation in Vacuum: A Critical Review</strong></a></p></li>
-<li><p><a href="https://arxiv.org/abs/2201.12817"><strong>Topology of Singularities of Optimal Semicouplings</strong></a></p></li>
-</ul>
-</section>
-<section id="personal" class="level2">
-<h2 data-anchor-id="personal">Personal</h2>
-<ul>
-<li>Canadian Citizen</li>
-<li>Born 1988</li>
-<li>English-French bilingual</li>
-<li>Clean Driving Abstract</li>
-</ul>
-</section>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<p><em>PhD. Mathematics</em> - University of Toronto [Sept.&nbsp;2013 - Nov.&nbsp;2019]</p>
-<ul>
-<li>Thesis: <em>“Applications of Optimal Transport to Algebraic Topology: How to Build Spines from Singularity”</em> Supervised by Prof.&nbsp;R. J. McCann, FRS.</li>
-</ul>
-<p><em>MSc. Mathematics</em> - University of British Columbia [Sept.&nbsp;2011 - May 2013]</p>
-<p><em>BSc. Specialization in Mathematics</em> - University of Ottawa [Sept.&nbsp;2007 – May 2011]</p>
-</section>
-<section id="recent-work-experience" class="level2">
-<h2 data-anchor-id="recent-work-experience">Recent Work Experience</h2>
-<p><em>Labourer</em> - (Private Contract), Carleton Place, ON [May 2023 – Dec.&nbsp;2023]</p>
-<p><em>Labourer</em> - Atlas Apex Commercial Flat Roofing, Ottawa, ON. [March 2023 -May 2023]</p>
-<p><em>Labourer</em> - GLOW Productions, Calgary, AB. [Nov.&nbsp;2022 - Feb.&nbsp;2023]</p>
-<p><em>Freelance Analyst</em> - (Private Contracts), Ottawa, ON. and Calgary, AB. [Feb.&nbsp;2022 – Sept.&nbsp;2022]</p>
-<p><em>Labourer</em> - Valley Barn Boards, Luskville, QC. [May 2021 - Dec.&nbsp;2021]</p>
-<p><em>Labourer</em> - Ottawa Moving and Delivery, Ottawa, ON. [July 2020 – May 2021]</p>
-</section>
-<section id="teaching-experience" class="level2">
-<h2 data-anchor-id="teaching-experience">Teaching Experience</h2>
-<p><em>Private Tutor for various students</em> [Jan 2020 - Dec 2022]</p>
-<p><em>Course Instructor for MAT135F (Calculus I) at University of Toronto.</em> [Sept 2019 - Dec.&nbsp;2019]</p>
-<p><em>Course Instructor for MAT235Y (Vector Calculus) at University of Toronto.</em> [May 2019–July 2019]</p>
-<p><em>Course Instructor for MAT235Y (Vector Calculus) at University of Toronto.</em> [Sept.&nbsp;2018 - April 2019]</p>
-<p><em>Teaching Assistant for PUMP II</em> (Course Coordinator: Dr.&nbsp;Lindsey Shorser). [July 2018 - Sept.&nbsp;2018]</p>
-<p><em>Teaching Assistant for MAT244 Ordinary Differential Equations</em> (Course Coordinator: Dr.&nbsp;Tomas Kojar). [June 2018 - Aug.&nbsp;2018]</p>
-<p><em>Course Instructor for MAT235 at University of Toronto</em>. (Course coordinator: Dr.&nbsp;Faisal Al-Faisal). [June 2017 - Sept.&nbsp;2017]</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</section>
-</main></div>
-    </div>
-    <img src="profile.jpg" class="about-image
-  rounded " style="width: 15em;">
-  </div>
+
+
+<p>We have to reflect on the risk inherent in rushing to market an untested product. Our premise is that classical encryption is secure, as secure as its ever been, with or without any development of so-called quantum computers. This is a consequence of <span class="math inline">\(P\)</span> not equal to <span class="math inline">\(NP\)</span>. So firstly we have to remark that:</p>
+<ul>
+<li><p>Point 1: The implementation of so-called quantum encryption schemes is not necessary. The classical encryption schemes have not been broken by any quantum algorithms.</p></li>
+<li><p>Point 2: Even if quantum computers are supposed to “break” classical cryptography, there is still the problem of deciding whether any quantum encryption algorithm is provably quantum secure.</p></li>
+</ul>
+<p>Quantum computers are fashionable. Obviously there is a prestige and recognition associated with quantum physics. Personally we are not so impressed with quantum theory. So public institutions feel pressured to implement quantum algorithms as if they are “state of the art”. But the so-called quantum algorithms remain highly experimental. Here we are speaking about the physical implementations. Not the linear algebra as implemented on Qiski. The linear algebra is perfect, but the engineers working on Qiski Pulse are the hardest working technical team on the planet, because they have to deal with all the behind the curtain issues. It’s as if the Wizard of Oz was frantically at work behind the curtains. Therefore there is no urgency to replace classical protocols with experimental “beta” versions.</p>
+<p>Notice the double pressure: quantum computers simultaneously claims to threaten classical encryption, yet also simultaneously claims to give improved security over classical encryption. Therefore organizations are doubly prompted to adopt these experimental beta protocols.</p>
+<p>But again we argue that we see no indication of any “quantum speedup”. The accounting by which quantum computers measure “complexity” is not physical and does not coincide with the classical measure of complexity and resources. The quantum complexity of a quantum gate cannot be counted as a fixed unit. We argue the correct complexity of a gate is the size of its support. Therefore we are not persuaded by the supposed complexity of Shor’s algorithm in breaking RSA encryption and factoring large numbers. This is contrary to most computer scientist’ s opinions. The classical security protocols need to continue to implement their classical standards to the maximum capacity.</p>
+<p>The fundamental error, we argue, in the quantum interpretation is to consider superpositions, i.e.&nbsp;images of the Hadamard gate, as consisting of a single state. Yes, it’s a single state, but it’s a single nonpure state, i.e.&nbsp;a state with large support! We think this point is consistently overlooked in the quantum computer literature. Therefore superposition gates are more complex than identity gates.</p>
+<p>This is the point of our critique of Deutsch’s algorithm as discussed in <span class="citation" data-cites="nc">(<a href="#ref-nc" role="doc-biblioref">Nielsen and Chuang 2010, 1.4.3–4</a>)</span>. If we have a binary deterministic function <span class="math inline">\(f: \{0,1\} \to \{0,1\}\)</span>, then how many resources are required to decide whether <span class="math inline">\(f\)</span> is a constant or non constant function. In otherwords, to deterministically decide whether <span class="math inline">\(f(0)=f(1)\)</span> or <span class="math inline">\(f(0)\neq f(1)\)</span>. The question is: how many times do we have to evaluate <span class="math inline">\(f\)</span> to decide whether <span class="math inline">\(f\)</span> is constant or nonconstant? Deutsch and the usual quantum interpretation is that “a single call to <span class="math inline">\(f\)</span>”. However we maintain the classical position that the question is irreducible, and there is no escaping the fact that <span class="math inline">\(f(0)\)</span> and <span class="math inline">\(f(1)\)</span> need to be evaluated. This requires <em>two</em> function evaluations instead of Deutsch’s alleged <em>one</em> function evaluation. Here we cannot relent: we insist that two function calls are necessary. Therefore the user needs two tokens to call <span class="math inline">\(f\)</span>, because <span class="math inline">\(f\)</span> might have elaborate complicated definition which requires alot of resources.</p>
+<p>What is written above is this author’s opinion drawn from scientific study. But what’s important is experiment. So is there any way to really test whether Deutsch’s algorithm is actually twice as fast as the classical algorithm? I.e. is there any experimental way to simply prove that the number of resources required for Deutsch is half as much as the classical method to decide whether a function <span class="math inline">\(f\)</span> is constant.</p>
+<p><a href="https://qc-at-davis.github.io/QCC/Introduction/Introduction.html">An interesting reference</a></p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-nc" class="csl-entry" role="listitem">
+Nielsen, Michael A, and Isaac L Chuang. 2010. <em>Quantum Computation and Quantum Information</em>. Cambridge university press.
 </div>
- <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -192,6 +216,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
