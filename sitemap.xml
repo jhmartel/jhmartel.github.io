@@ -1,83 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-15-RisksOfPrematureQuantumAdoption/index.html</loc>
-    <lastmod>2024-01-16T00:17:06.118Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-05-FibonacciComplexity/index.html</loc>
-    <lastmod>2024-01-16T00:17:00.594Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-04-YaoMillionaireProblemPart1/MillionaireGame.html</loc>
-    <lastmod>2024-01-16T00:16:57.324Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-03-WeberGibbsLiouville/2024-01-03-WeberGibbsLiouville.html</loc>
-    <lastmod>2024-01-16T00:16:54.785Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-02-WeberWorkEnergyEmuc2/index.html</loc>
-    <lastmod>2024-01-16T00:16:51.387Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-02-FaradayCage/Mathematical Review of Faraday Cages - A Gap In the Literature.html</loc>
-    <lastmod>2024-01-16T00:16:48.351Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-02-Bookstore/Bookstores and Image to ISBN Problem [JHM Labs].html</loc>
-    <lastmod>2024-01-16T00:16:45.094Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2023-03-11-GR_Tensor_PCA/index.html</loc>
-    <lastmod>2024-01-16T00:16:42.114Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2023-03-09-DoldThom_Part1/index.html</loc>
-    <lastmod>2024-01-16T00:16:37.854Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/index.html</loc>
-    <lastmod>2024-01-16T00:16:33.702Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/about.html</loc>
-    <lastmod>2024-01-16T00:16:28.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2023-03-08-FizeauSansbury/index.html</loc>
-    <lastmod>2024-01-16T00:16:35.102Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2023-03-10-DoldThom_Part2/index.html</loc>
-    <lastmod>2024-01-16T00:16:39.914Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2023-03-13-DoldThom_Part3/index.html</loc>
-    <lastmod>2024-01-16T00:16:43.343Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-02-EconomicsVintageSelling/index.html</loc>
-    <lastmod>2024-01-16T00:16:46.629Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-02-MeasuringTape/Measuring Tape.html</loc>
-    <lastmod>2024-01-16T00:16:49.526Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-03-SpineForTeichmuellerSpace/A Spine for Teichmueller Space of Closed Hyperbolic Surfaces (Draft).html</loc>
-    <lastmod>2024-01-16T00:16:53.371Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-04-EconomicsMovingAndDelivery/index.html</loc>
-    <lastmod>2024-01-16T00:16:55.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jhmartel.github.io/posts/2024-01-05-AtomHistory/index.html</loc>
-    <lastmod>2024-01-16T00:16:58.987Z</lastmod>
+    <loc>https://jhmartel.github.io/posts/2024-01-16-GenerativeVintage/index.html</loc>
+    <lastmod>2024-01-17T14:16:13.524Z</lastmod>
   </url>
   <url>
     <loc>https://jhmartel.github.io/posts/2024-01-10-AmpereMagnetism/index.html</loc>
-    <lastmod>2024-01-16T00:17:05.043Z</lastmod>
+    <lastmod>2024-01-17T14:16:11.783Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-05-AtomHistory/index.html</loc>
+    <lastmod>2024-01-17T14:16:09.318Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-04-EconomicsMovingAndDelivery/index.html</loc>
+    <lastmod>2024-01-17T14:16:06.396Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-03-SpineForTeichmuellerSpace/A Spine for Teichmueller Space of Closed Hyperbolic Surfaces (Draft).html</loc>
+    <lastmod>2024-01-17T14:16:02.664Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-02-MeasuringTape/Measuring Tape.html</loc>
+    <lastmod>2024-01-17T14:16:00.130Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-02-EconomicsVintageSelling/index.html</loc>
+    <lastmod>2024-01-17T14:15:57.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2023-03-13-DoldThom_Part3/index.html</loc>
+    <lastmod>2024-01-17T14:15:55.627Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2023-03-10-DoldThom_Part2/index.html</loc>
+    <lastmod>2024-01-17T14:15:52.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2023-03-08-FizeauSansbury/index.html</loc>
+    <lastmod>2024-01-17T14:15:48.494Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/about.html</loc>
+    <lastmod>2024-01-17T14:15:39.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/index.html</loc>
+    <lastmod>2024-01-17T14:15:46.377Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2023-03-09-DoldThom_Part1/index.html</loc>
+    <lastmod>2024-01-17T14:15:50.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2023-03-11-GR_Tensor_PCA/index.html</loc>
+    <lastmod>2024-01-17T14:15:54.666Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-02-Bookstore/Bookstores and Image to ISBN Problem [JHM Labs].html</loc>
+    <lastmod>2024-01-17T14:15:56.644Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-02-FaradayCage/Mathematical Review of Faraday Cages - A Gap In the Literature.html</loc>
+    <lastmod>2024-01-17T14:15:58.933Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-02-WeberWorkEnergyEmuc2/index.html</loc>
+    <lastmod>2024-01-17T14:16:01.479Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-03-WeberGibbsLiouville/2024-01-03-WeberGibbsLiouville.html</loc>
+    <lastmod>2024-01-17T14:16:04.750Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-04-YaoMillionaireProblemPart1/MillionaireGame.html</loc>
+    <lastmod>2024-01-17T14:16:07.902Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-05-FibonacciComplexity/index.html</loc>
+    <lastmod>2024-01-17T14:16:10.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jhmartel.github.io/posts/2024-01-15-RisksOfPrematureQuantumAdoption/index.html</loc>
+    <lastmod>2024-01-17T14:16:12.661Z</lastmod>
   </url>
 </urlset>
