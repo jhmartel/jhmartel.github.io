@@ -8,7 +8,7 @@
 
 <meta name="author" content="JHM">
 <meta name="dcterms.date" content="2024-01-16">
-<meta name="description" content="We have an idea on generative matchmaking in vintage clothing. This means generating items and complete outfits with confidence to customers. Easier said than done. This post is preliminary discussion.">
+<meta name="description" content="We have an idea on generative matchmaking in vintage clothing. This means generating items and complete outfits with confidence to customers. Easier said than done. Here we present the hypothesis that colour pattern preferences are the dominant factor when buying clothes. This means that a person’s outfits consists of combinations of colour patterns. This is necessary before any so-called machine learning methods can be applied.">
 
 <title>jhm - Vintage Selling and Generative Matchmaking (Part 1)</title>
 <style>
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">Vintage Selling and Generative Matchmaking (Part 1)</h1>
                   <div>
         <div class="description">
-          We have an idea on generative matchmaking in vintage clothing. This means generating items and complete outfits with confidence to customers. Easier said than done. This post is preliminary discussion.
+          We have an idea on generative matchmaking in vintage clothing. This means generating items and complete outfits with confidence to customers. Easier said than done. Here we present the hypothesis that colour pattern preferences are the dominant factor when buying clothes. This means that a person’s outfits consists of combinations of colour patterns. This is necessary before any so-called machine learning methods can be applied.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -159,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 <p><em>This post is parallel to <a href="https://jhmartel.github.io/posts/2024-01-02-EconomicsVintageSelling/">our earlier post on vintage selling</a> and represents preliminary thoughts on vintage selling and generative matchmaking. This is key buzzword for 2024.</em></p>
 <section id="supply-versus-demand-in-vintage-selling" class="level2">
 <h2 class="anchored" data-anchor-id="supply-versus-demand-in-vintage-selling">Supply versus Demand in Vintage Selling</h2>
-<p>Our impression is that the vintage clothing market has a significant gap between supply and demand. This gap is especially pronounced in quality used men’s clothing. By “gap” we mean that customers come to the store looking to spend money, they spend time going through the clothing, see nothing they like, and leave without buying anything. Why? Because they don’t see what they want, i.e.&nbsp;the supply does not overlap with the demand. This the gap we’re talking about.</p>
+<p>Our impression is that the vintage clothing market has a significant gap between supply and demand. This gap is especially pronounced in quality used men’s clothing. By “gap” we mean that customers come to the store looking to spend money, they spend time going through the clothing, see nothing they like, and leave without buying anything. Why? Because they don’t see what they want, i.e.&nbsp;the supply does not overlap with the demand. This is the gap we’re talking about.</p>
 <p>It appears the total space of customers is the sum of two distinct “mind sets” or “psychological states”. These two mindsets approximately correspond to “feminine” and “masculine” buyers, and are summarized in the idiom <em>“women shop. men buy.”</em> There’s many reference on this subject, for example:</p>
 <p><a href="https://knowledge.wharton.upenn.edu/podcast/knowledge-at-wharton-podcast/men-buy-women-shop-the-sexes-have-different-priorities-when-walking-down-the-aisles/">Wharton School of Business Podcast</a></p>
 <p><a href="https://www.washingtonpost.com/archive/lifestyle/magazine/1999/08/22/women-shop-men-buy/5ac9eb67-59aa-4294-ba9b-05a9ec2243e9/">Washington Post article from 1999</a></p>
@@ -177,26 +177,32 @@ ul.task-list li input[type="checkbox"] {
 <p>“<em>When a customer walks into the shop, what are the high- and low- probability items relative to the customer <span class="math inline">\(y\)</span>’s preferences? i.e.&nbsp;for which <span class="math inline">\(x\)</span> is <span class="math inline">\(q(x,y)\)</span> more than fifty percent probable?</em>”</p>
 <p>So we are asking about probabilities <span class="math inline">\(q\)</span> of items being sold to customers. The probabilities represented in <span class="math inline">\(q\)</span> are themselves uncertain. In otherwords, the customer <span class="math inline">\(y\)</span> doesn’t know what they want. This is where the art of curating a vintage collection enters: the seller sets the fashion and effectively tells the customer what to buy.</p>
 </section>
-<section id="knowing-your-audience-fitting-the-vetruvian-man" class="level2">
-<h2 class="anchored" data-anchor-id="knowing-your-audience-fitting-the-vetruvian-man">Knowing Your Audience, Fitting the Vetruvian Man</h2>
+<section id="knowing-your-audience-fitting-the-vetruvian-man-colour-preferences." class="level2">
+<h2 class="anchored" data-anchor-id="knowing-your-audience-fitting-the-vetruvian-man-colour-preferences.">Knowing Your Audience, Fitting the Vetruvian Man, Colour Preferences.</h2>
 <p>The problem is <em>knowing or not knowing your audience</em>. For the machine learning engineers, it raises the question <em>“What are the relevant numerical statistics worth knowing about your audience?”</em> We use <span class="math inline">\(x,y\)</span> as symbols intended to represent real items and real customers. But before we can perform any machine learning method, the symbols <span class="math inline">\(x,y\)</span> need to be correlated to floating point decimals. This is awkward process, and we try to keep it as simple as possible.</p>
-<p>Ultimately fashion and clothing is about the human form. So the basis of everything is a person in their body: <img src="v1.png" class="img-fluid" alt="Vetruvian Man needs clothes! What shirts, pants, shoes, jackets, etc.., does he prefer?"> We imagine every customer is basically their own Vetruvian person, like universal mannequin. What does anybody need to know about Vetruvian man to recommend some clothing items? Obviously we don’t need a longform interview. In fact, it’s better to keep it as simple as possible. We think everything reduces to examples. The only thing the seller needs is a summarized precis of colour pattern combinations. Again we really are trying to keep it as simple as possible.</p>
-<p><strong>Definition.</strong> A <em>colour pattern</em> is an <span class="math inline">\(RGB\)</span> valued measure <span class="math inline">\(\mu\)</span>. An <em>outfit</em> is a triple of fabric patches with different colour patterns. Thus an outfit consists of pants, undershirt, and overshirt with their own color patterns.</p>
-<p>This definition suggests that a person’s preferences mainly depend on the colour patterns <span class="math inline">\(\mu_1\)</span>, <span class="math inline">\(\mu_2\)</span>, <span class="math inline">\(\mu_3\)</span> of the pants, undershirt, overshirt combination. The contrast and comparison of these distributions together, i.e.&nbsp;whether they clash or correlate, is how we represent the customer’s style preferences.</p>
-<p>Personally the author thinks it’s amusing to wear homogeneous colour patterns, i.e.&nbsp;red on red, green on gree, blue on blue. We like simplicity and think it’s fun when eveything adds up to “red plus red plus red equals red”. But in other settings its better to be balanced, having at most three primary colours, etc..</p>
+<p>Ultimately fashion and clothing is about the human form. So the basis of everything is a person in their body:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="v1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Vetruvian Man needs clothes! What shirts, pants, shoes, jackets, etc.., does he prefer?</figcaption>
+</figure>
+</div>
+<p>We imagine every customer is basically their own Vetruvian person, like universal mannequin. What does anybody need to know about Vetruvian man to recommend some clothing items? Obviously we don’t need a longform interview. In fact, it’s better to keep it as simple as possible. We think everything reduces to examples. The only thing the seller needs is a summarized precis of colour pattern combinations. Again we really are trying to keep it as simple as possible.</p>
+<p><strong>Definition.</strong> A <em>colour pattern</em> is an <span class="math inline">\(RGB\)</span> valued measure <span class="math inline">\(\mu\)</span>. An <em>outfit</em> is a triple of colour pattern measures <span class="math inline">\(\mu_1, \mu_2, \mu_3\)</span>.</p>
+<p>The idea is that a choice of outfit is formally represented as a choice of colour patterns <span class="math inline">\(\mu_i\)</span> on pants, undershirt, and overshirt. The definition suggests that a person’s preferences depends mostly on triplets of colour patterns. What defines a person’s style are their preferences relating to <em>combinations of colours</em>. We emphasize that it’s not strictly preferences in the colours themselves, but preferenecs in the combinations of the colour. The contrast and comparison of these distributions together, i.e.&nbsp;whether they clash or correlate, is how we represent the customer’s style preferences.</p>
+<p>Personally the author thinks it’s amusing to wear homogeneous colour patterns, i.e.&nbsp;red on red, green on green, blue on blue. We like simplicity and think it’s fun when eveything adds up to “red plus red plus red equals red”. But in other settings its better to be balanced, having at most three primary colours, etc..</p>
 <p>This makes us wonder about birds and their wonderful plumage. Is there experiment to decide whether birds share common preferences in the colour distributions? It’s curious question…</p>
-<p>Let us summarize the discussion to this point:</p>
-<ul>
-<li><p>We are looking to predict the probability <span class="math inline">\(q(x,y)\)</span> of the event of item <span class="math inline">\(x\)</span> being purchased by customer <span class="math inline">\(y\)</span> at the sale price. Specifically we want to predict the most probable events, i.e.&nbsp;where the probability <span class="math inline">\(q\)</span> is maximized.</p></li>
-<li><p>For simplicity we assume that customer buys items depending on the colour distribution <span class="math inline">\(\mu\)</span> of the fabric. We assume that customers buy outfits depending on their preference for combination colour distributions <span class="math inline">\(\mu_1\)</span>, <span class="math inline">\(\mu_2\)</span>, <span class="math inline">\(\mu_3\)</span> of pants, undershirt, and overshirt.</p></li>
-<li><p>We assume the high probability colour distributions of customers can be “learned from examples”.</p></li>
-</ul>
-<p>Thus we have to clearly state the hypothesis underlying the above method: that a customer’s colour preferences are a strong factor in clothing purchases. <em>“Do you have any other colours?”</em></p>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Our goal here is “setting the stage” for the generative model. We identify the colour pattern distributions as the main eye factor in choosing clothes. Personally we know we only like clothes that have good colours and tones. To actually code, train, deploy the generative model which we are suggesting is another project.</p>
-<p>[to be continued – JHM]</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>To summarize the discussion:</p>
+<ol type="i">
+<li><p>The theme is generative matchmaking. I.e. if the customers can only see ten items to potentially buy, then generate a list of ten items which have better odds than ten random items. I.e. quickly curate a personal list to the customer. This means predicting the probability <span class="math inline">\(q(x,y)\)</span> of the event of item <span class="math inline">\(x\)</span> being purchased by customer <span class="math inline">\(y\)</span> at the sale price. The purpose is to predict the most probable events, where the probability <span class="math inline">\(q\)</span> is maximized.</p></li>
+<li><p>We hypothesize that customers buy items depending on colour patterns <span class="math inline">\(\mu\)</span> of the fabric. We assume that customers buy outfits depending on their preference for combination colour patterns <span class="math inline">\(\mu_1\)</span>, <span class="math inline">\(\mu_2\)</span>, <span class="math inline">\(\mu_3\)</span> of pants, undershirt, and overshirt.</p></li>
+<li><p>We assume the high probability colour distributions of customers can be “learned from examples”.</p></li>
+</ol>
+<p>Our goal here is “setting the stage” for the generative model. We identify the colour pattern distributions as the main eye factor in choosing clothes. Personally we know we only like clothes that have good colours and tones. To actually code, train, deploy the generative model we are suggesting is the next step.</p>
+<p>[To be continued – JHM]</p>
 
 
 </section>
