@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JHM">
-<meta name="dcterms.date" content="2024-02-10">
-<meta name="description" content="We announce a new spine for Teichmueller space of closed hyperbolic surfaces. We claim the new spine consists of hyperbolic surfaces whose shortest essential nonseparating curves are filling. The spine is distinct from Thurston’s original proposal.">
+<meta name="dcterms.date" content="2024-02-29">
+<meta name="description" content="We announce a new spine for Teichmueller space of closed hyperbolic surfaces. We claim the new spine consists of hyperbolic surfaces whose shortest essential nonseparating curves are filling. The spine is distinct from Thurston’s original proposal. Here we post a preprint.">
 
-<title>jhm - Announcing a New Spine for Teichmueller Space of Closed Hyperbolic Surfaces</title>
+<title>jhm - Update: Announcing a New Spine for Teichmueller Space of Closed Hyperbolic Surfaces</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,10 +112,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Announcing a New Spine for Teichmueller Space of Closed Hyperbolic Surfaces</h1>
+      <h1 class="title">Update: Announcing a New Spine for Teichmueller Space of Closed Hyperbolic Surfaces</h1>
                   <div>
         <div class="description">
-          We announce a new spine for Teichmueller space of closed hyperbolic surfaces. We claim the new spine consists of hyperbolic surfaces whose shortest essential nonseparating curves are filling. The spine is distinct from Thurston’s original proposal.
+          We announce a new spine for Teichmueller space of closed hyperbolic surfaces. We claim the new spine consists of hyperbolic surfaces whose shortest essential nonseparating curves are filling. The spine is distinct from Thurston’s original proposal. Here we post a preprint.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -139,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 10, 2024</p>
+        <p class="date">February 29, 2024</p>
       </div>
     </div>
     
@@ -158,15 +158,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>This post is a summary of our preprint <a href="https://github.com/jhmartel/SR/">A New Spine for Teichmueller Space of Closed Hyperbolic Surfaces</a>. We let <span class="math inline">\((S,g)\)</span> be a closed hyperbolic surface with constant Gauss curvature <span class="math inline">\(K=-1\)</span>. The goal of the preprint is to establish the following</p>
-<p><strong>Main Theorem.</strong> <em>The subvariety <span class="math inline">\(W\)</span> consisting of hyperbolic surfaces which are filled by their shortest essential separating curves is a minimal dimension spine of Teichmueller space <span class="math inline">\(Teich(S)\)</span>.</em></p>
+<p><strong>Main Theorem.</strong> <em>The subvariety <span class="math inline">\(W\)</span> consisting of hyperbolic surfaces which are homologically filled by their shortest essential separating curves is a minimal dimension spine of Teichmueller space <span class="math inline">\(Teich(S)\)</span>.</em></p>
 <p>A complete proof of this fact requires that we construct continuous equivariant deformation retract <span class="math inline">\(\text{Teich} \leadsto W\)</span>, and that we prove <span class="math inline">\(\dim W = \dim Teich - (2g-1)\)</span>.</p>
-<p>Our retraction is based on constructing harmonic one forms on the surface which are “adapted” to the short curves on <span class="math inline">\(S\)</span>. The key fact is that we can simultaneously increase the lengths of these short curves by flowing along a Teichmueller deformation in the direction of the above harmonic one form. Here is the construction. Let <span class="math inline">\(C'\)</span> be the set of short essential nonseparating curves on <span class="math inline">\((S,g)\)</span>. If <span class="math inline">\(C'\)</span> does not fill <span class="math inline">\(S\)</span>, then there exists canonical harmonic one form <span class="math inline">\(\phi\)</span> on <span class="math inline">\(S\)</span> such that:</p>
+<p>Our retraction is based on constructing harmonic one forms <span class="math inline">\(\phi\)</span> on the surface which are “adapted” to the short curves on <span class="math inline">\(S\)</span>.</p>
+<p>The key fact is that we can simultaneously increase the lengths of these short curves in the “<span class="math inline">\(\phi\)</span>-direction” by flowing along a Teichmueller deformation in the direction of the above harmonic one form.</p>
+<p>Let <span class="math inline">\(C'\)</span> be the set of short essential nonseparating curves on <span class="math inline">\((S,g)\)</span>. If <span class="math inline">\(C'\)</span> does not homologically fill <span class="math inline">\(S\)</span>, then there exists a canonical harmonic one form <span class="math inline">\(\phi\)</span> on <span class="math inline">\(S\)</span> such that:</p>
 <ul>
 <li><ol type="i">
 <li>we have <span class="math inline">\(\phi^*=0\)</span> along <span class="math inline">\(C' \subset S\)</span> (abelian condition).</li>
 </ol></li>
 <li><ol start="2" type="i">
-<li>we have <span class="math inline">\(\int_\alpha \phi=1\)</span> for all <span class="math inline">\(\alpha \in C'\)</span>.</li>
+<li>we have <span class="math inline">\(\int_\alpha \phi=1\)</span> for all <span class="math inline">\(\alpha \in C'\)</span> (uniform circulation)</li>
 </ol></li>
 <li><ol start="3" type="i">
 <li>we have <span class="math inline">\(\phi\)</span> is the minimal energy harmonic one form satisfying the above conditions.</li>
@@ -178,18 +180,21 @@ ul.task-list li input[type="checkbox"] {
 <li><p>the metric <span class="math inline">\(g_t\)</span> is hyperbolic for all <span class="math inline">\(t\geq 0\)</span> and <span class="math inline">\(g_0=g\)</span>;</p></li>
 <li><p>the curve lengths <span class="math inline">\(\ell(\gamma, g_t)\)</span> are simultaneously increasing for all <span class="math inline">\(t \geq 0\)</span> and all <span class="math inline">\(\gamma \in C'\)</span>.</p></li>
 </ul>
-<p>The proof of Belt Tightening is achieved by studying the initial value problem defined by: <span class="math display">\[g'=Re(q^{1/2})=(\phi \phi - \phi^* \phi^*)^{1/2}, \quad  g(0)=g.\]</span></p>
+<p>The proof of Belt Tightening is achieved by studying the initial value problem defined by: <span class="math display">\[g'=Re(q)=(\phi \phi - \phi^* \phi^*), \quad  g(0)=g.\]</span></p>
 <p>The definitions imply that the variation of length along integral curves of the above IVP satisfies the following key identity valid for <span class="math inline">\(\alpha \in C'\)</span> and <span class="math inline">\(\phi\)</span> the canonical harmonic one form defined above:</p>
-<p><span class="math display">\[\frac{d}{dt} \ell(\alpha, g_t) = \frac{1}{2} \int \sqrt{\phi(\alpha')^2} ds=\frac{1}{2}\int_\alpha \phi=\frac{1}{2}.\]</span></p>
-<p>In the expression <span class="math inline">\(\alpha'=\alpha'(s)\)</span> represents the unit speed parameterization of the geodesic <span class="math inline">\(\alpha\)</span> with respect to the metric <span class="math inline">\(g_t\)</span>, and this implies e.g.&nbsp;$ g(‘(s), ’(s))^{1/2}=1$ as a function of arclength parameter <span class="math inline">\(s\)</span>. Here we are assuming the unit speed parameterization of the geodesic curve <span class="math inline">\(\alpha\)</span>. This computation establishes Belt Tightening Lemma. Thus we obtain a canonical flow by which we can simultaneously increase the lengths of the short curves <span class="math inline">\(C'\)</span>. We simultaneously increase the lengths of these short curves until a new homologically independant curve appears. The time when these homologically independant curves appear is a continuous function of the initial data. This is key observation necessary to construct the strong deformation retracts as formally defined in algebraic topology.</p>
+<p><span class="math display">\[\frac{d}{dt} \ell(\alpha, g_t) = \frac{1}{2} \int \sqrt{\phi(\alpha')^2} ds=\frac{1}{2}\int_\alpha \phi=\frac{1}{2} \ell(\alpha, g_t).\]</span></p>
+<p>In the expression <span class="math inline">\(\alpha'=\alpha'(s)\)</span> represents the unit speed parameterization of the geodesic <span class="math inline">\(\alpha\)</span> with respect to the metric <span class="math inline">\(g_t\)</span>, and this implies e.g.&nbsp;$ g(‘(s), ’(s))^{1/2}=1$ as a function of arclength parameter <span class="math inline">\(s\)</span>. Here we are assuming the unit speed parameterization of the geodesic curve <span class="math inline">\(\alpha\)</span>. This computation establishes Belt Tightening Lemma.</p>
+<p>Thus we obtain a canonical flow by which we can simultaneously increase the lengths of the short curves <span class="math inline">\(C'\)</span>. We simultaneously increase the lengths of these short curves until a new homologically independant curve appears. The time when these homologically independant curves appear is a continuous function of the initial data. This is key observation necessary to construct the strong deformation retracts as formally defined in algebraic topology.</p>
 <p><strong>Definition</strong>: For every index <span class="math inline">\(1 \leq j \leq 2g\)</span>, let <span class="math inline">\(W_j\)</span> be the subvariety of <span class="math inline">\(T\)</span> consisting of hyperbolic metrics whose <span class="math inline">\(C\)</span>-systoles satisfy <span class="math inline">\(\xi(C) \geq j\)</span>.</p>
 <p><strong>Theorem 1.</strong> For every index <span class="math inline">\(1 \leq j \leq 2g-1\)</span>, there exists a continuous equivariant deformation retract <span class="math inline">\(W_j \to W_{j+1}\)</span>. Moreover <span class="math inline">\(W_{j+1}\)</span> has codimension one in <span class="math inline">\(W_j\)</span>.</p>
-<p>The general retract <span class="math inline">\(W_{j} \to W_{j+1}\)</span> is defined as follows. Let <span class="math inline">\((S,g)\)</span> be a hyperbolic surface in <span class="math inline">\(W_j\)</span> with <span class="math inline">\(\xi(C(g))=j &lt; 2g\)</span>. Let <span class="math inline">\(\{g_t\}\)</span> be the unique one-parameter deformation of hyperbolic metrics constructed in Belt Tightening Lemma which simultaneously increase the lengths of <span class="math inline">\(C'\)</span>. The theorem follows from the following Claims (i), (ii), (iii):</p>
-<p>Claim (i) There exists a minimal stopping time <span class="math inline">\(\tau=\tau(g)\)</span> which depends continuously on <span class="math inline">\(g\)</span> such that <span class="math inline">\(g_\tau \in W_{j+1}\)</span>. Equivalently <span class="math inline">\(\tau\)</span> is the unique minimal time such that a new homologically independant <span class="math inline">\(C\)</span>-systole appears and which strictly increases the complexity <span class="math inline">\(\xi\)</span>.</p>
-<p>Claim (ii) The one-parameter deformation <span class="math inline">\(g_t\)</span> defines a continuously well-posed global retraction <span class="math inline">\(g\mapsto g_\tau\)</span> from <span class="math inline">\(W_j\)</span> to <span class="math inline">\(W_{j+1}\)</span>.</p>
+<p>The general retract <span class="math inline">\(W_{j} \to W_{j+1}\)</span> is defined as follows: Let <span class="math inline">\((S,g)\)</span> be a hyperbolic surface in <span class="math inline">\(W_j\)</span> with <span class="math inline">\(\xi(C(g))=j &lt; 2g\)</span>. Let <span class="math inline">\(\{g_t\}\)</span> be the unique one-parameter deformation of hyperbolic metrics constructed in Belt Tightening Lemma which simultaneously increase the lengths of <span class="math inline">\(C'\)</span>. The theorem follows from the following Claims (i), (ii), (iii):</p>
+<p>Claim (i) There exists a minimal finite stopping time <span class="math inline">\(\tau=\tau(g)\)</span> for <span class="math inline">\(g\in W_j\)</span> which depends continuously on <span class="math inline">\(g\)</span> such that <span class="math inline">\(g_\tau \in W_{j+1}\)</span>. Equivalently <span class="math inline">\(\tau\)</span> is the unique minimal time such that a new homologically independant <span class="math inline">\(C\)</span>-systole appears and which strictly increases the complexity <span class="math inline">\(\xi\)</span>.</p>
+<p>Claim (ii) The one-parameter deformation <span class="math inline">\(g_t\)</span> defines a continuous strong deformation retraction <span class="math inline">\(g\mapsto g_\tau\)</span> from <span class="math inline">\(W_j\)</span> to <span class="math inline">\(W_{j+1}\)</span>.</p>
 <p>Claim (iii) The subvariety <span class="math inline">\(W_{j+1}\)</span> is a codimension one subvariety of <span class="math inline">\(W_j\)</span>.</p>
+<p>We argue that Claim (i) follows from the integral formula for variation of length along the Belt Tightening. For curves which are homologically independant of <span class="math inline">\(C'\)</span>, the negative term <span class="math inline">\(-\int \phi^* \phi^*\)</span> dominates for large values of <span class="math inline">\(t\)</span>.</p>
 <p><strong>Proof of Main Theorem.</strong> The retract <span class="math inline">\(T \to W\)</span> is defined as the composition of retracts <span class="math inline">\(W_1 \to W_2 \to \cdots \to W_{2g}\)</span> constructed in Theorem 1. It follows that <span class="math inline">\(W_{2g}\)</span> is a codimension <span class="math inline">\(2g-1\)</span> subvariety of <span class="math inline">\(T\)</span>, and this is the minimal possible dimension according to Bieri-Eckmann homological duality.</p>
 <p><strong>Remark</strong>. Geometric minimality requires a further homological duality argument a la Souto-Pettet <span class="citation" data-cites="ps">[@ps]</span>.</p>
+<p>[Updated February 29 2024 following important comments by MFB.]</p>
 <p>[-JHM]</p>
 
 
